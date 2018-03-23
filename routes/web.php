@@ -21,7 +21,7 @@ Route::get('/implementing_dashboard', function () {
     return view('implementing_dashboard');
 });
 Route::get('/nodal_dashboard', function () {
-    return view('odal_dashboard');
+    return view('nodal_dashboard');
 });
 Route::get('/implementing_phase1', function () {
     return view('implementing_phase1');
