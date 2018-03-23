@@ -46,6 +46,11 @@ body {font-family: Arial;}
     border: 1px solid #ccc;
     border-top: none;
 }
+
+.card {
+	margin-left: 5px;
+	float: left;
+}
 </style>
 <body>
 
@@ -69,30 +74,36 @@ body {font-family: Arial;}
 			    <a href="#" class="btn btn-primary">View Project</a>
 			  </div>
 			</div>
+			<div class="card">
+			  <h5 class="card-header">Project name</h5>
+			  <div class="card-body">
+			    <h5 class="card-title">Short description of project</h5>
+			    <p class="card-text">Date and status</p>
+			    <a href="#" class="btn btn-primary">View Project</a>
+			  </div>
+			</div>
     	</div>
 	</div>
 
 	<div id="Completed" class="tabcontent">
 	  	<h3>Completed</h3>
 	  	<div class="row">
-	        <div class="col-md-2">
-	            <p>Project 1</p>
-	        </div>
-	        <div class="col-md-2">
-	            <p>Project 2</p>
-	        </div>
-	        <div class="col-md-2">
-	            <p>Project 3</p>
-	        </div>
-	        <div class="col-md-2">
-	            <p>Project 4</p>
-	        </div>
-	        <div class="col-md-2">
-	            <p>Project 5</p>
-	        </div>
-	        <div class="col-md-2">
-	            <p>Project 6</p>
-	        </div>
+	  		<div class="card">
+			  <h5 class="card-header">Project name</h5>
+			  <div class="card-body">
+			    <h5 class="card-title">Short description of project</h5>
+			    <p class="card-text">Date and status</p>
+			    <a href="#" class="btn btn-primary">View Project</a>
+			  </div>
+			</div>
+			<div class="card">
+			  <h5 class="card-header">Project name</h5>
+			  <div class="card-body">
+			    <h5 class="card-title">Short description of project</h5>
+			    <p class="card-text">Date and status</p>
+			    <a href="#" class="btn btn-primary">View Project</a>
+			  </div>
+			</div>
     	</div> 
 	</div>
 
