@@ -14,3 +14,36 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/implementing_dashboard', function () {
+    return view('implementing_dashboard');
+});
+Route::get('/nodal_dashboard', function () {
+    return view('odal_dashboard');
+});
+Route::get('/implementing_phase1', function () {
+    return view('implementing_phase1');
+});
+Route::get('/implementing_phase2', function () {
+    return view('implementing_phase2');
+});
+Route::get('/implementing_phase3', function () {
+    return view('implementing_phase3');
+});
+Route::get('/nodal_phase1', function () {
+    return view('nodal_phase1');
+});
+Route::get('/nodal_phase2', function () {
+    return view('nodal_phase2');
+});
+Route::get('/nodal_phase3', function () {
+    return view('nodal_phase3');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
+});
