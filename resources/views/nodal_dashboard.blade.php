@@ -62,11 +62,11 @@ body {font-family: Arial;}
 	  	<h3>Pending</h3>
 	  	<div class="row">
 	  		<div class="card">
-			  <h5 class="card-header">Featured</h5>
+			  <h5 class="card-header">Project name</h5>
 			  <div class="card-body">
-			    <h5 class="card-title">Special title treatment</h5>
-			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			    <a href="#" class="btn btn-primary">Go somewhere</a>
+			    <h5 class="card-title">Short description of project</h5>
+			    <p class="card-text">Date and status</p>
+			    <a href="#" class="btn btn-primary">View Project</a>
 			  </div>
 			</div>
     	</div>
