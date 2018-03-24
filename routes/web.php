@@ -41,12 +41,6 @@ Route::get('/nodal_phase2', function () {
 Route::get('/nodal_phase3', function () {
     return view('nodal_phase3');
 });
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/register', function () {
-    return view('register');
-});
 
 Auth::routes();
 
