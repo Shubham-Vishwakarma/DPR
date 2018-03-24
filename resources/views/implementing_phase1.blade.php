@@ -794,7 +794,8 @@
 
                     <div class="form-group{{ $errors->has('solid_waste') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="solid_waste" class="control-label">vi. Solid Waste Management(Yes/No)</label>
+                            <label for="solid_waste" class="control-label">vi. Solid Waste Management</label>
+                            <label for="solid_waste" class="control-label">(Yes/No)</label>
                         </div>
                         <div class="col-md-8">
                             <div class="col-sm-10" id="solid_waste">
@@ -832,6 +833,195 @@
                                 </span>
                             @endif
                         </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('reasons') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="reasons" class="control-label">viii. In case, any infrastructure</label>
+                            <label for="reasons" class="control-label">has not been proposed, reasons</label>
+                            <label for="reasons" class="control-label">thereof</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input id="reasons" type="text" class="form-control" name="reasons" value="{{ old('reasons') }}" required>
+
+                            @if ($errors->has('reasons'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('reasons') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('disaster') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="disaster" class="control-label">Whether disaster (earthquake,</label>
+                            <label for="disaster" class="control-label">flood, cyclone, landslide etc.)</label>
+                            <label for="disaster" class="control-label">resistant features have been</label>
+                            <label for="disaster" class="control-label">adopted in concept, design and</label>
+                            <label for="disaster" class="control-label">implementation of the project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="col-sm-10" id="disaster">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="disaster" id="disaster_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="disaster_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="disaster" id="disaster_No" value="No">
+                                    <label class="form-check-label" for="disaster_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('disaster'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('disaster') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('quality') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="quality" class="control-label">Whether Quality Assurance is</label>
+                            <label for="quality" class="control-label">part of the Project, if not, how it</label>
+                            <label for="quality" class="control-label">is proposed to be ensured?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input id="quality" type="text" class="form-control" name="quality" value="{{ old('quality') }}" required>
+
+                            @if ($errors->has('quality'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('quality') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('o_and_m') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="o_and_m" class="control-label">Whether O&M is part of Project,</label>
+                            <label for="o_and_m" class="control-label">if yes, for how many years?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input id="o_and_m" type="text" class="form-control" name="o_and_m" value="{{ old('o_and_m') }}" required>
+
+                            @if ($errors->has('o_and_m'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('o_and_m') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('encumbrance') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="encumbrance" class="control-label">Whether encumbrance free land</label>
+                            <label for="encumbrance" class="control-label">is available for the project or</label>
+                            <label for="encumbrance" class="control-label">not?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="col-sm-10" id="encumbrance">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="encumbrance" id="encumbrance_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="encumbrance_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="encumbrance" id="encumbrance_No" value="No">
+                                    <label class="form-check-label" for="encumbrance_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('encumbrance'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('encumbrance') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('innovative') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="innovative" class="control-label">Whether any innovative/cost</label>
+                            <label for="innovative" class="control-label">effective/Green technology</label>
+                            <label for="innovative" class="control-label">adopted in the project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="col-sm-10" id="innovative">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="innovative" id="innovative_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="innovative_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="innovative" id="innovative_No" value="No">
+                                    <label class="form-check-label" for="innovative_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('innovative'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('innovative') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('slac_comments') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="slac_comments" class="control-label">Comments of SLAC after techno</label>
+                            <label for="slac_comments" class="control-label">economic appraisal of DPR</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="col-sm-10" id="slac_comments">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="slac_comments" id="slac_comments_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="slac_comments_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="slac_comments" id="slac_comments_No" value="No">
+                                    <label class="form-check-label" for="slac_comments_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('slac_comments'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('slac_comments') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('project_brief') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="project_brief" class="control-label">Project brief including any other</label>
+                            <label for="project_brief" class="control-label">information ULB/State would like</label>
+                            <label for="project_brief" class="control-label">to furnish</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input id="project_brief" type="text" class="form-control" name="project_brief" value="{{ old('project_brief') }}" required>
+
+                            @if ($errors->has('project_brief'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('project_brief') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="row" align="center">
+                        <button class="btn btn-primary" style="margin: 20px">Save</button>
+                        <button type="submit" class="btn btn-success" style="margin: 20px">Submit</button>
                     </div>
 
                 </form>
