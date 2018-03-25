@@ -429,6 +429,697 @@
                         </div>
                     </div>
 
+                    <div class="form-group{{ $errors->has('total_houses') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="total_houses" class="control-label">Total No. Of Projects Proposed In The Project</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="total_houses" type="text" class="form-control" name="total_houses" value="{{ old('total_houses') }}" required>
+
+                                @if ($errors->has('total_houses'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('total_houses') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('ews_unit') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="ews_unit" class="control-label">i. No. Of EWS Unit</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="ews_unit" type="text" class="form-control" name="ews_unit" value="{{ old('ews_unit') }}" required>
+
+                                @if ($errors->has('ews_unit'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('ews_unit') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('lig_unit') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="lig_unit" class="control-label">ii. No. Of LIG Units</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="lig_unit" type="text" class="form-control" name="lig_unit" value="{{ old('lig_unit') }}" required>
+
+                                @if ($errors->has('lig_unit'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('lig_unit') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('mig_unit') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="mig_unit" class="control-label">iii. No. Of MIG Units</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="mig_unit" type="text" class="form-control" name="mig_unit" value="{{ old('mig_unit') }}" required>
+
+                                @if ($errors->has('mig_unit'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('mig_unit') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('hig_unit') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="hig_unit" class="control-label">iv. No. Of HIG Units</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="hig_unit" type="text" class="form-control" name="hig_unit" value="{{ old('hig_unit') }}" required>
+
+                                @if ($errors->has('hig_unit'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('hig_unit') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('commercial_unit') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="commercial_unit" class="control-label">v. No. Of Commercial Units</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="commercial_unit" type="text" class="form-control" name="commercial_unit" value="{{ old('commercial_unit') }}" required>
+
+                                @if ($errors->has('commercial_unit'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('commercial_unit') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('private_partner') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="private_partner" class="control-label">Whether open and transparent procedure has been envisaged to select private partner, if private partner has been considered?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="private_partner">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="private_partner" id="private_partner_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="private_partner_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="private_partner" id="private_partner_No" value="No">
+                                    <label class="form-check-label" for="private_partner_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('private_partner'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('private_partner') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('ews_eligible') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="ews_eligible" class="control-label">No. of EWS houses eligible for Central Assistance</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="ews_eligible" type="text" class="form-control" name="ews_eligible" value="{{ old('ews_eligible') }}" required>
+
+                                @if ($errors->has('ews_eligible'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('ews_eligible') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('gol_grant') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="gol_grant" class="control-label">i. GOI grant required(Rs.1.50 lakh per eligible EWS house)(Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="gol_grant" type="text" class="form-control" name="gol_grant" value="{{ old('gol_grant') }}" required>
+
+                                @if ($errors->has('gol_grant'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('gol_grant') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('state_grant') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="state_grant" class="control-label">ii. State grant (Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="state_grant" type="text" class="form-control" name="state_grant" value="{{ old('state_grant') }}" required>
+
+                                @if ($errors->has('state_grant'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('state_grant') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('land_cost') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="land_cost" class="control-label">ii.a Land Cost(Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="land_cost" type="text" class="form-control" name="land_cost" value="{{ old('land_cost') }}" required>
+
+                                @if ($errors->has('land_cost'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('land_cost') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('cash_grant') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="cash_grant" class="control-label">ii.b Cash Grant(Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="cash_grant" type="text" class="form-control" name="cash_grant" value="{{ old('cash_grant') }}" required>
+
+                                @if ($errors->has('cash_grant'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('cash_grant') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('implementing_agency_share') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="implementing_agency_share" class="control-label">iii. Implementing Agency Share(Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="implementing_agency_share" type="text" class="form-control" name="implementing_agency_share" value="{{ old('implementing_agency_share') }}" required>
+
+                                @if ($errors->has('implementing_agency_share'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('implementing_agency_share') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('beneficiary_share') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="beneficiary_share" class="control-label">iv. Beneficiary Share(Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="beneficiary_share" type="text" class="form-control" name="beneficiary_share" value="{{ old('beneficiary_share') }}" required>
+
+                                @if ($errors->has('beneficiary_share'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('beneficiary_share') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('total_ews_eligible') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="total_ews_eligible" class="control-label">v. Total(Rs. in Lakhs)</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="total_ews_eligible" type="text" class="form-control" name="total_ews_eligible" value="{{ old('total_ews_eligible') }}" required>
+
+                                @if ($errors->has('total_ews_eligible'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('total_ews_eligible') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('techn') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="techn" class="control-label">Whether Techn specifications/design for housing have been ensured as per Indian Standards/NBC/State norms?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="techn">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="techn" id="techn_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="techn_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="techn" id="techn_No" value="No">
+                                    <label class="form-check-label" for="techn_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('techn'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('techn') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('trunk_infrastucture') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="trunk_infrastucture" class="control-label">Whether trunk infrastructure is existing or is being provided through AMRUT or any other scheme?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="trunk_infrastucture">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="trunk_infrastucture" id="trunk_infrastucture_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="trunk_infrastucture_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="trunk_infrastucture" id="trunk_infrastucture_No" value="No">
+                                    <label class="form-check-label" for="trunk_infrastucture_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('trunk_infrastucture'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('trunk_infrastucture') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('water_supply') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="water_supply" class="control-label">Whether the provision of Civic infrastructure has been made as per applicable State norms/CPHEEO norms/IS Code/NBC?</label>
+                            <label for="water_supply" class="control-label">i. Water Supply</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="water_supply">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="water_supply" id="water_supply_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="water_supply_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="water_supply" id="water_supply_No" value="No">
+                                    <label class="form-check-label" for="water_supply_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('water_supply'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('water_supply') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('sewerage') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="sewerage" class="control-label">ii. Sewerage</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="sewerage">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sewerage" id="sewerage_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="sewerage_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sewerage" id="sewerage_No" value="No">
+                                    <label class="form-check-label" for="sewerage_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('sewerage'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('sewerage') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('road') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="road" class="control-label">iii. Road</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="road">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="road" id="road_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="road_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="road" id="road_No" value="No">
+                                    <label class="form-check-label" for="road_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('road'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('road') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('storm_water') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="storm_water" class="control-label">iv. Storm water drain</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="storm_water">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="storm_water" id="storm_water_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="storm_water_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="storm_water" id="storm_water_No" value="No">
+                                    <label class="form-check-label" for="storm_water_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('storm_water'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('storm_water') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('external_electrification') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="external_electrification" class="control-label">v. External Electrification</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="external_electrification">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="external_electrification" id="external_electrification_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="external_electrification_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="external_electrification" id="external_electrification_No" value="No">
+                                    <label class="form-check-label" for="external_electrification_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('external_electrification'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('external_electrification') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('solid_waste') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="solid_waste" class="control-label">vi. Solid Waste Management</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="solid_waste">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="solid_waste" id="solid_waste_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="solid_waste_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="solid_waste" id="solid_waste_No" value="No">
+                                    <label class="form-check-label" for="solid_waste_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('solid_waste'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('solid_waste') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('other_civic') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="other_civic" class="control-label">vii. Any Other</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="other_civic" type="text" class="form-control" name="other_civic" value="{{ old('other_civic') }}" required>
+
+                                @if ($errors->has('other_civic'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('other_civic') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('reason') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="reason" class="control-label">viii. In case,any infrastructure has not been proposed, reason thereof</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="reason" type="text" class="form-control" name="reason" value="{{ old('reason') }}" required>
+
+                                @if ($errors->has('reason'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('reason') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('social_infrastructure') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="social_infrastructure" class="control-label">Whether adequate social infrastructure facilities covered in the project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="social_infrastructure">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="social_infrastructure" id="social_infrastructure_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="social_infrastructure_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="social_infrastructure" id="social_infrastructure_No" value="No">
+                                    <label class="form-check-label" for="social_infrastructure_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('social_infrastructure'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('social_infrastructure') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('resistant') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="resistant" class="control-label">Whether disaster(earthquake, flood ,cyclone,landslide etc.) resistant features have been adopted in concept , design and implementation of the project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="resistant">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="resistant" id="resistant_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="resistant_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="resistant" id="resistant_No" value="No">
+                                    <label class="form-check-label" for="resistant_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('resistant'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('resistant') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('quality') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="quality" class="control-label">Whether Quality Assurance is part of the project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="quality">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="quality" id="quality_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="quality_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="quality" id="quality_No" value="No">
+                                    <label class="form-check-label" for="quality_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('quality'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('quality') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('o_m') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="o_m" class="control-label">Whether O&M is part of project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="o_m">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="o_m" id="o_m_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="o_m_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="o_m" id="o_m_No" value="No">
+                                    <label class="form-check-label" for="o_m_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('o_m'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('o_m') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('free_land') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="free_land" class="control-label">Whether encumbrance free land is available for the Project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="free_land">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="free_land" id="free_land_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="free_land_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="free_land" id="free_land_No" value="No">
+                                    <label class="form-check-label" for="free_land_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('free_land'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('free_land') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('innovative_tech') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="innovative_tech" class="control-label">Whether any innovative/cost effective/Green technology adopted in the project?</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="innovative_tech">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="innovative_tech" id="innovative_tech_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="innovative_tech_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="innovative_tech" id="innovative_tech_No" value="No">
+                                    <label class="form-check-label" for="innovative_tech_No">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            @if ($errors->has('innovative_tech'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('innovative_tech') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('comments') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="comments" class="control-label">Comments of SLAC after techno economic appraisal of DPR</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="comments" type="text" class="form-control" name="comments" value="{{ old('comments') }}" required>
+
+                                @if ($errors->has('comments'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('comments') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('project_brief') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="project_brief" class="control-label">Project brief including any other information ULB/State would like to furnish</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="project_brief" type="text" class="form-control" name="project_brief" value="{{ old('project_brief') }}" required>
+
+                                @if ($errors->has('project_brief'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('project_brief') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('submission_date') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="submission_date" class="control-label">Project Submission Date to SLMC</label>
+                        </div>
+                        <div class="col-md-8">
+                                <input id="submission_date" type="text" class="form-control" name="submission_date" value="{{ old('submission_date') }}" required>
+
+                                @if ($errors->has('submission_date'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('submission_date') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                    </div>
+
                 </form>
             </div>
             <div class="col-md-2"></div>
