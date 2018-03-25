@@ -925,6 +925,7 @@ to furnish</td>
 
       </tbody>
     </table>
+  <center>  <button type="submit" class="btn btn-primary">Submit</button></center>
   </div>
 
 
