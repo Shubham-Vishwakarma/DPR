@@ -7,11 +7,13 @@ use App\Phase3;
 
 class Phase3Controller extends Controller
 {
-    public function phase3_store (Request $request) {
-    	$flight = new Phase3;
+    //
+    public function display(){
+        return view('implementing_phase3');
+    }
 
-        $flight->name = $request->name;
-
-        $flight->save();
+    public function store(Request $request){
+        Phase3::create($request->all());
+        return redirect()->route('implementing_phase3');
     }
 }

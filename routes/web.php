@@ -30,6 +30,8 @@ Route::get('/implementing_phase1', function () {
 Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2', 'Phase2Controller@store');
 
+Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementing_phase3');
+Route::post('/implementing_phase3', 'Phase3Controller@store');
 
 Route::get('/implementing_phase3', function () {
     return view('implementing_phase3');
@@ -43,7 +45,6 @@ Route::get('/nodal_phase2', function () {
 Route::get('/nodal_phase3', function () {
     return view('nodal_phase3');
 });
-Route::post('/phase3', 'Phase3Controller@phase3_store');
 
 Auth::routes();
 
