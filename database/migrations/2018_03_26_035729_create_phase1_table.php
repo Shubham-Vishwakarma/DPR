@@ -26,7 +26,7 @@ class CreatePhase1Table extends Migration
             $table->string('date_of_approval');
             $table->string('project_cost');
             $table->string('project_duration');
-            $table->string('status_of_slum ');
+            $table->string('status_of_slum');
             $table->string('total_slum_area');
             $table->string('area_rehabilitation');
             $table->string('slum_pop');
