@@ -21,7 +21,7 @@
         <div class="container">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <form class="form-horizontal" method="POST" action="#">
+                <form class="form-horizontal" method="POST" action="{{ route('implementing_phase2') }}">
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('state_name') ? ' has-error' : '' }}">
@@ -326,28 +326,28 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('PMAY_guidelines') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('selected') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="PMAY_guidelines" class="control-label">Whether beneficiary has been selected as per PMAY guidelines?</label>
+                            <label for="selected" class="control-label">Whether beneficiary has been selected as per PMAY guidelines?</label>
                         </div>
                         <div class="col-md-8">
-                            <div id="PMAY_guidelines">
+                            <div id="selected">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="PMAY_guidelines" id="PMAY_guidelines_Yes" value="Yes" required>
-                                    <label class="form-check-label" for="PMAY_guidelines_Yes">
+                                    <input class="form-check-input" type="radio" name="selected" id="selected_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="selected_Yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="PMAY_guidelines" id="PMAY_guidelines_No" value="No">
-                                    <label class="form-check-label" for="PMAY_guidelines_No">
+                                    <input class="form-check-input" type="radio" name="selected" id="selected_No" value="No">
+                                    <label class="form-check-label" for="selected_No">
                                         No
                                     </label>
                                 </div>
                             </div>
-                            @if ($errors->has('PMAY_guidelines'))
+                            @if ($errors->has('selected'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('PMAY_guidelines') }}</strong>
+                                        <strong>{{ $errors->first('selected') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -561,16 +561,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('gol_grant') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('goi_grant') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="gol_grant" class="control-label">i. GOI grant required(Rs.1.50 lakh per eligible EWS house)(Rs. in Lakhs)</label>
+                            <label for="goi_grant" class="control-label">i. GOI grant required(Rs.1.50 lakh per eligible EWS house)(Rs. in Lakhs)</label>
                         </div>
                         <div class="col-md-8">
-                                <input id="gol_grant" type="text" class="form-control" name="gol_grant" value="{{ old('gol_grant') }}" required>
+                                <input id="goi_grant" type="text" class="form-control" name="goi_grant" value="{{ old('goi_grant') }}" required>
 
-                                @if ($errors->has('gol_grant'))
+                                @if ($errors->has('goi_grant'))
                                     <span class="help-block">
-                                            <strong>{{ $errors->first('gol_grant') }}</strong>
+                                            <strong>{{ $errors->first('goi_grant') }}</strong>
                                     </span>
                                 @endif
                         </div>
@@ -591,16 +591,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('land_cost') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('land_grant') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="land_cost" class="control-label">ii.a Land Cost(Rs. in Lakhs)</label>
+                            <label for="land_grant" class="control-label">ii.a Land Cost(Rs. in Lakhs)</label>
                         </div>
                         <div class="col-md-8">
-                                <input id="land_cost" type="text" class="form-control" name="land_cost" value="{{ old('land_cost') }}" required>
+                                <input id="land_grant" type="text" class="form-control" name="land_grant" value="{{ old('land_grant') }}" required>
 
-                                @if ($errors->has('land_cost'))
+                                @if ($errors->has('land_grant'))
                                     <span class="help-block">
-                                            <strong>{{ $errors->first('land_cost') }}</strong>
+                                            <strong>{{ $errors->first('land_grant') }}</strong>
                                     </span>
                                 @endif
                         </div>
@@ -651,70 +651,70 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('total_ews_eligible') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('total_share') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="total_ews_eligible" class="control-label">v. Total(Rs. in Lakhs)</label>
+                            <label for="total_share" class="control-label">v. Total(Rs. in Lakhs)</label>
                         </div>
                         <div class="col-md-8">
-                                <input id="total_ews_eligible" type="text" class="form-control" name="total_ews_eligible" value="{{ old('total_ews_eligible') }}" required>
+                                <input id="total_share" type="text" class="form-control" name="total_share" value="{{ old('total_share') }}" required>
 
-                                @if ($errors->has('total_ews_eligible'))
+                                @if ($errors->has('total_share'))
                                     <span class="help-block">
-                                            <strong>{{ $errors->first('total_ews_eligible') }}</strong>
+                                            <strong>{{ $errors->first('total_share') }}</strong>
                                     </span>
                                 @endif
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('techn') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('specifications') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="techn" class="control-label">Whether Techn specifications/design for housing have been ensured as per Indian Standards/NBC/State norms?</label>
+                            <label for="specifications" class="control-label">Whether Techn specifications/design for housing have been ensured as per Indian Standards/NBC/State norms?</label>
                         </div>
                         <div class="col-md-8">
-                            <div id="techn">
+                            <div id="specifications">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="techn" id="techn_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="specifications" id="specifications_Yes" value="Yes" required>
                                     <label class="form-check-label" for="techn_Yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="techn" id="techn_No" value="No">
-                                    <label class="form-check-label" for="techn_No">
+                                    <input class="form-check-input" type="radio" name="specifications" id="specifications_No" value="No">
+                                    <label class="form-check-label" for="specifications_No">
                                         No
                                     </label>
                                 </div>
                             </div>
-                            @if ($errors->has('techn'))
+                            @if ($errors->has('specifications'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('techn') }}</strong>
+                                        <strong>{{ $errors->first('specifications') }}</strong>
                                 </span>
                             @endif
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('trunk_infrastucture') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('trunk_infrastructure') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="trunk_infrastucture" class="control-label">Whether trunk infrastructure is existing or is being provided through AMRUT or any other scheme?</label>
+                            <label for="trunk_infrastructure" class="control-label">Whether trunk infrastructure is existing or is being provided through AMRUT or any other scheme?</label>
                         </div>
                         <div class="col-md-8">
-                            <div id="trunk_infrastucture">
+                            <div id="trunk_infrastructure">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="trunk_infrastucture" id="trunk_infrastucture_Yes" value="Yes" required>
-                                    <label class="form-check-label" for="trunk_infrastucture_Yes">
+                                    <input class="form-check-input" type="radio" name="trunk_infrastructure" id="trunk_infrastructure_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="trunk_infrastructure_Yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="trunk_infrastucture" id="trunk_infrastucture_No" value="No">
-                                    <label class="form-check-label" for="trunk_infrastucture_No">
+                                    <input class="form-check-input" type="radio" name="trunk_infrastructure" id="trunk_infrastructure_No" value="No">
+                                    <label class="form-check-label" for="trunk_infrastructure_No">
                                         No
                                     </label>
                                 </div>
                             </div>
-                            @if ($errors->has('trunk_infrastucture'))
+                            @if ($errors->has('trunk_infrastructure'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('trunk_infrastucture') }}</strong>
+                                        <strong>{{ $errors->first('trunk_infrastructure') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -829,28 +829,28 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('external_electrification') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('electrification') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="external_electrification" class="control-label">v. External Electrification</label>
+                            <label for="electrification" class="control-label">v. External Electrification</label>
                         </div>
                         <div class="col-md-8">
-                            <div id="external_electrification">
+                            <div id="electrification">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="external_electrification" id="external_electrification_Yes" value="Yes" required>
-                                    <label class="form-check-label" for="external_electrification_Yes">
+                                    <input class="form-check-input" type="radio" name="electrification" id="electrification_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="electrification_Yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="external_electrification" id="external_electrification_No" value="No">
-                                    <label class="form-check-label" for="external_electrification_No">
+                                    <input class="form-check-input" type="radio" name="electrification" id="electrification_No" value="No">
+                                    <label class="form-check-label" for="electrification_No">
                                         No
                                     </label>
                                 </div>
                             </div>
-                            @if ($errors->has('external_electrification'))
+                            @if ($errors->has('electrification'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('external_electrification') }}</strong>
+                                        <strong>{{ $errors->first('electrification') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -940,28 +940,28 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('resistant') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('disaster') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="resistant" class="control-label">Whether disaster(earthquake, flood ,cyclone,landslide etc.) resistant features have been adopted in concept , design and implementation of the project?</label>
+                            <label for="disaster" class="control-label">Whether disaster(earthquake, flood ,cyclone,landslide etc.) resistant features have been adopted in concept , design and implementation of the project?</label>
                         </div>
                         <div class="col-md-8">
-                            <div id="resistant">
+                            <div id="disaster">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="resistant" id="resistant_Yes" value="Yes" required>
-                                    <label class="form-check-label" for="resistant_Yes">
+                                    <input class="form-check-input" type="radio" name="disaster" id="disaster_Yes" value="Yes" required>
+                                    <label class="form-check-label" for="disaster_Yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="resistant" id="resistant_No" value="No">
-                                    <label class="form-check-label" for="resistant_No">
+                                    <input class="form-check-input" type="radio" name="disaster" id="disaster_No" value="No">
+                                    <label class="form-check-label" for="disaster_No">
                                         No
                                     </label>
                                 </div>
                             </div>
-                            @if ($errors->has('resistant'))
+                            @if ($errors->has('disaster'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('resistant') }}</strong>
+                                        <strong>{{ $errors->first('disaster') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -1120,6 +1120,7 @@
                         </div>
                     </div>
 
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </form>
             </div>
             <div class="col-md-2"></div>

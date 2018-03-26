@@ -26,9 +26,11 @@ Route::get('/nodal_dashboard', function () {
 Route::get('/implementing_phase1', function () {
     return view('implementing_phase1');
 });
-Route::get('/implementing_phase2', function () {
-    return view('implementing_phase2');
-});
+
+Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
+Route::post('/implementing_phase2', 'Phase2Controller@store');
+
+
 Route::get('/implementing_phase3', function () {
     return view('implementing_phase3');
 });
