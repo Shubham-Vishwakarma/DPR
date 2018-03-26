@@ -41,6 +41,7 @@ Route::get('/nodal_phase2', function () {
 Route::get('/nodal_phase3', function () {
     return view('nodal_phase3');
 });
+Route::post('/phase3', 'Phase3Controller@phase3_store');
 
 Auth::routes();
 
