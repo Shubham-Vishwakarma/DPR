@@ -11,6 +11,9 @@
 |
 */
 
+
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,9 +26,6 @@ Route::get('/implementing_dashboard', function () {
 Route::get('/nodal_dashboard', function () {
     return view('nodal_dashboard');
 });
-/*Route::get('/implementing_phase1', function () {
-    return view('implementing_phase1');
-});*/
 
 Route::get('/implementing_phase1', 'Phase1Controller@display')->name('implementing_phase1');
 Route::post('/implementing_phase1', 'Phase1Controller@store');
@@ -36,9 +36,6 @@ Route::post('/implementing_phase2', 'Phase2Controller@store');
 Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementing_phase3');
 Route::post('/implementing_phase3', 'Phase3Controller@store');
 
-Route::get('/implementing_phase3', function () {
-    return view('implementing_phase3');
-});
 Route::get('/nodal_phase1', function () {
     return view('nodal_phase1');
 });
@@ -49,6 +46,5 @@ Route::get('/nodal_phase3', function () {
     return view('nodal_phase3');
 });
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
