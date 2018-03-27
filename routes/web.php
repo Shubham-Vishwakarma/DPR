@@ -43,5 +43,3 @@ Route::get('/nodal_phase3', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
