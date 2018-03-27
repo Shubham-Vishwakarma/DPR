@@ -39,6 +39,22 @@
                         </div>
                     </div>
 
+                    <div class="form-group{{ $errors->has('district_name') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="state_name" class="control-label">Name of the District</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('state_name') }}" required autofocus>
+
+                            @if ($errors->has('district_name'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('district_name') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+
                     <div class="form-group{{ $errors->has('city_name') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
                             <label for="city_name" class="control-label">Name of the City</label>
@@ -358,14 +374,92 @@
                             <label for="eligible_slum" class="control-label">No. of eligible slum households</label>
                         </div>
                         <div class="col-md-8">
-                            <input id="eligible_slum" type="text" class="form-control" name="eligible_slum" value="{{ old('eligible_slum') }}" required>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="row" align="center">
+                                        <label for="gen_eli" class="control-label">Gen</label>
+                                    </div>
+                                    <div class="row">
+                                        <input id="gen_eli" type="text" class="form-control" name="gen_eli" value="{{ old('gen_eli') }}" required>
 
-                            @if ($errors->has('eligible_slum'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('eligible_slum') }}</strong>
-                                </span>
-                            @endif
-                        </div>
+                                        @if ($errors->has('gen_eli'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('gen_eli') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row" align="center">
+                                        <label for="sc_eli" class="control-label">SC</label>
+                                    </div>
+                                    <div class="row">
+                                        <input id="sc_eli" type="text" class="form-control" name="sc_eli" value="{{ old('sc_eli') }}" required>
+
+                                        @if ($errors->has('sc_eli'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('sc_eli') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row" align="center">
+                                        <label for="st_eli" class="control-label">ST</label>
+                                    </div>
+                                    <div class="row">
+                                        <input id="st_eli" type="text" class="form-control" name="st_eli" value="{{ old('st_eli') }}" required>
+
+                                        @if ($errors->has('st_eli'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('st_eli') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row" align="center">
+                                        <label for="obc_eli" class="control-label">OBC</label>
+                                    </div>
+                                    <div class="row">
+                                        <input id="obc_eli" type="text" class="form-control" name="obc_eli" value="{{ old('obc_eli') }}" required>
+
+                                        @if ($errors->has('obc_eli'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('obc_eli') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row" align="center">
+                                        <label for="minority_eli" class="control-label">Minority</label>
+                                    </div>
+                                    <div class="row">
+                                        <input id="minority_eli" type="text" class="form-control" name="minority_eli" value="{{ old('minority_eli') }}" required>
+
+                                        @if ($errors->has('minority_eli'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('minority_eli') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row" align="center">
+                                        <label for="total_slum_household" class="control-label">Total</label>
+                                    </div>
+                                    <div class="row">
+                                        <input id="total_slum_household" type="text" class="form-control" name="total_slum_household" value="{{ old('total_slum_household') }}" required>
+
+                                        @if ($errors->has('total_slum_household'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('total_slum_household') }}</strong>
+                                            </span>
+                                        @endif
+                                      </div>
+                                      </div>
+                                    </div></div>
                     </div>
 
                     <div class="form-group{{ $errors->has('house_proposed') ? ' has-error' : '' }}">
@@ -436,15 +530,7 @@
                         <div class="col-md-4" align="left">
                             <label for="incentive_private_partner" class="control-label">Incentives to Private Partner</label>
                         </div>
-                        <div class="col-md-8">
-                            <input id="incentive_private_partner" type="text" class="form-control" name="incentive_private_partner" value="{{ old('incentive_private_partner') }}" required>
 
-                            @if ($errors->has('incentive_private_partner'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('incentive_private_partner') }}</strong>
-                                </span>
-                            @endif
-                        </div>
                     </div>
 
                     <div class="form-group{{ $errors->has('existing_fsi') ? ' has-error' : '' }}">
@@ -964,23 +1050,11 @@
                             <label for="slac_comments" class="control-label">economic appraisal of DPR</label>
                         </div>
                         <div class="col-md-8">
-                            <div class="col-sm-10" id="slac_comments">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="slac_comments" id="slac_comments_Yes" value="Yes" required>
-                                    <label class="form-check-label" for="slac_comments_Yes">
-                                        Yes
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="slac_comments" id="slac_comments_No" value="No">
-                                    <label class="form-check-label" for="slac_comments_No">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
-                            @if ($errors->has('slac_comments'))
+                            <input id="project_brief" type="text" class="form-control" name="project_brief" value="{{ old('project_brief') }}" required>
+
+                            @if ($errors->has('project_brief'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('slac_comments') }}</strong>
+                                        <strong>{{ $errors->first('project_brief') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -998,6 +1072,23 @@
                             @if ($errors->has('project_brief'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('project_brief') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('project_brief') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="project_brief" class="control-label">Project Submission date </label>
+                            <label for="project_brief" class="control-label">to SLSMC</label>
+
+                        </div>
+                        <div class="col-md-8">
+                            <input id="private_partner_selected" type="date" class="form-control" name="private_partner_selected" value="{{ old('private_partner_selected') }}" required>
+
+                            @if ($errors->has('private_partner_selected'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('private_partner_selected') }}</strong>
                                 </span>
                             @endif
                         </div>
