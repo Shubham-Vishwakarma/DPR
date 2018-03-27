@@ -8,6 +8,7 @@ class Phase2 extends Model
 {
     //
     protected $table = 'phase2';
+    public $timestamps = false;
 
     protected $fillable = [
         'state_name',
