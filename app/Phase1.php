@@ -10,12 +10,14 @@ class Phase1 extends Model
     public $timestamps = false;
   protected $fillable = [
     'state_name',
+    'district_name',
     'city_name',
     'slum_name',
     'project_name',
     'project_code',
     'nodal_agency',
     'implementing_agency',
+    'agency_name',
     'approval_date',
     'project_cost',
     'project_duration',
@@ -28,12 +30,17 @@ class Phase1 extends Model
     'st',
     'obc',
     'minority',
-    'total_slum_household',
-    'eligible_slum',
+    'gen_eli',
+    'sc_eli',
+    'st_eli',
+    'obc_eli',
+    'minority_eli',
+    'total_slum_household_eli',
+
     'houses_proposed',
     'selected_PMAY',
     'private_partner_selected',
-    'incentive_private_partner',
+
     'existing_fsi',
     'provided_fsi',
     'other_incentives',
@@ -59,7 +66,8 @@ class Phase1 extends Model
     'encumbrance',
     'innovative',
     'slac_comments',
-    'project_brief'
+    'project_brief',
+    'sub_date'
   ];
 
 }

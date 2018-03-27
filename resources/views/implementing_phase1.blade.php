@@ -150,6 +150,22 @@
                         </div>
                     </div>
 
+                    <div class="form-group{{ $errors->has('agency_name') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+                            <label for="agency_name" class="control-label">Agency Name</label>
+
+                        </div>
+                        <div class="col-md-8">
+                            <input id="agency_name" type="text" class="form-control" name="agency_name" value="{{ old('implementing_agency') }}" required>
+
+                            @if ($errors->has('agency_name'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('agency_name') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
                     <div class="form-group{{ $errors->has('approval_date') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
                             <label for="approval_date" class="control-label">Date of approval by State Level</label>
@@ -447,14 +463,14 @@
                                 </div>
                                 <div class="col-md-2">
                                     <div class="row" align="center">
-                                        <label for="total_slum_household" class="control-label">Total</label>
+                                        <label for="total_slum_household_eli" class="control-label">Total</label>
                                     </div>
                                     <div class="row">
-                                        <input id="total_slum_household" type="text" class="form-control" name="total_slum_household" value="{{ old('total_slum_household') }}" required>
+                                        <input id="total_slum_household_eli" type="text" class="form-control" name="total_slum_household_eli" value="{{ old('total_slum_household_eli') }}" required>
 
-                                        @if ($errors->has('total_slum_household'))
+                                        @if ($errors->has('total_slum_household_eli'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('total_slum_household') }}</strong>
+                                                <strong>{{ $errors->first('total_slum_household_eli') }}</strong>
                                             </span>
                                         @endif
                                       </div>
@@ -1050,11 +1066,11 @@
                             <label for="slac_comments" class="control-label">economic appraisal of DPR</label>
                         </div>
                         <div class="col-md-8">
-                            <input id="project_brief" type="text" class="form-control" name="project_brief" value="{{ old('project_brief') }}" required>
+                            <input id="slac_comments" type="text" class="form-control" name="slac_comments" value="{{ old('slac_comments') }}" required>
 
-                            @if ($errors->has('project_brief'))
+                            @if ($errors->has('slac_comments'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('project_brief') }}</strong>
+                                        <strong>{{ $errors->first('slac_comments') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -1077,18 +1093,18 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('project_brief') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('sub_date') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="project_brief" class="control-label">Project Submission date </label>
-                            <label for="project_brief" class="control-label">to SLSMC</label>
+                            <label for="sub_date" class="control-label">Project Submission date </label>
+                            <label for="sub_date" class="control-label">to SLSMC</label>
 
                         </div>
                         <div class="col-md-8">
-                            <input id="private_partner_selected" type="date" class="form-control" name="private_partner_selected" value="{{ old('private_partner_selected') }}" required>
+                            <input id="sub_date" type="date" class="form-control" name="sub_date" value="{{ old('sub_date') }}" required>
 
-                            @if ($errors->has('private_partner_selected'))
+                            @if ($errors->has('sub_date'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('private_partner_selected') }}</strong>
+                                        <strong>{{ $errors->first('sub_date') }}</strong>
                                 </span>
                             @endif
                         </div>

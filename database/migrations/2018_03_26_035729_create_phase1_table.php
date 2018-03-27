@@ -16,12 +16,14 @@ class CreatePhase1Table extends Migration
         Schema::create('phase1', function (Blueprint $table) {
             $table->increments('id');
             $table->string('state_name');
+            $table->string('district_name');
             $table->string('city_name');
             $table->string('slum_name');
             $table->string('project_name');
             $table->string('project_code');
             $table->string('nodal_agency');
             $table->string('implementing_agency');
+            $table->string('agency_name');
             $table->string('approval_date');
             $table->string('project_cost');
             $table->string('project_duration');
@@ -34,12 +36,15 @@ class CreatePhase1Table extends Migration
             $table->string('st');
             $table->string('obc');
             $table->string('minority');
-            $table->string('total_slum_household');
-            $table->string('eligible_slum');
+            $table->string('gen_eli');
+            $table->string('sc_eli');
+            $table->string('st_eli');
+            $table->string('obc_eli');
+            $table->string('minority_eli');
+            $table->string('total_slum_household_eli');
             $table->string('houses_proposed');
             $table->string('selected_PMAY');
             $table->string('private_partner_selected');
-            $table->string('incentive_private_partner');
             $table->string('existing_fsi');
             $table->string('provided_fsi');
             $table->string('other_incentives');
@@ -66,6 +71,7 @@ class CreatePhase1Table extends Migration
             $table->string('innovative');
             $table->string('slac_comments');
             $table->string('project_brief');
+              $table->string('sub_date');
 
         });
     }
