@@ -10,7 +10,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>Phase 1</title>
+    <title>Phase 3</title>
 </head>
 
 <body>

@@ -42,8 +42,6 @@ Route::get('/nodal_phase1', function () {
 Route::get('/nodal_phase2', function () {
     return view('nodal_phase2');
 });
-Route::get('/nodal_phase3', function () {
-    return view('nodal_phase3');
-});
+Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3');
 
 Route::get('/home', 'HomeController@index')->name('home');
