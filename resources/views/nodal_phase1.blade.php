@@ -73,6 +73,7 @@
       </div>
     </div>
   -->
+  @if($phasedata)
     <table class="table table-hover">
       <thead>
         <tr>
@@ -86,7 +87,23 @@
         <tr>
           <th scope="row">1</th>
           <td>Name of State</td>
-          <td>Maharashtra</td>
+          <td>{{$phasedata->state_name}}</td>
+          <td class="align-items-center">
+            <div class="input-group ">
+              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <div class="input-group-append">
+                <button class="btn btn-outline-success" type="button">Yes</button>
+              </div>
+              <div class="input-group-append">
+                <button class="btn btn-outline-danger" type="button">No</button>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Name of District</td>
+          <td>---</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -102,7 +119,7 @@
         <tr>
           <th scope="row">2</th>
           <td>Name of City</td>
-          <td>Jalgaon</td>
+          <td>{{$phasedata->city_name}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -119,7 +136,7 @@
         <tr>
           <th scope="row">3</th>
           <td>Name of the Slum</td>
-          <td>---</td>
+          <td>{{$phasedata->slum_name}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -135,7 +152,7 @@
         <tr>
           <th scope="row">4</th>
           <td>Project Name</td>
-          <td>---</td>
+          <td>{{$phasedata->project_name}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -151,7 +168,7 @@
         <tr>
           <th scope="row">5</th>
           <td>Project Code *</td>
-          <td>---</td>
+          <td>{{$phasedata->project_code}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -167,7 +184,7 @@
         <tr>
           <th scope="row">6</th>
           <td>State Level Nodal Agency</td>
-          <td>---</td>
+          <td>{{$phasedata->nodal_agency}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -183,7 +200,7 @@
         <tr>
           <th scope="row">7</th>
           <td>Implementing Agency (Urban Local Body/ Development Authority/ Housing Board/ Urban Improvement Trust/ Designated Slum Rehabilitation Agency/ Private agency/ Developer)</td>
-          <td>---</td>
+          <td>{{$phasedata->implementing_agency}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -196,13 +213,28 @@
             </div>
           </td>
         </tr>
-
+        <tr>
+          <th scope="row">8</th>
+          <td>Implementing Agency Name</td>
+          <td>--</td>
+          <td class="align-items-center">
+            <div class="input-group ">
+              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <div class="input-group-append">
+                <button class="btn btn-outline-success" type="button">Yes</button>
+              </div>
+              <div class="input-group-append">
+                <button class="btn btn-outline-danger" type="button">No</button>
+              </div>
+            </div>
+          </td>
+        </tr>
         <tr>
           <th scope="row">8</th>
           <td>Date of approval by State Level
 Sanctioning and Monitoring
 Committee (SLSMC)</td>
-          <td>---</td>
+          <td>{{$phasedata->approval_date}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -219,7 +251,7 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">9</th>
             <td>Project Cost (Rs. In Lakhs)</td>
-            <td>---</td>
+            <td>{{$phasedata->project_cost}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -235,7 +267,7 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">10</th>
             <td>Project Duration (in months)</td>
-            <td>---</td>
+            <td>{{$phasedata->project_duration}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -251,7 +283,7 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">11.i</th>
             <td>Status of slum <br />(Please write: 1 if notified, 2 if recognised and 3 if identified)</td>
-            <td>---</td>
+            <td>{{$phasedata->slum_status}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -267,7 +299,7 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">11.ii</th>
             <td>Total slum area (Sqm.)</td>
-            <td>---</td>
+            <td>{{$phasedata->total_slum_area}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -283,7 +315,7 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">11.iii</th>
             <td>Area under slum rehabilitation (Sqm.)</td>
-            <td>---</td>
+            <td>{{$phasedata->rehabilitation_area}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -299,7 +331,7 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">11.iv</th>
             <td>Slum Population</td>
-            <td>---</td>
+            <td>{{$phasedata->slum_population}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -327,12 +359,12 @@ Committee (SLSMC)</td>
                       <th style=" font-weight: normal;">Total</th>
                     </tr>
                     <tr>
-                      <td>69</td>
-                      <td>1016</td>
-                      <td>4</td>
-                      <td>134</td>
-                      <td>-</td>
-                      <td>1223</td>
+                      <td>{{$phasedata->gen}}</td>
+                      <td>{{$phasedata->sc}}</td>
+                      <td>{{$phasedata->st}}</td>
+                      <td>{{$phasedata->obc}}</td>
+                      <td>{{$phasedata->minority}}</td>
+                      <td>{{$phasedata->total_slum_household}}</td>
                     </tr>
                   </table>
                   <h6><center>ABC Basti</center> </h6>
@@ -370,7 +402,25 @@ Committee (SLSMC)</td>
           <tr>
             <th scope="row">13</th>
             <td>No. of eligible slum households</td>
-            <td>---</td>
+            <td><h6><center>ABC Basti</center> </h6>
+            <table>
+                  <tr>
+                    <th style=" font-weight: normal;">GEN</th>
+                    <th style=" font-weight: normal;">SC</th>
+                    <th style=" font-weight: normal;">ST</th>
+                    <th style=" font-weight: normal;">OBC</th>
+                    <th style=" font-weight: normal;">Minority</th>
+                    <th style=" font-weight: normal;">Total</th>
+                  </tr>
+                  <tr>
+                    <td>{{$phasedata->gen}}</td>
+                    <td>{{$phasedata->sc}}</td>
+                    <td>{{$phasedata->st}}</td>
+                    <td>{{$phasedata->obc}}</td>
+                    <td>{{$phasedata->minority}}</td>
+                    <td>{{$phasedata->total_slum_household}}</td>
+                  </tr>
+                </table></td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -388,7 +438,7 @@ Committee (SLSMC)</td>
             <td>No. of houses proposed (slum
 rehabilitation only) with carpet
 area</td>
-            <td>---</td>
+            <td>{{$phasedata->houses_proposed}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -406,7 +456,7 @@ area</td>
             <td>Whether beneficiary have been
 selected as per PMAY guidelines?
 (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->selected_PMAY}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -425,7 +475,7 @@ selected as per PMAY guidelines?
 been selected through open
 competitive bidding? If yes, date
 of bidding</td>
-            <td>---</td>
+            <td>{{$phasedata->private_partner_selected}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -441,23 +491,15 @@ of bidding</td>
           <tr>
             <th scope="row">17</th>
             <td>Incentives to Private Partner</td>
-            <td>---</td>
+            <td></td>
             <td class="align-items-center">
-              <div class="input-group ">
-                <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-success" type="button">Yes</button>
-                </div>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-danger" type="button">No</button>
-                </div>
-              </div>
+
             </td>
           </tr>
           <tr>
             <th scope="row">17.i</th>
             <td>Existing FSI in the area</td>
-            <td>---</td>
+            <td>{{$phasedata->existing_fsi}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -473,7 +515,7 @@ of bidding</td>
           <tr>
             <th scope="row">17.ii</th>
             <td>FSI provided in the project</td>
-            <td>---</td>
+            <td>{{$phasedata->provided_fsi}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -489,7 +531,7 @@ of bidding</td>
           <tr>
             <th scope="row">17.iii</th>
             <td>Other Incentives, if any</td>
-            <td>---</td>
+            <td>{{$phasedata->other_incentives}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -507,7 +549,7 @@ of bidding</td>
             <td>GoI grant required (Rs. 1.0 lakh
 per eligible slum dweller) (Rs. In
 Lakhs)</td>
-            <td>---</td>
+            <td>{{$phasedata->goi_grant}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -524,7 +566,7 @@ Lakhs)</td>
             <th scope="row">18.ii</th>
             <td>State grant, if any (Rs. In
 Lakhs)</td>
-            <td>---</td>
+            <td>{{$phasedata->state_grant}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -540,7 +582,7 @@ Lakhs)</td>
           <tr>
             <th scope="row">18.iii</th>
             <td>ULB grant, if any (Rs. In Lakhs)</td>
-            <td>---</td>
+            <td>{{$phasedata->ulb_grant}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -557,7 +599,7 @@ Lakhs)</td>
             <th scope="row">18.iv</th>
             <td>Beneficiary Share (Rs. In
 Lakhs)</td>
-            <td>---</td>
+            <td>{{$phasedata->beneficiary_share}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -573,7 +615,7 @@ Lakhs)</td>
           <tr>
             <th scope="row"></th>
             <td>Total (Rs. In Lakhs)</td>
-            <td>---</td>
+            <td>{{$phasedata->total_grant}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -592,7 +634,7 @@ Lakhs)</td>
 specification/design for housing
 have been ensured as per Indian
 Standards/NBC/ State norms?</td>
-            <td>---</td>
+            <td>{{$phasedata->specification}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -612,7 +654,7 @@ for beneficiaries during
 construction period provided in
 the project (Rent / Transit
 Shelter)</td>
-            <td>---</td>
+            <td>{{$phasedata->temporary}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -922,10 +964,32 @@ to furnish</td>
               </div>
             </td>
           </tr>
+          <tr>
+            <th scope="row">29</th>
+            <td>Project Submission Date</td>
+            <td>---</td>
+            <td class="align-items-center">
+              <div class="input-group ">
+                <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-success" type="button">Yes</button>
+                </div>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-danger" type="button">No</button>
+                </div>
+              </div>
+            </td>
+          </tr>
 
       </tbody>
     </table>
   <center>  <button type="submit" class="btn btn-primary">Submit</button></center>
+  @else
+      <div align="center">
+          <h1>Nothing to display</h1>
+      </div>
+  @endif
+
   </div>
 
 
