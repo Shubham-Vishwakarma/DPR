@@ -103,7 +103,7 @@
         <tr>
           <th scope="row">2</th>
           <td>Name of District</td>
-          <td>---</td>
+          <td>{{$phasedata->district_name}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -216,7 +216,7 @@
         <tr>
           <th scope="row">8</th>
           <td>Implementing Agency Name</td>
-          <td>--</td>
+          <td>{{$phasedata->agency_name}}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -413,12 +413,12 @@ Committee (SLSMC)</td>
                     <th style=" font-weight: normal;">Total</th>
                   </tr>
                   <tr>
-                    <td>{{$phasedata->gen}}</td>
-                    <td>{{$phasedata->sc}}</td>
-                    <td>{{$phasedata->st}}</td>
-                    <td>{{$phasedata->obc}}</td>
-                    <td>{{$phasedata->minority}}</td>
-                    <td>{{$phasedata->total_slum_household}}</td>
+                    <td>{{$phasedata->gen_eli}}</td>
+                    <td>{{$phasedata->sc_eli}}</td>
+                    <td>{{$phasedata->st_eli}}</td>
+                    <td>{{$phasedata->obc_eli}}</td>
+                    <td>{{$phasedata->minority_eli}}</td>
+                    <td>{{$phasedata->total_slum_household_eli}}</td>
                   </tr>
                 </table></td>
             <td class="align-items-center">
@@ -673,7 +673,7 @@ Shelter)</td>
 existing or is being provided
 through AMRUT or any other
 scheme? (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->trunk_infrastructure}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -693,23 +693,14 @@ infrastructure has been made as
 per applicable State
 norms/CPHEEO norms/IS
 Code/NBC?</td>
-            <td>---</td>
+            <td></td>
             <td class="align-items-center">
-              <div class="input-group ">
-                <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-success" type="button">Yes</button>
-                </div>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-danger" type="button">No</button>
-                </div>
-              </div>
             </td>
           </tr>
           <tr>
             <th scope="row">22.i</th>
             <td>Water Supply (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->water_supply}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -725,7 +716,7 @@ Code/NBC?</td>
           <tr>
             <th scope="row">22.ii</th>
             <td>Sewerage (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->sewerage}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -741,7 +732,7 @@ Code/NBC?</td>
           <tr>
             <th scope="row">22.iii</th>
             <td>Road (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->road}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -757,7 +748,7 @@ Code/NBC?</td>
           <tr>
             <th scope="row">22.iv</th>
             <td>Storm Water Drain (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->storm_water_drain}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -774,7 +765,7 @@ Code/NBC?</td>
             <th scope="row">22.v</th>
             <td>External Electrification
 (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->electrification}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -791,7 +782,7 @@ Code/NBC?</td>
             <th scope="row">22.vi</th>
             <td>Solid Waste Management
 (Yes/No)</td>
-            <td>---</td>
+            <td>{{$phasedata->solid_waste}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -807,7 +798,7 @@ Code/NBC?</td>
           <tr>
             <th scope="row">22.vii</th>
             <td>Any other, specify</td>
-            <td>---</td>
+            <td>{{$phasedata->other_infrastructure}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -825,7 +816,7 @@ Code/NBC?</td>
             <td>In case, any infrastructure
 has not been proposed, reasons
 thereof</td>
-            <td>---</td>
+            <td>{{$phasedata->reasons}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -845,7 +836,7 @@ flood, cyclone, landslide etc.)
 resistant features have been
 adopted in concept, design and
 implementation of the project?</td>
-            <td>---</td>
+            <td>{{$phasedata->disaster}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -863,7 +854,7 @@ implementation of the project?</td>
             <td>Whether Quality Assurance is
 part of the Project, if not, how it
 is proposed to be ensured?</td>
-            <td>---</td>
+            <td>{{$phasedata->quality}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -880,7 +871,7 @@ is proposed to be ensured?</td>
             <th scope="row">25</th>
             <td>Whether O&M is part of Project,
 if yes, for how many years?</td>
-            <td>---</td>
+            <td>{{$phasedata->o_and_m}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -898,7 +889,7 @@ if yes, for how many years?</td>
             <td>Whether encumbrance free land
 is available for the project or
 not?</td>
-            <td>---</td>
+            <td>{{$phasedata->encumbrance}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -916,7 +907,7 @@ not?</td>
             <td>Whether any innovative/cost
 effective/Green technology
 adopted in the project?</td>
-            <td>---</td>
+            <td>{{$phasedata->innovative}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -933,7 +924,7 @@ adopted in the project?</td>
             <th scope="row">28</th>
             <td>Comments of SLAC after techno
 economic appraisal of DPR</td>
-            <td>---</td>
+            <td>{{$phasedata->slac_comments}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -951,7 +942,7 @@ economic appraisal of DPR</td>
             <td>Project brief including any other
 information ULB/State would like
 to furnish</td>
-            <td>---</td>
+            <td>{{$phasedata->project_brief}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -967,7 +958,7 @@ to furnish</td>
           <tr>
             <th scope="row">29</th>
             <td>Project Submission Date</td>
-            <td>---</td>
+            <td>{{$phasedata->sub_date}}</td>
             <td class="align-items-center">
               <div class="input-group ">
                 <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
