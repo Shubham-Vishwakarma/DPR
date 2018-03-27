@@ -10,7 +10,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>Phase 1</title>
+    <title>Phase 3</title>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
 <div class="container">
 
-    <form class="form-horizontal" method="POST" action="#">
+    <form class="form-horizontal" method="POST" action="{{ route('implementing_phase3') }}">
         {{ csrf_field() }}
 
         <table class="table table-responsive table-hover">

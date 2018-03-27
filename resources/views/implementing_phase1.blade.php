@@ -21,7 +21,7 @@
         <div class="container">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <form class="form-horizontal" method="POST" action="#">
+                <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1') }}">
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('state_name') ? ' has-error' : '' }}">
@@ -555,22 +555,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('beneficiary_share') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="beneficiary_share" class="control-label">iv. Beneficiary Share (Rs. In
-                                Lakhs)</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input id="beneficiary_share" type="text" class="form-control" name="beneficiary_share" value="{{ old('beneficiary_share') }}" required>
-
-                            @if ($errors->has('beneficiary_share'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('beneficiary_share') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-
                     <div class="form-group{{ $errors->has('total_grant') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
                             <label for="total_grant" class="control-label">Total (Rs. In Lakhs)</label>
@@ -624,10 +608,10 @@
 
                     <div class="form-group{{ $errors->has('trunk_infrastructure') ? ' has-error' : '' }}">
                         <div class="col-md-4" align="left">
-                            <label for="trunk_infrastructure" class="control-label">Type of temporary arrangement</label>
-                            <label for="trunk_infrastructure" class="control-label">for beneficiaries during</label>
-                            <label for="trunk_infrastructure" class="control-label">construction period provided in</label>
-                            <label for="trunk_infrastructure" class="control-label">the project (Rent/Transit Shelter)</label>
+                            <label for="trunk_infrastructure" class="control-label">Whether trunk infrastructure</label>
+                            <label for="trunk_infrastructure" class="control-label">is existing or is being</label>
+                            <label for="trunk_infrastructure" class="control-label">provided through AMRUT</label>
+                            <label for="trunk_infrastructure" class="control-label">or any other scheme?</label>
                         </div>
                         <div class="col-md-8">
                             <div class="col-sm-10" id="trunk_infrastructure_label">

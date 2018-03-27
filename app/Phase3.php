@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Phase3 extends Model
 {
+    protected $table = 'phase3';
+    public $timestamps = false;
+
     protected $fillable = [
-        'id',
         'state_name',
         'district_name',
         'city_name',
@@ -21,7 +23,7 @@ class Phase3 extends Model
         'sc',
         'st',
         'obc',
-        'minority'
+        'minority',
         'total_slum_household',
         'construct_gen',
         'construct_sc',
@@ -64,6 +66,4 @@ class Phase3 extends Model
         'project_brief',
         'submission_date'
     ];
-
-    protected $table = 'phase3';
 }
