@@ -64,10 +64,10 @@ class Phase2 extends Model
         'disaster',
         'quality',
         'o_m',
-        'free_land',
-        'innovative_tech',
-        'comments',
-        'project_brief',
+        'encumbrance',
+        'innovative',
+        'slac_comments',
+        'brief',
         'submission_date'
     ];
 }

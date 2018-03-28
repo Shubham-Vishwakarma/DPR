@@ -68,10 +68,10 @@ class CreatePhase2Table extends Migration
             $table->string('disaster');
             $table->string('quality');
             $table->string('o_m');
-            $table->string('free_land');
-            $table->string('innovative_tech');
-            $table->string('comments');
-            $table->string('project_brief');
+            $table->string('encumbrance');
+            $table->string('innovative');
+            $table->string('slac_comments');
+            $table->string('brief');
             $table->string('submission_date');
             $table->timestamps();
         });

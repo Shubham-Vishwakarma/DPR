@@ -816,7 +816,7 @@
         <tr>
           <th scope="row">28</th>
           <td>Whether encumbrance free land is available for the Project?</td>
-          <td>{{ $phase2->free_land }}</td>
+          <td>{{ $phase2->encumbrance }}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -832,7 +832,7 @@
         <tr>
           <th scope="row">29</th>
           <td>Whether any innovative/cost effective/Green technology adopted in the project?</td>
-          <td>{{ $phase2->innovative_tech }}</td>
+          <td>{{ $phase2->innovative }}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -848,7 +848,7 @@
         <tr>
           <th scope="row">30</th>
           <td>Comments of SLAC after techno economic appraisal of DPR</td>
-          <td>{{ $phase2->comments }}</td>
+          <td>{{ $phase2->slac_comments }}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
@@ -864,7 +864,7 @@
         <tr>
           <th scope="row">31</th>
           <td>Project brief including any other information ULB/State would like to furnish</td>
-          <td>{{ $phase2->project_brief }}</td>
+          <td>{{ $phase2->brief }}</td>
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>

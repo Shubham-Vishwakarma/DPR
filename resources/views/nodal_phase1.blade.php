@@ -199,7 +199,7 @@
         </tr>
         <tr>
           <th scope="row">7</th>
-          <td>Implementing Agency (Urban Local Body/ Development Authority/ Housing Board/ Urban Improvement Trust/ Designated Slum Rehabilitation Agency/ Private agency/ Developer)</td>
+          <td>Implementing Agency</td>
           <td>{{$phasedata->implementing_agency}}</td>
           <td class="align-items-center">
             <div class="input-group ">
@@ -282,7 +282,7 @@ Committee (SLSMC)</td>
           </tr>
           <tr>
             <th scope="row">11.i</th>
-            <td>Status of slum <br />(Please write: 1 if notified, 2 if recognised and 3 if identified)</td>
+            <td>Status of slum <br />(1 if notified, 2 if recognised and 3 if identified)</td>
             <td>{{$phasedata->slum_status}}</td>
             <td class="align-items-center">
               <div class="input-group ">
@@ -367,25 +367,6 @@ Committee (SLSMC)</td>
                       <td>{{$phasedata->total_slum_household}}</td>
                     </tr>
                   </table>
-                  <h6><center>ABC Basti</center> </h6>
-                  <table >
-                    <tr>
-                      <th style=" font-weight: normal;">GEN</th>
-                      <th style=" font-weight: normal;">SC</th>
-                      <th style=" font-weight: normal;">ST</th>
-                      <th style=" font-weight: normal;">OBC</th>
-                      <th style=" font-weight: normal;">Minority</th>
-                      <th style=" font-weight: normal;">Total</th>
-                    </tr>
-                        <tr>
-                          <td>69</td>
-                          <td>1016</td>
-                          <td>4</td>
-                          <td>134</td>
-                            <td>-</td>
-                          <td>1223</td>
-                        </tr>
-                      </table>
           </td>
             <td class="align-items-center">
               <div class="input-group ">
@@ -613,7 +594,7 @@ Lakhs)</td>
             </td>
           </tr>
           <tr>
-            <th scope="row"></th>
+            <th scope="row">18.v</th>
             <td>Total (Rs. In Lakhs)</td>
             <td>{{$phasedata->total_grant}}</td>
             <td class="align-items-center">

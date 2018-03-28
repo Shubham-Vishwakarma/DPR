@@ -121,9 +121,7 @@
                 </tr>
                 <tr>
                     <td><label for="implementing_agency" class="control-label">7</label></td>
-                    <td><label for="implementing_agency" class="control-label">(Urban Local Body/ Development Authority/ Housing</label>
-                    <label for="implementing_agency" class="control-label">Board/ Urban Improvement Trust/ Designated Slum</label>
-                    <label for="implementing_agency" class="control-label">Rehabilitation Agency/ Private agency/ Developer)</label></td>
+                    <td><label for="implementing_agency" class="control-label">Implementing Agency</label>
 					<td>
                         <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ old('implementing_agency') }}" required>
 
@@ -181,14 +179,14 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="row" align="center">
-                                    <label for="infrastucture" class="control-label">Infrastucture</label>
+                                    <label for="infrastructure" class="control-label">Infrastructure</label>
                                 </div>
                                 <div class="row">
-                                    <input id="infrastucture" type="text" class="form-control" name="infrastucture" value="{{ old('infrastucture') }}" required>
+                                    <input id="infrastructure" type="text" class="form-control" name="infrastructure" value="{{ old('infrastructure') }}" required>
 
-                                    @if ($errors->has('infrastucture'))
+                                    @if ($errors->has('infrastructure'))
                                         <span class="help-block">
-                                                <strong>{{ $errors->first('infrastucture') }}</strong>
+                                                <strong>{{ $errors->first('infrastructure') }}</strong>
                                             </span>
                                     @endif
                                 </div>
@@ -209,14 +207,14 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="row" align="center">
-                                    <label for="total" class="control-label">Total</label>
+                                    <label for="total_project_cost" class="control-label">Total</label>
                                 </div>
                                 <div class="row">
-                                    <input id="total" type="text" class="form-control" name="total" value="{{ old('total') }}" required>
+                                    <input id="total_project_cost" type="text" class="form-control" name="total_project_cost" value="{{ old('total_project_cost') }}" required>
 
-                                    @if ($errors->has('total'))
+                                    @if ($errors->has('total_project_cost'))
                                         <span class="help-block">
-                                                <strong>{{ $errors->first('total') }}</strong>
+                                                <strong>{{ $errors->first('total_project_cost') }}</strong>
                                             </span>
                                     @endif
                                 </div>
@@ -317,29 +315,29 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="selected_PMAY_label" class="control-label">12</label></td>
+                    <td><label for="selected" class="control-label">12</label></td>
                     <td>
-                        <label for="selected_PMAY_label" class="control-label">Whether beneficiaries have been</label>
-                        <label for="selected_PMAY_label" class="control-label">selected as per PMAY guidelines?</label>
+                        <label for="selected" class="control-label">Whether beneficiaries have been</label>
+                        <label for="selected" class="control-label">selected as per PMAY guidelines?</label>
                     </td>
                     <td>
-                        <div class="col-sm-10" id="selected_PMAY_label">
+                        <div class="col-sm-10" id="selected">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="selected_PMAY" id="selected_PMAY_Yes" value="Yes" required>
-                                <label class="form-check-label" for="selected_PMAY_Yes">
+                                <input class="form-check-input" type="radio" name="selected" id="selected_Yes" value="Yes" required>
+                                <label class="form-check-label" for="selected_Yes">
                                     Yes
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="selected_PMAY" id="selected_PMAY_No" value="No">
-                                <label class="form-check-label" for="selected_PMAY_No">
+                                <input class="form-check-input" type="radio" name="selected" id="selected_No" value="No">
+                                <label class="form-check-label" for="selected_No">
                                     No
                                 </label>
                             </div>
                         </div>
-                        @if ($errors->has('selected_PMAY'))
+                        @if ($errors->has('selected'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('selected_PMAY') }}</strong>
+                                        <strong>{{ $errors->first('selected') }}</strong>
                                 </span>
                         @endif
                     </td>
@@ -607,16 +605,16 @@
                 </tr>
 				
 				<tr>
-                    <td><label for="implementing_agency_grant" class="control-label">19.iii)</label></td>
+                    <td><label for="implementing_agency_share" class="control-label">19.iii)</label></td>
                     <td>
-                        <label for="implementing_agency_grant" class="control-label">Implementing Agency Grant (Rs. In Lakhs)</label>
+                        <label for="implementing_agency_share" class="control-label">Implementing Agency Grant (Rs. In Lakhs)</label>
                     </td>
                     <td>
-                        <input id="implementing_agency_grant" type="text" class="form-control" name="implementing_agency_grant" value="{{ old('implementing_agency_grant') }}" required>
+                        <input id="implementing_agency_share" type="text" class="form-control" name="implementing_agency_share" value="{{ old('implementing_agency_share') }}" required>
 
-                        @if ($errors->has('implementing_agency_grant'))
+                        @if ($errors->has('implementing_agency_share'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('implementing_agency_grant') }}</strong>
+                                        <strong>{{ $errors->first('implementing_agency_share') }}</strong>
                                 </span>
                         @endif
                     </td>
@@ -638,16 +636,16 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="total_grant" class="control-label">19.v)</label></td>
+                    <td><label for="total_share" class="control-label">19.v)</label></td>
                     <td>
-                        <label for="total_grant" class="control-label">Total (Rs. In Lakhs)</label>
+                        <label for="total_share" class="control-label">Total (Rs. In Lakhs)</label>
                     </td>
                     <td>
-                        <input id="total_grant" type="text" class="form-control" name="total_grant" value="{{ old('total_grant') }}" required>
+                        <input id="total_share" type="text" class="form-control" name="total_share" value="{{ old('total_share') }}" required>
 
-                        @if ($errors->has('total_grant'))
+                        @if ($errors->has('total_share'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('total_grant') }}</strong>
+                                        <strong>{{ $errors->first('total_share') }}</strong>
                                 </span>
                         @endif
                     </td>
@@ -719,25 +717,6 @@
 						<label for="civic_infrastructure" class="control-label">CPHEEO norms/IS Code/NBC?</label>
                     </td>
                     <td>
-                        <div class="col-sm-10" id="civic_infrastructure">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="civic_infrastructure" id="civic_infrastructure_Yes" value="Yes" required>
-                                <label class="form-check-label" for="civic_infrastructure_Yes">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="civic_infrastructure" id="civic_infrastructure_No" value="No">
-                                <label class="form-check-label" for="civic_infrastructure_No">
-                                    No
-                                </label>
-                            </div>
-                        </div>
-                        @if ($errors->has('civic_infrastructure'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('civic_infrastructure') }}</strong>
-                            </span>
-                        @endif
                     </td>
                 </tr>
                 <tr>
@@ -824,26 +803,26 @@
                 <tr>
                     <td><label class="control-label">22.iv)</label></td>
                     <td>
-                        <label for="storm_water_drain" class="control-label">Storm Water Drain</label>
+                        <label for="storm_water" class="control-label">Storm Water Drain</label>
                     </td>
                     <td>
-                        <div class="col-sm-10" id="storm_water_drain">
+                        <div class="col-sm-10" id="storm_water">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="storm_water_drain" id="storm_water_drain_Yes" value="Yes" required>
-                                <label class="form-check-label" for="storm_water_drain_Yes">
+                                <input class="form-check-input" type="radio" name="storm_water" id="storm_water_Yes" value="Yes" required>
+                                <label class="form-check-label" for="storm_water_Yes">
                                     Yes
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="storm_water_drain" id="storm_water_drain_No" value="No">
-                                <label class="form-check-label" for="storm_water_drain_No">
+                                <input class="form-check-input" type="radio" name="storm_water" id="storm_water_No" value="No">
+                                <label class="form-check-label" for="storm_water_No">
                                     No
                                 </label>
                             </div>
                         </div>
-                        @if ($errors->has('storm_water_drain'))
+                        @if ($errors->has('storm_water'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('storm_water_drain') }}</strong>
+                                        <strong>{{ $errors->first('storm_water') }}</strong>
                                 </span>
                         @endif
                     </td>
@@ -905,14 +884,14 @@
                 <tr>
                     <td><label class="control-label">22.vii)</label></td>
                     <td>
-                        <label for="other_infrastructure" class="control-label">vii. Any other, specify</label>
+                        <label for="other_civic" class="control-label">vii. Any other, specify</label>
                     </td>
                     <td>
-                        <input id="other_infrastructure" type="text" class="form-control" name="other_infrastructure" value="{{ old('other_infrastructure') }}" required>
+                        <input id="other_civic" type="text" class="form-control" name="other_civic" value="{{ old('other_civic') }}" required>
 
-                        @if ($errors->has('other_infrastructure'))
+                        @if ($errors->has('other_civic'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('other_infrastructure') }}</strong>
+                                        <strong>{{ $errors->first('other_civic') }}</strong>
                                 </span>
                         @endif
                     </td>
@@ -920,15 +899,15 @@
                 <tr>
                     <td><label class="control-label">22.viii)</label></td>
                     <td>
-                        <label for="reasons" class="control-label">In case, any infrastructure has not been proposed, reasons</label>
-                        <label for="reasons" class="control-label">thereof</label>
+                        <label for="reason" class="control-label">In case, any infrastructure has not been proposed, reasons</label>
+                        <label for="reason" class="control-label">thereof</label>
                     </td>
                     <td>
-                        <input id="reasons" type="text" class="form-control" name="reasons" value="{{ old('reasons') }}" required>
+                        <input id="reason" type="text" class="form-control" name="reason" value="{{ old('reason') }}" required>
 
-                        @if ($errors->has('reasons'))
+                        @if ($errors->has('reason'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('reasons') }}</strong>
+                                        <strong>{{ $errors->first('reason') }}</strong>
                                 </span>
                         @endif
                     </td>
@@ -1147,7 +1126,7 @@
                         <label for="submission_date" class="control-label">Project Submission Date to SLMC</label>
                     </td>
                     <td>
-                        <input id="submission_date" type="text" class="form-control" name="submission_date" value="{{ old('submission_date') }}" required>
+                        <input id="submission_date" type="date" class="form-control" name="submission_date" value="{{ old('submission_date') }}" required>
 
                         @if ($errors->has('submission_date'))
                             <span class="help-block">

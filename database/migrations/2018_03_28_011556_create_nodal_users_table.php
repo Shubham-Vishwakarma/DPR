@@ -13,8 +13,8 @@ class CreateNodalUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('nodal_users', function (Blueprint $table) {
-            $table->increments('emp_id');
+        Schema::create('nodal_users', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('emp_name');
             $table->string('username');
             $table->string('password');
@@ -31,8 +31,6 @@ class CreateNodalUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('nodal_users', function (Blueprint $table) {
-            Schema::dropIfExists('nodal_users');
-        });
+        Schema::dropIfExists('nodal_users');
     }
 }
