@@ -7,6 +7,7 @@ use App\License;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
 
 class RegisterController extends Controller
 {
@@ -64,12 +65,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $licensed_user = License::where('email','=',$data['email'])->where('email','=',$data['email'])
+        $licensed_user = License::where('license','=',$data['license'])->where('email','=',$data['email'])
                                 ->where('phone','=',$data['phone'])->first();
 
-        error_log('Licensed_user = ' . $licensed_user->name);
+        //error_log('Licensed_user = ' . $licensed_user->name);
 
         if($licensed_user){
+          //  sendMail($licensed_user->name,$data['password']);
+          $data1 = array('name'=>$licensed_user->name,
+          'pass'=>$data['password'],
+          'email'=>$licensed_user->email,
+          'end' => "This is Auto-generated mail. Dont't Reply.");
+          Mail::send('emails.mail', $data1, function($message) use ($data1) {
+          $message->to($data1['email'],$data1['name'])
+                  ->subject('Registration Completed');
+          $message->from('yogmah6@gmail.com','Yog Mah');
+
+      });
+
             return User::create([
                 'username' => $licensed_user->name,
                 'license' => $licensed_user->license,
@@ -78,8 +91,21 @@ class RegisterController extends Controller
                 'phone' => $licensed_user->phone,
                 'builder_id' => $licensed_user->builder_id
             ]);
+
         }
 
-        return $licensed_user;
+      return $licensed_user;
     }
+  /*  public static function sendMail($username,$pass){
+      $data = array('name'=>$username,
+      "pass"=>$pass,
+      "end" => "This is Auto-generated mail. Dont't Reply.");
+	    Mail::send('emails.mail', $data, function($message) {
+	    $message->to('yogmah6@gmail.com', 'Yog Mah')
+	            ->subject('Registration Completed');
+	    $message->from('yogmah6@gmail.com','Yog Mah');
+
+	});
+
+}*/
 }
