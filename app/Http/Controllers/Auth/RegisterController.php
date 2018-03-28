@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\License;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -48,8 +49,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'license' => 'required|string|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required|string|',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -62,10 +64,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $licensed_user = License::where('email','=',$data['email'])->where('email','=',$data['email'])
+                                ->where('phone','=',$data['phone'])->first();
+
+        error_log('Licensed_user = ' . $licensed_user->name);
+
+        if($licensed_user){
+            return User::create([
+                'username' => $licensed_user->name,
+                'license' => $licensed_user->license,
+                'email' => $licensed_user->email,
+                'password' => bcrypt($data['password']),
+                'phone' => $licensed_user->phone,
+                'builder_id' => $licensed_user->builder_id
+            ]);
+        }
+
+        return $licensed_user;
     }
 }
