@@ -19,47 +19,49 @@
         </div>
 
         <div class="container">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1') }}">
-                    {{ csrf_field() }}
 
-                    <div class="form-group{{ $errors->has('state_name') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="state_name" class="control-label">Name of the State</label>
-                        </div>
-                        <div class="col-md-8">
+            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase2') }}">
+                {{ csrf_field() }}
+                <br>
+                <table class="table table-responsive table-hover">
+                    <thead>
+                    <tr>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-5">Title</th>
+                        <th class="col-md-6">Answers</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><label for="state_name" class="control-label">1</label></td>
+                        <td><label for="state_name" class="control-label">Name of the State</label></td>
+                        <td>
                             <input id="state_name" type="text" class="form-control" name="state_name" value="{{ old('state_name') }}" required autofocus>
 
                             @if ($errors->has('state_name'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('state_name') }}</strong>
-                                </span>
+                                            <strong>{{ $errors->first('state_name') }}</strong>
+                                    </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('district_name') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="state_name" class="control-label">Name of the District</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="state_name" class="control-label">2</label></td>
+                        <td><label for="state_name" class="control-label">Name of the District</label></td>
+                        <td>
                             <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('state_name') }}" required autofocus>
 
                             @if ($errors->has('district_name'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('district_name') }}</strong>
-                                </span>
+                                            <strong>{{ $errors->first('district_name') }}</strong>
+                                    </span>
                             @endif
-                        </div>
-                    </div>
-
-
-                    <div class="form-group{{ $errors->has('city_name') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="city_name" class="control-label">Name of the City</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="city_name" class="control-label">3</label></td>
+                        <td><label for="city_name" class="control-label">Name of the City</label></td>
+                        <td>
                             <input id="city_name" type="text" class="form-control" name="city_name" value="{{ old('city_name') }}" required>
 
                             @if ($errors->has('city_name'))
@@ -67,14 +69,12 @@
                                         <strong>{{ $errors->first('city_name') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('slum_name') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="slum_name" class="control-label">Name of the Slum</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="slum_name" class="control-label">4</label></td>
+                        <td><label for="slum_name" class="control-label">Name of the Slum</label></td>
+                        <td>
                             <input id="slum_name" type="text" class="form-control" name="slum_name" value="{{ old('slum_name') }}" required>
 
                             @if ($errors->has('slum_name'))
@@ -82,14 +82,12 @@
                                         <strong>{{ $errors->first('slum_name') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('project_name') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="project_name" class="control-label">Project Name</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="project_name" class="control-label">5</label></td>
+                        <td><label for="project_name" class="control-label">Project Name</label></td>
+                        <td>
                             <input id="project_name" type="text" class="form-control" name="project_name" value="{{ old('project_name') }}" required>
 
                             @if ($errors->has('project_name'))
@@ -97,14 +95,12 @@
                                         <strong>{{ $errors->first('project_name') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('project_code') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="project_code" class="control-label">Project Code</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="project_code" class="control-label">6</label></td>
+                        <td><label for="project_code" class="control-label">Project Code</label></td>
+                        <td>
                             <input id="project_code" type="text" class="form-control" name="project_code" value="{{ old('project_code') }}" required>
 
                             @if ($errors->has('project_code'))
@@ -112,14 +108,12 @@
                                         <strong>{{ $errors->first('slum_name') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('nodal_agency') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="nodal_agency" class="control-label">State Level Nodal Agency</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="nodal_agency" class="control-label">7</label></td>
+                        <td><label for="nodal_agency" class="control-label">State Level Nodal Agency</label></td>
+                        <td>
                             <input id="nodal_agency" type="text" class="form-control" name="nodal_agency" value="{{ old('nodal_agency') }}" required>
 
                             @if ($errors->has('nodal_agency'))
@@ -127,19 +121,12 @@
                                         <strong>{{ $errors->first('nodal_agency') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('implementing_agency') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="implementing_agency" class="control-label">Implementing Agency (Urban</label>
-                            <label for="implementing_agency" class="control-label">Local Body/ Development</label>
-                            <label for="implementing_agency" class="control-label">Authority/ Housing Board/Urban</label>
-                            <label for="implementing_agency" class="control-label">Improvement Trust/ Designated</label>
-                            <label for="implementing_agency" class="control-label">Slum Rehabilitation Agency/</label>
-                            <label for="implementing_agency" class="control-label">Private agency/ Developer)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="implementing_agency" class="control-label">8</label></td>
+                        <td><label for="implementing_agency" class="control-label">Implementing Agency</label></td>
+                        <td>
                             <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ old('implementing_agency') }}" required>
 
                             @if ($errors->has('implementing_agency'))
@@ -147,15 +134,12 @@
                                         <strong>{{ $errors->first('implementing_agency') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('agency_name') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="agency_name" class="control-label">Agency Name</label>
-
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="agency_name" class="control-label">9</label></td>
+                        <td><label for="agency_name" class="control-label">Implementing Agency Name</label></td>
+                        <td>
                             <input id="agency_name" type="text" class="form-control" name="agency_name" value="{{ old('implementing_agency') }}" required>
 
                             @if ($errors->has('agency_name'))
@@ -163,16 +147,16 @@
                                         <strong>{{ $errors->first('agency_name') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('approval_date') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="approval_date" class="control-label">10</label></td>
+                        <td>
                             <label for="approval_date" class="control-label">Date of approval by State Level</label>
                             <label for="approval_date" class="control-label">Sanctioning and Monitoring</label>
                             <label for="approval_date" class="control-label">Committee (SLSMC)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <input id="approval_date" type="text" class="form-control" name="approval_date" value="{{ old('approval_date') }}" required>
 
                             @if ($errors->has('approval_date'))
@@ -180,14 +164,14 @@
                                         <strong>{{ $errors->first('approval_date') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('project_cost') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="project_cost" class="control-label">11</label></td>
+                        <td>
                             <label for="project_cost" class="control-label">Project Cost (Rs. In Lakhs)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ old('project_cost') }}" required>
 
                             @if ($errors->has('project_cost'))
@@ -195,14 +179,14 @@
                                         <strong>{{ $errors->first('project_cost') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('project_duration') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="project_duration" class="control-label">12</label></td>
+                        <td>
                             <label for="project_duration" class="control-label">Project Duration (in months)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ old('project_duration') }}" required>
 
                             @if ($errors->has('project_duration'))
@@ -210,14 +194,14 @@
                                         <strong>{{ $errors->first('project_duration') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('slum_status') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="slum" class="control-label">i) Status of Slum</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="slum" class="control-label">13.i)</label></td>
+                        <td>
+                            <label for="slum" class="control-label">Status of Slum</label>
+                        </td>
+                        <td>
                             <div class="col-sm-10" id="slum">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="slum_status" id="slum_status_1" value="1" required>
@@ -243,14 +227,14 @@
                                         <strong>{{ $errors->first('slum_status') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('total_slum_area') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="total_slum_area" class="control-label">ii) Total slum area(Sqm.)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="slum" class="control-label">13.ii)</label></td>
+                        <td>
+                            <label for="total_slum_area" class="control-label">Total slum area(Sqm.)</label>
+                        </td>
+                        <td>
                             <input id="total_slum_area" type="text" class="form-control" name="total_slum_area" value="{{ old('total_slum_area') }}" required>
 
                             @if ($errors->has('total_slum_area'))
@@ -258,14 +242,14 @@
                                         <strong>{{ $errors->first('total_slum_area') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('rehabilitation_area') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="rehabilitation_area" class="control-label">iii)Area under rehabilitation(Sqm.)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="rehabilitation_area" class="control-label">13.iii)</label></td>
+                        <td>
+                            <label for="rehabilitation_area" class="control-label">Area under rehabilitation(Sqm.)</label>
+                        </td>
+                        <td>
                             <input id="rehabilitation_area" type="text" class="form-control" name="rehabilitation_area" value="{{ old('rehabilitation_area') }}" required>
 
                             @if ($errors->has('rehabilitation_area'))
@@ -273,14 +257,14 @@
                                         <strong>{{ $errors->first('rehabilitation_area') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('slum_population') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
-                            <label for="slum_population" class="control-label">iv) Slum Population</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="slum_population" class="control-label">13.iv)</label></td>
+                        <td>
+                            <label for="slum_population" class="control-label">Slum Population</label>
+                        </td>
+                        <td>
                             <input id="slum_population" type="text" class="form-control" name="slum_population" value="{{ old('slum_population') }}" required>
 
                             @if ($errors->has('slum_population'))
@@ -288,14 +272,14 @@
                                         <strong>{{ $errors->first('slum_population') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-4" align="left">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="slum_population" class="control-label">14</label></td>
+                        <td>
                             <label class="control-label">No. of existing slum households</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="row" align="center">
@@ -382,14 +366,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('eligible_slum') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="eligible_slum" class="control-label">15</label></td>
+                        <td>
                             <label for="eligible_slum" class="control-label">No. of eligible slum households</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="row" align="center">
@@ -473,18 +457,19 @@
                                                 <strong>{{ $errors->first('total_slum_household_eli') }}</strong>
                                             </span>
                                         @endif
-                                      </div>
-                                      </div>
-                                    </div></div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('house_proposed') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="houses_proposed" class="control-label">16</label></td>
+                        <td>
                             <label for="houses_proposed" class="control-label">No. of houses proposed (slum</label>
                             <label for="houses_proposed" class="control-label">rehabilitation only) with carpet</label>
                             <label for="houses_proposed" class="control-label">area</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <input id="houses_proposed" type="text" class="form-control" name="houses_proposed" value="{{ old('houses_proposed') }}" required>
 
                             @if ($errors->has('houses_proposed'))
@@ -492,16 +477,16 @@
                                         <strong>{{ $errors->first('houses_proposed') }}</strong>
                                 </span>
                             @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('selected_PMAY') ? ' has-error' : '' }}">
-                        <div class="col-md-4" align="left">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="selected_PMAY_label" class="control-label">17</label></td>
+                        <td>
                             <label for="selected_PMAY_label" class="control-label">Whether beneficiary have been</label>
                             <label for="selected_PMAY_label" class="control-label">selected as per PMAY guidelines?</label>
                             <label for="selected_PMAY_label" class="control-label">(Yes/No)</label>
-                        </div>
-                        <div class="col-md-8">
+                        </td>
+                        <td>
                             <div class="col-sm-10" id="selected_PMAY_label">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="selected_PMAY" id="selected_PMAY_Yes" value="Yes" required>
@@ -521,6 +506,26 @@
                                         <strong>{{ $errors->first('selected_PMAY') }}</strong>
                                 </span>
                             @endif
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+
+
+                    <div class="container">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1') }}">
+                    {{ csrf_field() }}
+
+                    <div class="form-group{{ $errors->has('selected_PMAY') ? ' has-error' : '' }}">
+                        <div class="col-md-4" align="left">
+
+                        </div>
+                        <div class="col-md-8">
+
                         </div>
                     </div>
 
