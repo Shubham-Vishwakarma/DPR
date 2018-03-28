@@ -20,7 +20,7 @@
 
         <div class="container">
 
-            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase2') }}">
+            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1') }}">
                 {{ csrf_field() }}
                 <br>
                 <table class="table table-responsive table-hover">
@@ -532,10 +532,10 @@
 							<label for="incentive_private_partner" class="control-label">Incentives to Private Partner</label>
 						</td>
 						<td>
-							<input id="private_partner_selected" type="date" class="form-control" name="private_partner_selected" value="{{ old('private_partner_selected') }}" required>
-                            @if ($errors->has('private_partner_selected'))
+							<input id="incentive_private_partner" type="text" class="form-control" name="incentive_private_partner" value="{{ old('incentive_private_partner') }}" required>
+                            @if ($errors->has('incentive_private_partner'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('private_partner_selected') }}</strong>
+                                        <strong>{{ $errors->first('incentive_private_partner') }}</strong>
                                 </span>
                             @endif
 						</td>
@@ -1126,27 +1126,17 @@
                             @endif
 						</td>
 					</tr>
-					
                     </tbody>
                 </table>
+
+                <div class="row" align="center">
+                    <button class="btn btn-primary" style="margin: 20px">Save</button>
+                    <button type="submit" class="btn btn-success" style="margin: 20px">Submit</button>
+                </div>
+
             </form>
         </div>
 
-		
-        <div class="container">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1') }}">
-                    {{ csrf_field() }}
-                    <div class="row" align="center">
-                        <button class="btn btn-primary" style="margin: 20px">Save</button>
-                        <button type="submit" class="btn btn-success" style="margin: 20px">Submit</button>
-                    </div>
-
-                </form>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
     </body>
 
 </html>
