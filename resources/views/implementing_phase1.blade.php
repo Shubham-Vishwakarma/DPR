@@ -46,10 +46,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="state_name" class="control-label">2</label></td>
-                        <td><label for="state_name" class="control-label">Name of the District</label></td>
+                        <td><label for="district_name" class="control-label">2</label></td>
+                        <td><label for="district_name" class="control-label">Name of the District</label></td>
                         <td>
-                            <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('state_name') }}" required autofocus>
+                            <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('district_name') }}" required autofocus>
 
                             @if ($errors->has('district_name'))
                                 <span class="help-block">

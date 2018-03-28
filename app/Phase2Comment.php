@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Phase2 extends Model
+class Phase2Comment extends Model
 {
-    protected $table = 'phase2';
+    protected $table = 'phase2_comments';
     public $timestamps = false;
     protected $fillable = [
         'state_name',

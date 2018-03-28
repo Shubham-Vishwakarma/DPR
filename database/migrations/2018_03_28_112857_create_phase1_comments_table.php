@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePhase1Table extends Migration
+class CreatePhase1CommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePhase1Table extends Migration
      */
     public function up()
     {
-        Schema::create('phase1', function (Blueprint $table) {
+        Schema::create('phase1_comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('state_name');
+			$table->string('state_name');
             $table->string('district_name');
             $table->string('city_name');
             $table->string('slum_name');
@@ -72,7 +72,7 @@ class CreatePhase1Table extends Migration
             $table->string('slac_comments');
             $table->string('project_brief');
             $table->string('sub_date');
-
+            $table->timestamps();
         });
     }
 
@@ -83,6 +83,6 @@ class CreatePhase1Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phase1');
+        Schema::dropIfExists('phase1_comments');
     }
 }
