@@ -43,7 +43,9 @@
       <h1 class="display-4">Phase 2 Verification</h1><br />
 
       @if($phase2)
-    <table class="table table-hover">
+      <form class="form-horizontal" method="POST" action="{{ route('nodal_phase2') }}">
+        {{ csrf_field() }}
+        <table class="table table-hover">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -59,7 +61,7 @@
           <td>{{ $phase2->state_name }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="state_name" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -75,7 +77,7 @@
           <td>{{ $phase2->district_name }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="district_name" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -91,7 +93,7 @@
           <td>{{ $phase2->city_name }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="city_name" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -107,7 +109,7 @@
           <td>{{ $phase2->project_name }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="project_name" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -123,7 +125,7 @@
           <td>{{ $phase2->project_code }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="project_code" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -139,7 +141,7 @@
           <td>{{ $phase2->nodal_agency }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="nodal_agency" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -155,7 +157,7 @@
           <td>{{ $phase2->implementing_agency }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="implementing_agency" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -171,7 +173,7 @@
           <td>{{ $phase2->implementing_agency_name }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="implementing_agency_name" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -187,7 +189,7 @@
           <td>{{ $phase2->approval_date }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="approval_date" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -218,7 +220,7 @@
                 </table></td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="total_project_cost" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -251,7 +253,7 @@
                 </table></td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="total_slum_household" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -267,7 +269,7 @@
           <td>{{ $phase2->selected }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="selected" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -283,7 +285,7 @@
           <td>{{ $phase2->construction_cost }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="construction_cost" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -299,7 +301,7 @@
           <td>{{ $phase2->project_duration }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="project_duration" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -315,7 +317,7 @@
           <td>{{ $phase2->sales_price }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="sales_price" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -331,7 +333,7 @@
           <td>{{ $phase2->carpet_area }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="carpet_area" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -346,7 +348,15 @@
           <td>Total No. of houses proposed in the project</td>
           <td>{{ $phase2->total_houses }}</td>
           <td class="align-items-center">
-
+            <div class="input-group ">
+              <textarea class="form-control" name="total_houses" placeholder="Comment here" rows=1 cols=250></textarea>
+              <div class="input-group-append">
+                <button class="btn btn-outline-success" type="button">Yes</button>
+              </div>
+              <div class="input-group-append">
+                <button class="btn btn-outline-danger" type="button">No</button>
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -355,7 +365,7 @@
           <td>{{ $phase2->ews_unit }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="ews_unit" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -371,7 +381,7 @@
           <td>{{ $phase2->lig_unit }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="lig_unit" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -387,7 +397,7 @@
           <td>{{ $phase2->mig_unit }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="mig_unit" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -400,10 +410,10 @@
         <tr>
           <th scope="row">17.iv</th>
           <td>No. of HIG units.</td>
-          <td{{ $phase2->hig_unit }}</td>
+          <td>{{ $phase2->hig_unit }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="hig_unit" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -419,7 +429,7 @@
           <td>{{ $phase2->commercial_unit }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="commercial_unit" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -435,7 +445,7 @@
           <td>{{ $phase2->private_partner }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="private_partner" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -451,7 +461,7 @@
           <td>{{ $phase2->ews_eligible }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="ews_eligible" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -467,7 +477,7 @@
           <td>{{ $phase2->goi_grant }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="goi_grant" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -483,7 +493,7 @@
           <td>{{ $phase2->state_grant }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="state_grant" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -499,7 +509,7 @@
           <td>{{ $phase2->land_grant }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="land_grant" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -515,7 +525,7 @@
           <td>{{ $phase2->cash_grant }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="cash_grant" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -531,7 +541,7 @@
           <td>{{ $phase2->implementing_agency_share }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="implementing_agency_share" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -547,7 +557,7 @@
           <td>{{ $phase2->beneficiary_share }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="beneficiary_share" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -563,7 +573,7 @@
           <td>{{ $phase2->total_share }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="total_share" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -579,7 +589,7 @@
           <td>{{ $phase2->specifications }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="specifications" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -595,7 +605,7 @@
           <td>{{ $phase2->trunk_infrastructure }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="trunk_infrastructure" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -627,7 +637,7 @@
           <td>{{ $phase2->water_supply }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="water_supply" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -643,7 +653,7 @@
           <td>{{ $phase2->sewerage }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="sewerage" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -659,7 +669,7 @@
           <td>{{ $phase2->road }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="road" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -675,7 +685,7 @@
           <td>{{ $phase2->storm_water }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="storm_water" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -691,7 +701,7 @@
           <td>{{ $phase2->electrification }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="electrification" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -707,7 +717,7 @@
           <td>{{ $phase2->solid_waste }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="solid_waste" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -723,7 +733,7 @@
           <td>{{ $phase2->other_civic }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="other_civic" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -739,7 +749,7 @@
           <td>{{ $phase2->reason }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="reason" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -755,7 +765,7 @@
           <td>{{ $phase2->social_infrastructure }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="social_infrastructure" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -771,7 +781,7 @@
           <td>{{ $phase2->disaster }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="disaster" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -787,7 +797,7 @@
           <td>{{ $phase2->quality }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="quality" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -803,7 +813,7 @@
           <td>{{ $phase2->o_m }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="o_m" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -819,7 +829,7 @@
           <td>{{ $phase2->encumbrance }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="emcumbrance" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -835,7 +845,7 @@
           <td>{{ $phase2->innovative }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="innovative" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -851,7 +861,7 @@
           <td>{{ $phase2->slac_comments }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="slac_comments" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -867,7 +877,7 @@
           <td>{{ $phase2->brief }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="brief" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -883,7 +893,7 @@
           <td>{{ $phase2->submission_date }}</td>
           <td class="align-items-center">
             <div class="input-group ">
-              <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
+              <textarea class="form-control" name="submission_date" placeholder="Comment here" rows=1 cols=250></textarea>
               <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button">Yes</button>
               </div>
@@ -897,13 +907,16 @@
 
       </tbody>
     </table>
-    <center><button type="submit" class="btn btn-primary">Submit</button></center><br />
-
+        <div align="center">
+            <button class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
     @else
           <div align="center">
               <h1>Nothing to display</h1>
           </div>
       @endif
+      </form>
   </div>
 
 

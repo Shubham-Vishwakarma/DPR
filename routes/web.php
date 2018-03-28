@@ -36,13 +36,10 @@ Route::post('/implementing_phase2', 'Phase2Controller@store');
 Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementing_phase3');
 Route::post('/implementing_phase3', 'Phase3Controller@store');
 
-Route::get('/nodal_phase1','NodalPhase1Controller@displayNodal');
-
-Route::get('/nodal_phase2', function () {
-    return view('nodal_phase2');
-});
+Route::get('/nodal_phase1','NodalPhase1Controller@displayNodal')->name('nodal_phase1');
 
 Route::get('/nodal_phase2','Phase2Controller@displayNodal')->name('nodal_phase2');
+Route::post('/nodal_phase2','Phase2Controller@storeComments');
 
 Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3');
 
