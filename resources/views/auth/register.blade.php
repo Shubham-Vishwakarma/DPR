@@ -14,15 +14,15 @@
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="lic" class="col-md-4 control-label">License Number <font color="red" size="3"> * </font></label>
+                        <div class="form-group{{ $errors->has('license') ? ' has-error' : '' }}">
+                            <label for="license" class="col-md-4 control-label">License Number <font color="red" size="3"> * </font></label>
 
                             <div class="col-md-6">
-                                <input id="lic" type="text" maxlength="12" size="10" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" class="form-control" name="lic" value="{{ old('name') }}" required autofocus>
+                                <input id="license" type="text" maxlength="12" size="10" pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$" class="form-control" name="license" value="{{ old('license') }}" required autofocus>
 
-                                @if ($errors->has('lic'))
+                                @if ($errors->has('license'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('lic') }}</strong>
+                                        <strong>{{ $errors->first('license') }}</strong>
                                     </span>
                                 @endif
                             </div>
