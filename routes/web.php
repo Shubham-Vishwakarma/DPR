@@ -57,3 +57,7 @@ Route::post('/nodal_phase2','Phase2Controller@saveComments')->name('nodal_phase2
 Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3');
 Route::post('/nodal_phase3','Phase3Controller@storeComments');
 Route::post('/nodal_phase3','Phase3Controller@saveComments')->name('nodal_phase3_save');
+
+Route::get('/new_implement_dash', function () {
+    return view('new_implement_dash');
+});
