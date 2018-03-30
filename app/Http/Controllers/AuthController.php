@@ -19,7 +19,7 @@ class AuthController extends Controller
                 'password' => $request->get ( 'password' )
             ) ))
             {
-                return redirect()->route('home');
+                return redirect()->route('implementing_dashboard');
             }
             else {
                 Session::flash ( 'message', "Invalid Credentials , Please try again." );
@@ -27,7 +27,17 @@ class AuthController extends Controller
             }
         }
         elseif ($request->agencyType == 'nodal'){
-            return view('nodal_phase3')->with('phase3',null);
+            if (Auth::attempt ( array (
+                'email' => $request->get ( 'email' ),
+                'password' => $request->get ( 'password' )
+            ) ))
+            {
+                return redirect()->route('nodal_dashboard');
+            }
+            else {
+                Session::flash ( 'message', "Invalid Credentials , Please try again." );
+                return Redirect::back ();
+            }
         }
     }
 }
