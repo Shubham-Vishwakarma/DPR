@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Phase3;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -14,7 +16,7 @@ class AuthController extends Controller
 
     public function login(Request $request){
         if($request->agencyType == 'implementing'){
-            if (Auth::attempt ( array (
+            if (Auth::guard('user')->attempt ( array (
                 'email' => $request->get ( 'email' ),
                 'password' => $request->get ( 'password' )
             ) ))
@@ -27,7 +29,7 @@ class AuthController extends Controller
             }
         }
         elseif ($request->agencyType == 'nodal'){
-            if (Auth::attempt ( array (
+            if (Auth::guard('nodal_user')->attempt ( array (
                 'email' => $request->get ( 'email' ),
                 'password' => $request->get ( 'password' )
             ) ))

@@ -47,7 +47,7 @@ return [
         ],
 
         'nodal_user' => [
-            'driver' => 'token',
+            'driver' => 'session',
             'provider' => 'nodal_users',
         ],
 

@@ -14,6 +14,7 @@ class NodalUsers extends Authenticatable
 
     protected $fillable = [
           'username',
+          'email',
           'phase_no',
           'completed',
           'pending'

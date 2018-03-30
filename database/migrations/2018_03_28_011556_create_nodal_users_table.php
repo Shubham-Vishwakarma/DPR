@@ -16,6 +16,7 @@ class CreateNodalUsersTable extends Migration
         Schema::create('nodal_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username');
+            $table->string('email');
             $table->string('password');
             $table->string('phase_no');
             $table->string('completed');
