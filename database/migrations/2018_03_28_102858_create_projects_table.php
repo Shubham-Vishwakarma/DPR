@@ -17,11 +17,11 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
 			$table->string('implementing_agency_id');
 			$table->string('phase1_id');
-			$table->string('phase1_status');
-			$table->string('phase2_id');
-			$table->string('phase2_status');
-			$table->string('phase3_id');
-			$table->string('phase3_status');
+			$table->boolean('phase1_status')->default(0);
+			$table->string('phase2_id')->nullable();
+			$table->boolean('phase2_status')->default(0);
+			$table->string('phase3_id')->nullable();
+			$table->boolean('phase3_status')->default(0);
             $table->timestamps();
         });
     }
