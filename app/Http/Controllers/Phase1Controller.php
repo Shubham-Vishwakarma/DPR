@@ -33,8 +33,8 @@ class Phase1Controller extends Controller
         return view('new_implementing_dashboard');
       }
 
-      public function displayNodal(){
-          $phasedata = Phase1::find(1); //Write the id from the table 'id'
+      public function displayNodal($id){
+          $phasedata = Phase1::find($id); //Write the id from the table 'id'
           return view('nodal_phase1')->with('phasedata',$phasedata);
       }
 

@@ -39,7 +39,7 @@
       <h1 class="display-4">Phase 1 Verification</h1><br />
 
   @if($phasedata)
-      <form class="form-horizontal" method="POST" action="{{ route('nodal_phase1') }}">
+      <form class="form-horizontal" method="POST" action="{{ route('nodal_phase1',$phasedata->id) }}">
         {{ csrf_field() }}
     <table class="table table-hover">
       <thead>
@@ -918,7 +918,7 @@ to furnish</td>
     </table>
 
         <div>
-          <a href="{{ route('nodal_phase1_save') }}"><button type="button" class="btn btn-primary">Save</button></a>
+          <a href="{{ route('nodal_phase1_save',$phasedata->id) }}"><button type="button" class="btn btn-primary">Save</button></a>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 
