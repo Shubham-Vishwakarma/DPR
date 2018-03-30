@@ -11,7 +11,7 @@ class Phase1Controller extends Controller
 {
       //
       public function display($id){
-          return view('implementing_phase1');
+          return view('implementing_phase1')->with('id',$id);
       }
 
       public function store(Phase1Request $request){

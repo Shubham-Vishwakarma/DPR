@@ -20,7 +20,7 @@
 
         <div class="container">
 
-            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1') }}">
+            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1',$id) }}">
                 {{ csrf_field() }}
                 <br>
                 <table class="table table-responsive table-hover">
@@ -1131,7 +1131,7 @@
 
                 <div class="row" align="center">
 
-              <a href="{{ route('implementing_phase1_save') }}">
+              <a href="{{ route('implementing_phase1', $id ) }}">
                 <button type="submit" class="btn btn-primary" style="margin: 20px">Save</button>
               </a>
 
