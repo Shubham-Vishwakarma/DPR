@@ -198,7 +198,7 @@ toggle between hiding and showing the dropdown content */
             </ul>
         </div>
     </nav>
-
+<a href="{{ route('create_project') }}">Create new Project</a>
 <div class="container">
     <nav class="navbar" style="background-color: #BDBDBD">
         <!--<div class="cm-flex">-->
@@ -216,50 +216,36 @@ toggle between hiding and showing the dropdown content */
         <div class="container">
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
+
                     <div class="row cm-fix-height">
+                      @forelse ($userproject as $project)
                         <div class="col-sm-4">
                             <div class="panel panel-default">
-                                <div class="panel-heading">Project name</div>
+
+                                <div class="panel-heading">{{$project->id}}</div>
                                 <div class="panel-body">
                                     <blockquote style="margin:0">
-                                        <p>Project Description</p>
+                                        <p>Project details</p>
                                         <footer><cite title="Source Title">Status</cite></footer>
                                     </blockquote>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Project name</div>
-                                <div class="panel-body">
-                                    <blockquote style="margin:0">
-                                        <p>Project Description</p>
-                                        <footer><cite title="Source Title">Status</cite></footer>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Project name</div>
-                                <div class="panel-body">
-                                    <blockquote style="margin:0">
-                                        <p>Project Description</p>
-                                        <footer><cite title="Source Title">Status</cite></footer>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                        <p>not found</p>
+                        @endforelse
+
                     </div>
                 </div>
                 <div class="tab-pane fade" id="completed" style="margin-top:20px;">
                     <div class="row cm-fix-height">
+
                         <div class="col-sm-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading">Project name</div>
                                 <div class="panel-body">
                                     <blockquote style="margin:0">
-                                        <p>Project Description</p>
+                                        <p>Project DashBoard</p>
                                         <footer><cite title="Source Title">Status</cite></footer>
                                     </blockquote>
                                 </div>

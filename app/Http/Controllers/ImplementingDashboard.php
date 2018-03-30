@@ -22,6 +22,7 @@ class ImplementingDashboard extends Controller
         $id = Auth::id();
         //$userproject=Project::where('implementing_agency_id',$id)->get();
         $userproject=DB::table('projects')->join('phase1', 'projects.phase1_id', '=', 'phase1.id')->where('implementing_agency_id',$id)->get();
+
         return view('new_implement_dash')->with('userproject',$userproject);
     }
 }

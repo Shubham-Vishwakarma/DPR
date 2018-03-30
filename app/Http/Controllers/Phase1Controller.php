@@ -28,9 +28,10 @@ class Phase1Controller extends Controller
           Phase1Comment::create($request->all());
           return redirect()->route('nodal_phase1');
       }
-      public function save(Request $request){
-          Phase1::create($request->all());
-          return redirect()->route('implementing_phase1');
+      public function save(Request $request,$id){
+          $phasedata = Phase1::find($id);
+          $phasedata->update($request->all());
+          return redirect()->route('implementing_dashboard');
       }
       public function saveComments(Request $request){
           Phase1Comment::create($request->all());
