@@ -109,7 +109,7 @@
             </ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Login</a></li>
-				<li><a href="#">Register</a></li>
+				<li><a href="/login">Register</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -206,7 +206,7 @@
 </div>
 
 <div class="container-fluid about">
-    <div class="container" style="line-height: 1.6;">
+    <div class="container" style="line-height: 1.6; font-size: 1.3em;">
         <p class="text-body-heading text-center">
             About
         </p>
