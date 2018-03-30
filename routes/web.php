@@ -17,6 +17,10 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login','AuthController@showLogin')->name('login');
+Route::post('/login','AuthController@login');
+
 Route::get('/home', function () {
     return view('home');
 });
