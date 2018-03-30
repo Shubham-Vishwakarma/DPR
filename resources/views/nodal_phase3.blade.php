@@ -757,7 +757,10 @@
             </tr>
           </tbody>
         </table>
-          <center><button type="submit" class="btn btn-primary">Submit</button></center><br />
+          <div align="center">
+            <a href="{{ route('nodal_phase3_save') }}"><button type="button" class="btn btn-primary">Save</button></a>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
 </form>
       @else
           <div align="center">
