@@ -219,10 +219,11 @@ toggle between hiding and showing the dropdown content */
 
                     <div class="row cm-fix-height">
                       @forelse ($userproject as $project)
+                      <a href="{{route('implementing_phase1',$project->id)}}">
                         <div class="col-sm-4">
                             <div class="panel panel-default">
 
-                                <div class="panel-heading">{{$project->id}}</div>
+                                <div class="panel-heading">{{$project->project_name}}</div>
                                 <div class="panel-body">
                                     <blockquote style="margin:0">
                                         <p>Project details</p>
@@ -231,6 +232,7 @@ toggle between hiding and showing the dropdown content */
                                 </div>
                             </div>
                         </div>
+                        </a>
                         @empty
                         <p>not found</p>
                         @endforelse

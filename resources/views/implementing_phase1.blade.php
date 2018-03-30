@@ -20,7 +20,7 @@
 
         <div class="container">
 
-            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1',$id) }}">
+            <form class="form-horizontal" method="POST" action="{{ route('implementing_phase1',$phasedata->id) }}">
                 {{ csrf_field() }}
                 <br>
                 <table class="table table-responsive table-hover">
@@ -36,8 +36,11 @@
                         <td><label for="state_name" class="control-label">1</label></td>
                         <td><label for="state_name" class="control-label">Name of the State</label></td>
                         <td>
-                            <input id="state_name" type="text" class="form-control" name="state_name" value="{{ old('state_name') }}"  autofocus>
-
+                          @if($phasedata->state_name)
+                            <input id="state_name" type="text" class="form-control" name="state_name" value="{{ $phasedata->state_name }}"  autofocus>
+                          @else
+                              <input id="state_name" type="text" class="form-control" name="state_name"  autofocus>
+                          @endif
                             @if ($errors->has('state_name'))
                                 <span class="help-block">
                                             <strong>{{ $errors->first('state_name') }}</strong>
@@ -1131,7 +1134,7 @@
 
                 <div class="row" align="center">
 
-              <a href="{{ route('implementing_phase1_save', $id ) }}">
+              <a href="{{ route('implementing_phase1_save', $phasedata->id) }}">
                 <button type="submit" class="btn btn-primary" style="margin: 20px">Save</button>
               </a>
 
