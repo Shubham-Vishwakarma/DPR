@@ -199,16 +199,18 @@ toggle between hiding and showing the dropdown content */
         </div>
     </nav>
 
-    <nav class="cm-navbar cm-navbar-default cm-navbar-slideup">
-        <div class="cm-flex">
-            <div class="nav-tabs-container">
+<div class="container">
+    <nav class="navbar" style="background-color: #BDBDBD">
+        <!--<div class="cm-flex">-->
+            <div class="">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
                     <li><a href="#completed" data-toggle="tab">Completed</a></li>
                 </ul>
             </div>
-        </div>
+        <!--</div>-->
     </nav>
+</div>
 
     <div class="container-fluid" style="background-color: #7986CB; min-height: 500px;">
         <div class="container">
@@ -354,7 +356,6 @@ toggle between hiding and showing the dropdown content */
     <div class="container">
         <p style="color: #F5F5F5; font-size: 1.2em;" class="text-center"><i class="fa fa-copyright" aria-hidden="true"></i> This site was made as a part of Smart India Hackathon 2018 by Team Friday</p>
     </div>
-</div>
 </div>
 </body>
 </html>
