@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Assigned extends Model
 {
     protected $table = 'assigneds';
-    public $timestamps = false;
+
 	protected $fillable = [
 		'phase_no',
 		'status',

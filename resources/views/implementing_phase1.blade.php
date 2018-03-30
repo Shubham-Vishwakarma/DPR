@@ -52,8 +52,11 @@
                         <td><label for="district_name" class="control-label">2</label></td>
                         <td><label for="district_name" class="control-label">Name of the District</label></td>
                         <td>
+                          @if($phasedata->district_name)
+                            <input id="district_name" type="text" class="form-control" name="district_name" value="{{ $phasedata->district_name }}"  autofocus>
+                          @else
                             <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('district_name') }}"  autofocus>
-
+                          @endif
                             @if ($errors->has('district_name'))
                                 <span class="help-block">
                                             <strong>{{ $errors->first('district_name') }}</strong>
@@ -65,7 +68,11 @@
                         <td><label for="city_name" class="control-label">3</label></td>
                         <td><label for="city_name" class="control-label">Name of the City</label></td>
                         <td>
+                            @if($phasedata->city_name)
+                            <input id="city_name" type="text" class="form-control" name="city_name" value="{{ $phasedata->city_name }}" >
+                            @else
                             <input id="city_name" type="text" class="form-control" name="city_name" value="{{ old('city_name') }}" >
+                              @endif
 
                             @if ($errors->has('city_name'))
                                 <span class="help-block">
@@ -78,8 +85,11 @@
                         <td><label for="slum_name" class="control-label">4</label></td>
                         <td><label for="slum_name" class="control-label">Name of the Slum</label></td>
                         <td>
+                          @if($phasedata->slum_name)
+                            <input id="slum_name" type="text" class="form-control" name="slum_name" value="{{ $phasedata->slum_name }}" >
+                            @else
                             <input id="slum_name" type="text" class="form-control" name="slum_name" value="{{ old('slum_name') }}" >
-
+                            @endif
                             @if ($errors->has('slum_name'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('slum_name') }}</strong>
@@ -91,7 +101,11 @@
                         <td><label for="project_name" class="control-label">5</label></td>
                         <td><label for="project_name" class="control-label">Project Name</label></td>
                         <td>
+                          @if($phasedata->project_name)
+                            <input id="project_name" type="text" class="form-control" name="project_name" value="{{ $phasedata->project_name }}" >
+                            @else
                             <input id="project_name" type="text" class="form-control" name="project_name" value="{{ old('project_name') }}" >
+                            @endif
 
                             @if ($errors->has('project_name'))
                                 <span class="help-block">
@@ -104,7 +118,11 @@
                         <td><label for="project_code" class="control-label">6</label></td>
                         <td><label for="project_code" class="control-label">Project Code</label></td>
                         <td>
+                          @if($phasedata->project_code)
+                            <input id="project_code" type="text" class="form-control" name="project_code" value="{{ $phasedata->project_code }}" >
+                            @else
                             <input id="project_code" type="text" class="form-control" name="project_code" value="{{ old('project_code') }}" >
+                            @endif
 
                             @if ($errors->has('project_code'))
                                 <span class="help-block">
@@ -117,7 +135,11 @@
                         <td><label for="nodal_agency" class="control-label">7</label></td>
                         <td><label for="nodal_agency" class="control-label">State Level Nodal Agency</label></td>
                         <td>
+                          @if($phasedata->nodal_agency)
+                            <input id="nodal_agency" type="text" class="form-control" name="nodal_agency" value="{{ $phasedata->nodal_agency }}" >
+                            @else
                             <input id="nodal_agency" type="text" class="form-control" name="nodal_agency" value="{{ old('nodal_agency') }}" >
+                            @endif
 
                             @if ($errors->has('nodal_agency'))
                                 <span class="help-block">
@@ -130,8 +152,11 @@
                         <td><label for="implementing_agency" class="control-label">8</label></td>
                         <td><label for="implementing_agency" class="control-label">Implementing Agency</label></td>
                         <td>
-                            <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ old('implementing_agency') }}" >
-
+                          @if($phasedata->implementing_agency)
+                            <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ $phasedata->implementing_agency }}" >
+                          @else
+                          <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ old('implementing_agency') }}" >
+                          @endif
                             @if ($errors->has('implementing_agency'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('implementing_agency') }}</strong>
@@ -143,8 +168,11 @@
                         <td><label for="agency_name" class="control-label">9</label></td>
                         <td><label for="agency_name" class="control-label">Implementing Agency Name</label></td>
                         <td>
+                          @if($phasedata->agency_name)
+                            <input id="agency_name" type="text" class="form-control" name="agency_name" value="{{ $phasedata->agency_name }}" >
+                          @else
                             <input id="agency_name" type="text" class="form-control" name="agency_name" value="{{ old('implementing_agency') }}" >
-
+                            @endif
                             @if ($errors->has('agency_name'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('agency_name') }}</strong>
@@ -160,8 +188,11 @@
                             <label for="approval_date" class="control-label">Committee (SLSMC)</label>
                         </td>
                         <td>
+                          @if($phasedata->approval_date)
+                            <input id="approval_date" type="text" class="form-control" name="approval_date" value="{{ $phasedata->approval_date }}" >
+                            @else
                             <input id="approval_date" type="text" class="form-control" name="approval_date" value="{{ old('approval_date') }}" >
-
+                            @endif
                             @if ($errors->has('approval_date'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('approval_date') }}</strong>
@@ -175,8 +206,11 @@
                             <label for="project_cost" class="control-label">Project Cost (Rs. In Lakhs)</label>
                         </td>
                         <td>
+                          @if($phasedata->project_cost)
+                            <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ $phasedata->project_cost}}" >
+                            @else
                             <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ old('project_cost') }}" >
-
+                            @endif
                             @if ($errors->has('project_cost'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('project_cost') }}</strong>
@@ -190,8 +224,11 @@
                             <label for="project_duration" class="control-label">Project Duration (in months)</label>
                         </td>
                         <td>
+                          @if($phasedata->project_duration)
+                            <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ $phasedata->project_duration }}" >
+                            @else
                             <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ old('project_duration') }}" >
-
+                            @endif
                             @if ($errors->has('project_duration'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('project_duration') }}</strong>

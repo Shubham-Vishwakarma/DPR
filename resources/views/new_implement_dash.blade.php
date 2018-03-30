@@ -145,7 +145,7 @@ toggle between hiding and showing the dropdown content */
     </script>
 </head>
 
-<body style="background-color: #7986CB;>
+<body style="background-color: #7986CB;">
 
     <div class="container-fluid">
         <div class="row" style="background-color: rgb(206,219,233);">
@@ -187,11 +187,11 @@ toggle between hiding and showing the dropdown content */
                 <li><a href="{{route('login')}}" style="color: #212121;">Logout</a></li>
                 <li>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o" style="font-size:24px; color: black;"></i></button>
+                        <button onclick="myFunction()" class="dropbtn"><a href="javascript: myFunction()"><i class="fa fa-user-circle-o" style="font-size:24px; color: black;"></i></a></button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Sign Out</a>
                         </div>
                     </div>
                 </li>

@@ -65,7 +65,8 @@ class Phase1 extends Model
     'innovative',
     'slac_comments',
     'project_brief',
-    'sub_date'
+    'sub_date',
+    'status'
   ];
 
 }
