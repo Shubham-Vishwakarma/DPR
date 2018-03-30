@@ -226,7 +226,9 @@ toggle between hiding and showing the dropdown content */
                                 <div class="panel-heading">{{$project->project_name}}</div>
                                 <div class="panel-body">
                                     <blockquote style="margin:0">
-                                        <p>Project details</p>
+                                      <p>City Name:{{$project->city_name}}</p>
+                                        <p>District Name:{{$project->district_name}}</p>
+                                        <p>State Name:{{$project->state_name}}</p>
                                         <footer><cite title="Source Title">Status</cite></footer>
                                     </blockquote>
                                 </div>
