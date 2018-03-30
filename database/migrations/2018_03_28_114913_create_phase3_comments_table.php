@@ -15,7 +15,7 @@ class CreatePhase3CommentsTable extends Migration
     {
         Schema::create('phase3_comments', function (Blueprint $table) {
             $table->increments('id')->nullable();
-			$table->string('state_name')->nullable();
+			      $table->string('state_name')->nullable();
             $table->string('district_name')->nullable();
             $table->string('city_name')->nullable();
             $table->string('project_name')->nullable();
@@ -24,24 +24,9 @@ class CreatePhase3CommentsTable extends Migration
             $table->string('implementing_agency')->nullable();
             $table->string('implementing_agency_name')->nullable();
             $table->string('project_cost')->nullable();
-            $table->string('gen')->nullable();
-            $table->string('sc')->nullable();
-            $table->string('st')->nullable();
-            $table->string('obc')->nullable();
-            $table->string('minority')->nullable();
-            $table->string('total_slum_household')->nullable();
-            $table->string('construct_gen')->nullable();
-            $table->string('construct_sc')->nullable();
-            $table->string('construct_st')->nullable();
-            $table->string('construct_obc')->nullable();
-            $table->string('construct_minority')->nullable();
-            $table->string('construct_total_slum_household')->nullable();
-            $table->string('enhancement_gen')->nullable();
-            $table->string('enhancement_sc')->nullable();
-            $table->string('enhancement_st')->nullable();
-            $table->string('enhancement_obc')->nullable();
-            $table->string('enhancement_minority')->nullable();
-            $table->string('enhancement_total_slum_household')->nullable();
+            $table->string('table_bene_covered')->nullable();
+            $table->string('table_bene_new')->nullable();
+            $table->string('table_bene_enhance')->nullable();
             $table->string('selected_PMAY')->nullable();
             $table->string('ownership')->nullable();
             $table->string('approved')->nullable();
@@ -50,7 +35,7 @@ class CreatePhase3CommentsTable extends Migration
             $table->string('ulb_grant')->nullable();
             $table->string('beneficiary_share')->nullable();
             $table->string('total_grant')->nullable();
-            $table->string('specifications')->nullable();
+            $table->string('specification')->nullable();
             $table->string('balance_cost')->nullable();
             $table->string('water_supply')->nullable();
             $table->string('sewerage')->nullable();
