@@ -45,6 +45,16 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'nodal_user' => [
+            'driver' => 'session',
+            'provider' => 'nodal_users',
+        ],
+
+        'nodal_user-api' => [
+            'driver' => 'token',
+            'provider' => 'nodal_users',
+        ],
     ],
 
     /*
@@ -68,6 +78,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'nodal_users' => [
+            'driver' => 'eloquent',
+            'model' => App\NodalUsers::class,
         ],
 
         // 'users' => [

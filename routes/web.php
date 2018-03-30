@@ -32,7 +32,7 @@ Route::get('/implementing_dashboard', function () {
 
 Route::get('/nodal_dashboard', function () {
     return view('nodal_dashboard');
-});
+})->name('nodal_dashboard');
 
 Route::get('/create_project','ImplementingDashboard@create_project')->name('create_project');
 
@@ -42,9 +42,11 @@ Route::post('/implementing_phase1/{id}', 'Phase1Controller@save')->name('impleme
 
 Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2', 'Phase2Controller@store');
+Route::post('/implementing_phase2', 'Phase2Controller@save')->name('implementing_phase2_save');
 
 Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementing_phase3');
 Route::post('/implementing_phase3', 'Phase3Controller@store');
+Route::post('/implementing_phase3', 'Phase3Controller@save')->name('implementing_phase3_save');
 
 Route::get('/nodal_phase1','Phase1Controller@displayNodal')->name('nodal_phase1');
 Route::post('/nodal_phase1','Phase1Controller@storeComments');
