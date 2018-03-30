@@ -21,7 +21,7 @@
                     <div id="cm-menu-scroller">
                         <ul class="cm-menu-items">
                             <li><a href="pending.html" class="sf-dashboard">Dashboard</a></li>
-                            <li><a href="#" class="sf-brick">Create New Project</a></li>
+                            <li><a href="{{ route('create_project') }}" class="sf-brick">Create New Project</a></li>
                             <li><a href="#" class="sf-lock-open">Sign Out</a></li>
                         </ul>
                     </div>
@@ -32,7 +32,7 @@
             <nav class="cm-navbar cm-navbar-primary">
                 <div class="btn btn-primary md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
                 <div class="cm-flex">
-                    <h1>Dashboard</h1> 
+                    <h1>Dashboard</h1>
                     <form id="cm-search" action="index.html" method="get">
                         <input type="search" name="q" autocomplete="off" placeholder="Search...">
                     </form>
