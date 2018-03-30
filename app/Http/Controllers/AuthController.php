@@ -19,7 +19,7 @@ class AuthController extends Controller
                 'password' => $request->get ( 'password' )
             ) ))
             {
-                return redirect()->route('home');
+                return redirect()->route('implementing_dashboard');
             }
             else {
                 Session::flash ( 'message', "Invalid Credentials , Please try again." );

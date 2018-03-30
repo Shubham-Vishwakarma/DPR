@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\Phase1Request
+use App\Http\Requests\Phase1Request;
 use App\Phase1;
 use App\Phase1Comment;
 
 class Phase1Controller extends Controller
 {
       //
-      public function display(){
-          return view('implementing_phase1');
+      public function display($id){
+          return view('implementing_phase1')->with('id',$id);
       }
 
       public function store(Phase1Request $request){

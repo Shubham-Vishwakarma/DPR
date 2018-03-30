@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/login','AuthController@showLogin')->name('login');
 Route::post('/login','AuthController@login');
 
@@ -28,15 +29,16 @@ Route::get('/home', function () {
 Route::get('/implementing_dashboard', function () {
     return view('implementing_dashboard');
 })->name('implementing_dashboard');
+
 Route::get('/nodal_dashboard', function () {
     return view('nodal_dashboard');
 });
 
-Route::post('/implementing_dashboard','ImplementingDashboard@create_project')->name('create_project');
+Route::get('/create_project','ImplementingDashboard@create_project')->name('create_project');
 
-Route::get('/implementing_phase1/{id}', 'Phase1Controller@display')->name('implementing_phase1');
-Route::post('/implementing_phase1', 'Phase1Controller@store');
-Route::post('/implementing_phase1', 'Phase1Controller@save')->name('implementing_phase1_save');
+Route::get('/implementing_phase1/{id}','Phase1Controller@display')->name('implementing_phase1');
+Route::post('/implementing_phase1/{id}', 'Phase1Controller@store');
+Route::post('/implementing_phase1/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
 
 Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2', 'Phase2Controller@store');
