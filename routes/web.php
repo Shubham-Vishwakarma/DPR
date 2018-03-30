@@ -32,7 +32,7 @@ Route::get('/implementing_dashboard', function () {
 
 Route::get('/nodal_dashboard', function () {
     return view('nodal_dashboard');
-});
+})->name('nodal_dashboard');
 
 Route::get('/create_project','ImplementingDashboard@create_project')->name('create_project');
 

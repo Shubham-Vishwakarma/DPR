@@ -3,13 +3,23 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class NodalUsers extends Model
+class NodalUsers extends Authenticatable
 {
+    use Notifiable;
+
+    protected $guard = 'nodal_user';
+
     protected $fillable = [
-  'emp_name',
-  'username',
-  'password',
-  'completed',
-  'pending'];
+          'username',
+          'phase_no',
+          'completed',
+          'pending'
+    ];
+
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }
