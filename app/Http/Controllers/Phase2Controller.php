@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Phase2;
 use App\Phase2Comment;
+use App\Http\Requests\Phase2Request;
 
 class Phase2Controller extends Controller
 {
@@ -13,7 +14,7 @@ class Phase2Controller extends Controller
         return view('implementing_phase2');
     }
 
-    public function store(Request $request){
+    public function store(Phase2Request $request){
         Phase2::create($request->all());
         return redirect()->route('implementing_phase2');
     }

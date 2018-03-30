@@ -27,12 +27,14 @@ Route::get('/home', function () {
 
 Route::get('/implementing_dashboard', function () {
     return view('implementing_dashboard');
-});
+})->name('implementing_dashboard');
 Route::get('/nodal_dashboard', function () {
     return view('nodal_dashboard');
 });
 
-Route::get('/implementing_phase1', 'Phase1Controller@display')->name('implementing_phase1');
+Route::post('/implementing_dashboard','ImplementingDashboard@create_project')->name('create_project');
+
+Route::get('/implementing_phase1/{id}', 'Phase1Controller@display')->name('implementing_phase1');
 Route::post('/implementing_phase1', 'Phase1Controller@store');
 Route::post('/implementing_phase1', 'Phase1Controller@save')->name('implementing_phase1_save');
 
