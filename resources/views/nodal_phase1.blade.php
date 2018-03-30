@@ -12,19 +12,15 @@
     .backcolor {
       background-color: yellow;
     }
-
     .backcolor1 {
       background-color: red;
     }
-
     .backcolor2 {
       background-color: green;
     }
-
     .heightcontrol {
       height: 100%;
     }
-
     .format {
       padding: 10px;
     }
