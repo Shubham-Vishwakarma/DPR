@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
 Route::get('/implementing_dashboard', function () {
     return view('implementing_dashboard');
 });

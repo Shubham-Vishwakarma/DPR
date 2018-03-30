@@ -19,7 +19,7 @@ class Phase2Controller extends Controller
     }
 
     public function displayNodal(){
-        $phase2 = Phase2::find(1); //Write the id from the table 'id'
+        $phase2 = Phase2::find(2); //Write the id from the table 'id'
         return view('nodal_phase2')->with('phase2',$phase2);
     }
 
