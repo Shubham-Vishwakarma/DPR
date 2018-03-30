@@ -33,7 +33,7 @@ Route::get('/create_project','ImplementingDashboard@create_project')->name('crea
 
 Route::get('/implementing_phase1/{id}','Phase1Controller@display')->name('implementing_phase1');
 Route::post('/implementing_phase1/{id}', 'Phase1Controller@store');
-Route::post('/implementing_phase1/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
+Route::post('/implementing_phase1_save/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
 
 Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2', 'Phase2Controller@store');
@@ -58,3 +58,7 @@ Route::post('/nodal_phase3','Phase3Controller@saveComments')->name('nodal_phase3
 
 
 Route::get('/implementing_dashboard', 'ImplementingDashboard@getProject')->name('implementing_dashboard');
+
+Route::get('/ocr', function () {
+    return view('ocr');
+});
