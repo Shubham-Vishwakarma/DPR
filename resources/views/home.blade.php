@@ -23,12 +23,12 @@
 
         .text-header{
             font-family: 'Bigshot One', cursive;
-            font-size: 6em;
+            font-size: 4em;
         }
 
         .text-footer-heading{
             color: #69F0AE;
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 600;
         }
 
@@ -39,7 +39,7 @@
 
         .text-body-heading{
             color: #B9F6CA;
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 600;
         }
 
@@ -81,35 +81,42 @@
 <div class="container-fluid">
 	<div class="row" style="background-color: rgb(206,219,233);">
         <div class="col-md-2 col-sm-2" align="center">
-            <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 200px;">
+            <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
         </div>
         <div class="col-md-8 col-sm-2">
             <span style="vertical-align: middle;">
                 <h3 class="text-header text-center">Online Detailed Project Report</h3>
             </span>
             <div align="center">
-                <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 100px;">
+                <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 75px;">
             </div>
         </div>
 	</div>
 </div>
 
-	<nav class="navbar" style="background-color: #C5CAE9; color: #212121;">
+	<nav class="navbar" style="background-color: #C5CAE9; color: #212121; font-size: 1.15em;">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">PMAY Home</a>
-			</div>
+			<!--<div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="navbar-brand" href="#" style="color: #212121; font-size: 1.2em;">PMAY Home</a>
+                    </li>
+                </ul>
+			</div>-->
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#" style="color: #212121;">PMAY Home</a>
                 </li>
                 <li>
-                    <a href="#about-div">About</a>
+                    <a href="#" style="color: #212121;">Services</a>
+                </li>
+                <li>
+                    <a href="#about-div" style="color: #212121;">About</a>
                 </li>
             </ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Login</a></li>
-				<li><a href="/login">Register</a></li>
+				<li><a href="{{route('login')}}" style="color: #212121;">Login</a></li>
+				<li><a href="#" style="color: #212121;">Register</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -206,7 +213,7 @@
 </div>
 
 <div class="container-fluid about">
-    <div class="container" style="line-height: 1.6; font-size: 1.3em;">
+    <div class="container" style="line-height: 1.6; font-size: 1.1em;">
         <p class="text-body-heading text-center">
             About
         </p>
@@ -279,7 +286,7 @@
 
             </div>
             <div class="col-md-2 col-sm-2" align="center">
-                <img src="/img/logo_wt.png" class="img-responsive" alt="PMAY1">
+                <img src="/img/logo_wt.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
             </div>
             <div class="col-md-2 col-sm-2" align="center">
                 <p class="text-footer-heading">
@@ -333,6 +340,11 @@
             </div>
         </div>
         <br>
+    </div>
+</div>
+<div class="container-fluid" style="background-color: #1A237E; padding: 1em 1em 1em 1em;">
+    <div class="container">
+        <p style="color: #F5F5F5; font-size: 1.2em;" class="text-center"><i class="fa fa-copyright" aria-hidden="true"></i> This site was made as a part of Smart India Hackathon 2018 by Team Friday</p>
     </div>
 </div>
 </body>
