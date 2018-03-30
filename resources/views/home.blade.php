@@ -10,12 +10,20 @@
     <!-- Raleway Heading Font-->
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
+    <!-- Bigshot One Heading-->
+    <link href="https://fonts.googleapis.com/css?family=Bigshot+One" rel="stylesheet">
+
     <!-- Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         p {
             font-family: 'Slabo 27px', serif;
+        }
+
+        .text-header{
+            font-family: 'Bigshot One', cursive;
+            font-size: 6em;
         }
 
         .text-footer-heading{
@@ -72,23 +80,40 @@
 <body style="background-color: #7986CB">
 <div class="container-fluid">
 	<div class="row" style="background-color: rgb(206,219,233);">
-		<div class="col-md-12">
-			<h1>PMAY</h1>
-			<h3>Detailed Project Report</h3>
-		</div> 
+        <div class="col-md-2 col-sm-2" align="center">
+            <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 200px;">
+        </div>
+        <div class="col-md-8 col-sm-2">
+            <span style="vertical-align: middle;">
+                <h3 class="text-header text-center">Online Detailed Project Report</h3>
+            </span>
+            <div align="center">
+                <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 100px;">
+            </div>
+        </div>
 	</div>
 </div>
-	<nav class="navbar navbar-default">
+
+	<nav class="navbar" style="background-color: #C5CAE9; color: #212121;">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">PMAY Home</a>
 			</div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#about-div">About</a>
+                </li>
+            </ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Login</a></li>
 				<li><a href="#">Register</a></li>
 			</ul>
 		</div>
 	</nav>
+
 <div class="container-fluid" style="background-color: #7986CB">
     <div class="container" style="background-color: #7986CB">
         <div class="row">
@@ -192,7 +217,7 @@
             Maharashtra Pradhan Mantri Awas Yojna 2017-18. This is the good news for all the poor people of Maharashtra who want to get their own
             house in affordable budget.
         </p>
-        <div class="row">
+        <div class="row" id="about-div">
             <div class="col-md-6">
                 <p class="text-body-heading text-center">
                     Implementing Agency
