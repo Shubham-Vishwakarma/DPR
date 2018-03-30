@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\Phase1Request;
 use App\Phase1;
+use App\Project;
 use App\Phase1Comment;
+use App\NodalUsers;
+use App\Assigned;
 
 class Phase1Controller extends Controller
 {
@@ -16,8 +19,24 @@ class Phase1Controller extends Controller
           //return view('implementing_phase1')->with('id',$id);
       }
 
-      public function store(Phase1Request $request){
-          Phase1::create($request->all());
+      public function store(Phase1Request $request,$id){
+          $phasedata = Phase1::find($id);
+          $phasedata->update($request->all());
+
+          $projectid = Project::where('phase1_id','=',$id)->first();
+          error_log('Project = '.$projectid->id);
+          
+          $nodalusersid = DB::table('nodal_users')
+                     ->select(DB::raw('id'))
+                     ->whereColumn([
+                    ['phase_no', '=', 1],
+                    ['pending', '=', 'min(pending)']
+                ])->first();
+                     error_log("hiiiii");
+          $nodalusersid->update(['pending'=>$nodalusersid->pending+1]);
+          
+          Assigned::create(['phase_no'=>1,'status'=>0,'nodal_id'=>$nodalusersid,'phase_id'=>$id,'project_id'=>$projectid]);
+
           return redirect()->route('implementing_phase1');
       }
 
@@ -31,6 +50,7 @@ class Phase1Controller extends Controller
           return redirect()->route('nodal_phase1');
       }
       public function save(Request $request,$id){
+          error_log("hi");
           $phasedata = Phase1::find($id);
           $phasedata->update($request->all());
           return redirect()->route('implementing_dashboard');

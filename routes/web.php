@@ -35,7 +35,7 @@ Route::get('/create_project','ImplementingDashboard@create_project')->name('crea
 
 Route::get('/implementing_phase1/{id}','Phase1Controller@display')->name('implementing_phase1');
 Route::post('/implementing_phase1/{id}', 'Phase1Controller@store');
-Route::post('/implementing_phase1/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
+Route::post('/implementing_phase1_save/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
 
 Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2', 'Phase2Controller@store');
