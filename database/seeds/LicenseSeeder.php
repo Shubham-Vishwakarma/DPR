@@ -17,7 +17,7 @@ class LicenseSeeder extends Seeder
             'name' => str_random(10),
             'address' => str_random(10),
             'email' => 'priyanka.lubal33@gmail.com',
-            'phone' => mt_rand(),
+            'phone' => '7'.mt_rand(),
             'license' => 'ABCDE'.mt_rand(1000,10000).'A',
             'pan' => str_random(10),
             'created_at' => '2017-08-01',

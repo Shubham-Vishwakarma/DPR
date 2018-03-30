@@ -16,7 +16,7 @@ class AuthController extends Controller
 
     public function login(Request $request){
         if($request->agencyType == 'implementing'){
-            if (Auth::guard('user')->attempt ( array (
+            if (Auth::guard('web')->attempt ( array (
                 'email' => $request->get ( 'email' ),
                 'password' => $request->get ( 'password' )
             ) ))
