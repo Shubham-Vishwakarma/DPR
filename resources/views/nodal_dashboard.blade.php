@@ -1,179 +1,345 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-clearmin.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/roboto.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/material-design.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/small-n-flat.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
-        <title>Dashboard</title>
-    </head>
-    <body class="cm-no-transition cm-2-navbar">
-        <div id="cm-menu">
-            <nav class="cm-navbar cm-navbar-primary">
-                <div class="cm-flex"><a href="#"><i class="fa fa-home fa-3x" style="color: #ffffff"></i></a></div>
-                <div class="btn btn-primary md-menu-white" data-toggle="cm-menu"></div>
-            </nav>
-            <div id="cm-menu-content">
-                <div id="cm-menu-items-wrapper">
-                    <div id="cm-menu-scroller">
-                        <ul class="cm-menu-items">
-                            <li><a href="pending.html" class="sf-dashboard">Dashboard</a></li>
-                            <li><a href="#" class="sf-brick">Create New Project</a></li>
-                            <li><a href="#" class="sf-lock-open">Sign Out</a></li>
-                        </ul>
+<head>
+    <title>Nodal Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Raleway Heading Font-->
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+    <!-- Bigshot One Heading-->
+    <link href="https://fonts.googleapis.com/css?family=Bigshot+One" rel="stylesheet">
+
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        p {
+            font-family: 'Slabo 27px', serif;
+        }
+
+        .text-header{
+            font-family: 'Bigshot One', cursive;
+            font-size: 4em;
+        }
+
+        .text-footer-heading{
+            color: #69F0AE;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+
+        .text-footer{
+            color: #CFD8DC;
+            font-size: 1.2em;
+        }
+
+        .text-body-heading{
+            color: #B9F6CA;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+
+        .text-news-date{
+            color: #757575;
+            text-align: left;
+            font-size: 1.2em;
+        }
+
+        .text-news-link{
+            text-align: left;
+            font-size: 1.2em;
+            color: #00796B;
+        }
+
+        .news-bg{
+            background-color: #E1F5FE;
+            border-radius: 15px;
+            padding-left: 2em;
+            padding-top: 2em;
+            padding-right: 2em;
+            padding-bottom: 2em;
+        }
+
+        .about{
+            margin: 1em 0em 0em 0em;
+            background-color: #5C6BC0;
+            padding: 1em 1em 1em 1em;
+        }
+
+        .text-about{
+            text-align: left;
+            font-size: 1.2em;
+            color: #E0E0E0;
+        }
+
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #C5CAE9;
+            color: white;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #283593;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd}
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {display:block;}
+    </style>
+
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: #7986CB;">
+
+    <div class="container-fluid">
+<div class="row" style="background-color: rgb(206,219,233);">
+    <div class="col-md-2 col-sm-2" align="center">
+        <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
+    </div>
+    <div class="col-md-8 col-sm-2">
+            <span style="vertical-align: middle;">
+                <h3 class="text-header text-center">Online Detailed Project Report</h3>
+            </span>
+        <div align="center">
+            <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 75px;">
+        </div>
+    </div>
+</div>
+</div>
+
+<nav class="navbar" style="background-color: #C5CAE9; color: #212121; font-size: 1.15em;">
+    <div class="container-fluid">
+        <!--<div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-brand" href="#" style="color: #212121; font-size: 1.2em;">PMAY Home</a>
+                </li>
+            </ul>
+        </div>-->
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#" style="color: #212121;">PMAY Home</a>
+            </li>
+            <li>
+                <a href="#" style="color: #212121;">Services</a>
+            </li>
+            <li>
+                <a href="#about-div" style="color: #212121;">About</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{route('login')}}" style="color: #212121;">Logout</a></li>
+            <li>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o" style="font-size:24px; color: black;"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
                     </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <nav class="navbar" style="background-color: #BDBDBD">
+        <div class="">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
+                <li><a href="#completed" data-toggle="tab">Completed</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid" style="background-color: #7986CB; min-height: 500px;">
+    <div class="container">
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
+
+                <div class="row cm-fix-height">
+                    @forelse($pendings as $pending)
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">Project Id {{ $pending->id }}</div>
+                                <div class="panel-body">
+                                    <blockquote style="margin:0">
+                                        <p>Implementing agency:  {{ $pending->implementing_agency_id }}</p>
+                                        <footer>
+                                            <cite title="Source Title">Phase1 Status: {{ $pending->phase1_status }}</cite>
+                                            <cite title="Source Title">Phase2 Status: {{ $pending->phase2_status }}</cite>
+                                            <cite title="Source Title">Phase3 Status: {{ $pending->phase3_status }}</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <div align="center">
+                            <p>No Pending Projects</p>
+                        </div>
+                    @endforelse
+                </div>
+            </div>
+            <div class="tab-pane fade" id="completed" style="margin-top:20px;">
+                <div class="row cm-fix-height">
+                    @forelse($completed as $complete)
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">Project Id {{ $complete->id }}</div>
+                                <div class="panel-body">
+                                    <blockquote style="margin:0">
+                                        <p>Imolementing agency:  {{ $pending->implementing_agency_id }}</p>
+                                        <footer><cite title="Source Title">Status: </cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <div align="center">
+                            <p>No Completed Projects</p>
+                        </div>
+                    @endforelse
                 </div>
             </div>
         </div>
-        <header id="cm-header">
-            <nav class="cm-navbar cm-navbar-primary">
-                <div class="btn btn-primary md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
-                <div class="cm-flex">
-                    <h1>Dashboard</h1> 
-                    <form id="cm-search" action="index.html" method="get">
-                        <input type="search" name="q" autocomplete="off" placeholder="Search...">
-                    </form>
-                </div>
-                <div class="pull-right">
-                    <div id="cm-search-btn" class="btn btn-primary md-search-white" data-toggle="cm-search"></div>
-                </div>
-                <div class="dropdown pull-right">
-                    <button class="btn btn-primary md-notifications-white" data-toggle="dropdown"> <span class="label label-danger">23</span> </button>
-                    <div class="popover cm-popover bottom">
-                        <div class="arrow"></div>
-                        <div class="popover-content">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <h4 class="list-group-item-heading text-overflow">
-                                        <i class="fa fa-fw fa-envelope"></i> Nunc volutpat aliquet magna.
-                                    </h4>
-                                    <p class="list-group-item-text text-overflow">Pellentesque tincidunt mollis scelerisque. Praesent vel blandit quam.</p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <h4 class="list-group-item-heading">
-                                        <i class="fa fa-fw fa-envelope"></i> Aliquam orci lectus
-                                    </h4>
-                                    <p class="list-group-item-text">Donec quis arcu non risus sagittis</p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <h4 class="list-group-item-heading">
-                                        <i class="fa fa-fw fa-warning"></i> Holy guacamole !
-                                    </h4>
-                                    <p class="list-group-item-text">Best check yo self, you're not looking too good.</p>
-                                </a>
-                            </div>
-                            <div style="padding:10px"><a class="btn btn-success btn-block" href="#">Show me more...</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown pull-right">
-                    <button class="btn btn-primary md-account-circle-white" data-toggle="dropdown"></button>
-                    <ul class="dropdown-menu">
-                        <li class="disabled text-center">
-                            <a style="cursor:default;"><strong>Priyanka Lubal</strong></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-cog"></i> Settings</a>
-                        </li>
-                        <li>
-                            <a href="login.html"><i class="fa fa-fw fa-sign-out"></i> Sign out</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <nav class="cm-navbar cm-navbar-default cm-navbar-slideup">
-                <div class="cm-flex">
-                    <div class="nav-tabs-container">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
-                            <li><a href="#completed" data-toggle="tab">Completed</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div id="global">
-            <div class="container-fluid">
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
-                        <div class="row cm-fix-height">
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project Description</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project Description</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project Description</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                    <div class="tab-pane fade" id="completed" style="margin-top:20px;">
-                        <div class="row cm-fix-height">
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project Description</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project Description</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
+
+    </div>
+</div>
+<script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>
+<script src="{{ asset('js/jquery.mousewheel.min.js') }}"></script>
+<script src="{{ asset('js/jquery.cookie.min.js') }}"></script>
+<script src="{{ asset('js/fastclick.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/clearmin.min.js') }}"></script>
+<div class="container-fluid" style="background-color: #283593;">
+    <div class="container" style="background-color: #283593;">
+        <br>
+        <div class="row">
+            <div class="col-md-1 col-sm-1">
+
             </div>
-            <footer class="cm-footer"><span class="pull-left">Connected as Priyanka Lubal</span><span class="pull-right">&copy; PAOMEDIA SARL</span></footer>
+            <div class="col-md-2 col-sm-2" align="center">
+                <img src="/img/logo_wt.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
+            </div>
+            <div class="col-md-2 col-sm-2" align="center">
+                <p class="text-footer-heading">
+                    PMAY
+                </p>
+                <p class="text-footer">
+                    About <br> History
+                </p>
+            </div>
+            <div class="col-md-2 col-sm-2" align="center">
+                <p class="text-footer-heading">
+                    Related Sites
+                </p>
+                <p class="text-footer">
+                    Site 1 <br> Site 2 <br> GST GOV
+                </p>
+            </div>
+            <div class="col-md-2 col-sm-2" align="center">
+                <p class="text-footer-heading">
+                    Help
+                </p>
+                <p class="text-footer">
+                    Requirements <br> How To Register <br> DPR Manual
+                </p>
+            </div>
+            <div class="col-md-2 col-sm-2" align="center">
+                <div class="row">
+                    <p class="text-footer-heading">
+                        Contact Us
+                    </p>
+                    <p class="text-footer">
+                        Help Desk Number :  <br> 1800-xxxx-xxxx <br>
+                    </p>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+                        <i class="fa fa-facebook-square" style="font-size:1.5em;color:#CFD8DC"></i>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+                        <i class="fa fa-youtube-play" style="font-size:1.5em;color:#CFD8DC"></i>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+                        <i class="fa fa-twitter-square" style="font-size:1.5em;color:#CFD8DC"></i>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+                        <i class="fa fa-linkedin-square" style="font-size:1.5em;color:#CFD8DC"></i>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>
-        <script src="{{ asset('js/jquery.mousewheel.min.js') }}"></script>
-        <script src="{{ asset('js/jquery.cookie.min.js') }}"></script>
-        <script src="{{ asset('js/fastclick.min.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/clearmin.min.js') }}"></script>
-    </body>
+        <br>
+    </div>
+</div>
+<div class="container-fluid" style="background-color: #1A237E; padding: 1em 1em 1em 1em;">
+    <div class="container">
+        <p style="color: #F5F5F5; font-size: 1.2em;" class="text-center"><i class="fa fa-copyright" aria-hidden="true"></i> This site was made as a part of Smart India Hackathon 2018 by Team Friday</p>
+    </div>
+</div>
+</body>
 </html>
