@@ -45,5 +45,3 @@ Route::post('/nodal_phase2','Phase2Controller@storeComments');
 
 Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3');
 Route::post('/nodal_phase3','Phase3Controller@storeComments');
-
-Route::get('/home', 'HomeController@index')->name('home');
