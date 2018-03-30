@@ -19,8 +19,8 @@ class CreateNodalUsersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('phase_no');
-            $table->string('completed');
-            $table->string('pending');
+            $table->integer('completed');
+            $table->integer('pending');
             $table->rememberToken();
             $table->timestamps();
         });
