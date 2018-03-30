@@ -11,7 +11,9 @@ class Phase1Controller extends Controller
 {
       //
       public function display($id){
-          return view('implementing_phase1')->with('id',$id);
+        $phasedata = Phase1::find($id); //Write the id from the table 'id'
+        return view('implementing_phase1')->with('phasedata',$phasedata);
+          //return view('implementing_phase1')->with('id',$id);
       }
 
       public function store(Phase1Request $request){
@@ -28,9 +30,10 @@ class Phase1Controller extends Controller
           Phase1Comment::create($request->all());
           return redirect()->route('nodal_phase1');
       }
-      public function save(Request $request){
-          Phase1::create($request->all());
-          return redirect()->route('implementing_phase1');
+      public function save(Request $request,$id){
+          $phasedata = Phase1::find($id);
+          $phasedata->update($request->all());
+          return redirect()->route('implementing_dashboard');
       }
       public function saveComments(Request $request){
           Phase1Comment::create($request->all());

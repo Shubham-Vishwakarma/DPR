@@ -71,17 +71,17 @@ class RegisterController extends Controller
         //error_log('Licensed_user = ' . $licensed_user->name);
 
         if($licensed_user){
-          //  sendMail($licensed_user->name,$data['password']);
-//          $data1 = array('name'=>$licensed_user->name,
-//          'pass'=>$data['password'],
-//          'email'=>$licensed_user->email,
-//          'end' => "This is Auto-generated mail. Dont't Reply.");
-//          Mail::send('emails.mail', $data1, function($message) use ($data1) {
-//          $message->to($data1['email'],$data1['name'])
-//                  ->subject('Registration Completed');
-//          $message->from('ff043095@gmail.com','fdxas fafssd');
-//
-//      });
+            //sendMail($licensed_user->name,$data['password']);
+          $data1 = array('name'=>$licensed_user->name,
+          'pass'=>$data['password'],
+         'email'=>$licensed_user->email,
+          'end' => "This is Auto-generated mail. Dont't Reply.");
+          Mail::send('emails.mail', $data1, function($message) use ($data1) {
+          $message->to($data1['email'],$data1['name'])
+                  ->subject('Registration Completed');
+          $message->from('yogmah6@gmail.com','Yog Mah');
+
+      });
 
             return User::create([
                 'username' => $licensed_user->name,

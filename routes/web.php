@@ -26,9 +26,6 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('/implementing_dashboard', function () {
-    return view('implementing_dashboard');
-})->name('implementing_dashboard');
 
 Route::get('/nodal_dashboard', function () {
     return view('nodal_dashboard');
@@ -60,6 +57,6 @@ Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3'
 Route::post('/nodal_phase3','Phase3Controller@storeComments');
 Route::post('/nodal_phase3','Phase3Controller@saveComments')->name('nodal_phase3_save');
 
-Route::get('/new_implement_dash', function () {
-    return view('new_implement_dash');
-});
+
+
+Route::get('/implementing_dashboard', 'ImplementingDashboard@getProject')->name('implementing_dashboard');
