@@ -525,7 +525,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="incentive_private_partner" class="control-label">19</label></td>
 						<td>
@@ -540,7 +540,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="existing_fsi" class="control-label">19.i)</label></td>
 						<td>
@@ -556,7 +556,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="provided_fsi" class="control-label">19.ii)</label></td>
 						<td>
@@ -572,7 +572,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="other_incentives" class="control-label">19.iii)</label></td>
 						<td>
@@ -588,7 +588,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="goi_grant" class="control-label">20.i)</label></td>
 						<td>
@@ -606,7 +606,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="state_grant" class="control-label">20.ii)</label></td>
 						<td>
@@ -622,7 +622,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="ulb_grant" class="control-label">20.iii)</label></td>
 						<td>
@@ -638,7 +638,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="beneficiary_share" class="control-label">20.iv)</label></td>
 						<td>
@@ -654,7 +654,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="total_grant" class="control-label">21</label></td>
 						<td>
@@ -670,7 +670,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="specifications" class="control-label">22</label></td>
 						<td>
@@ -689,7 +689,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="temporary" class="control-label">23</label></td>
 						<td>
@@ -708,7 +708,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="trunk_infrastructure" class="control-label">24</label></td>
 						<td>
@@ -739,7 +739,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="water_supply" class="control-label">25</label></td>
 						<td>
@@ -772,7 +772,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="sewerage" class="control-label">25.ii)</label></td>
 						<td>
@@ -800,7 +800,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="road" class="control-label">25.iii)</label></td>
 						<td>
@@ -828,7 +828,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="storm_water_drain" class="control-label">25.iv)</label></td>
 						<td>
@@ -856,7 +856,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="electrification" class="control-label">25.v)</label></td>
 						<td>
@@ -884,7 +884,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="solid_waste" class="control-label">25.vi)</label></td>
 						<td>
@@ -913,7 +913,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="other_infrastructure" class="control-label">25.vii)</label></td>
 						<td>
@@ -929,7 +929,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="reasons" class="control-label">25.viii)</label></td>
 						<td>
@@ -947,7 +947,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="disaster" class="control-label">26</label></td>
 						<td>
@@ -979,7 +979,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="quality" class="control-label">27</label></td>
 						<td>
@@ -997,7 +997,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="o_and_m" class="control-label">28</label></td>
 						<td>
@@ -1014,7 +1014,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="encumbrance" class="control-label">29</label></td>
 						<td>
@@ -1044,7 +1044,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="innovative" class="control-label">30</label></td>
 						<td>
@@ -1074,7 +1074,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="slac_comments" class="control-label">31</label></td>
 						<td>
@@ -1091,7 +1091,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="project_brief" class="control-label">32</label></td>
 						<td>
@@ -1109,7 +1109,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="sub_date" class="control-label">33</label></td>
 						<td>
@@ -1130,7 +1130,9 @@
                 </table>
 
                 <div class="row" align="center">
-                    <button class="btn btn-primary" style="margin: 20px">Save</button>
+
+                      <a href="{{ route('save') }}"><button type="button" class="btn btn-primary" style="margin: 20px">Save</button></a>
+
                     <button type="submit" class="btn btn-success" style="margin: 20px">Submit</button>
                 </div>
 
