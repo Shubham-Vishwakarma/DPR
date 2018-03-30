@@ -36,7 +36,7 @@
                         <td><label for="state_name" class="control-label">1</label></td>
                         <td><label for="state_name" class="control-label">Name of the State</label></td>
                         <td>
-                            <input id="state_name" type="text" class="form-control" name="state_name" value="{{ old('state_name') }}" required autofocus>
+                            <input id="state_name" type="text" class="form-control" name="state_name" value="{{ old('state_name') }}"  autofocus>
 
                             @if ($errors->has('state_name'))
                                 <span class="help-block">
@@ -49,7 +49,7 @@
                         <td><label for="district_name" class="control-label">2</label></td>
                         <td><label for="district_name" class="control-label">Name of the District</label></td>
                         <td>
-                            <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('district_name') }}" required autofocus>
+                            <input id="district_name" type="text" class="form-control" name="district_name" value="{{ old('district_name') }}"  autofocus>
 
                             @if ($errors->has('district_name'))
                                 <span class="help-block">
@@ -62,7 +62,7 @@
                         <td><label for="city_name" class="control-label">3</label></td>
                         <td><label for="city_name" class="control-label">Name of the City</label></td>
                         <td>
-                            <input id="city_name" type="text" class="form-control" name="city_name" value="{{ old('city_name') }}" required>
+                            <input id="city_name" type="text" class="form-control" name="city_name" value="{{ old('city_name') }}" >
 
                             @if ($errors->has('city_name'))
                                 <span class="help-block">
@@ -75,7 +75,7 @@
                         <td><label for="slum_name" class="control-label">4</label></td>
                         <td><label for="slum_name" class="control-label">Name of the Slum</label></td>
                         <td>
-                            <input id="slum_name" type="text" class="form-control" name="slum_name" value="{{ old('slum_name') }}" required>
+                            <input id="slum_name" type="text" class="form-control" name="slum_name" value="{{ old('slum_name') }}" >
 
                             @if ($errors->has('slum_name'))
                                 <span class="help-block">
@@ -88,7 +88,7 @@
                         <td><label for="project_name" class="control-label">5</label></td>
                         <td><label for="project_name" class="control-label">Project Name</label></td>
                         <td>
-                            <input id="project_name" type="text" class="form-control" name="project_name" value="{{ old('project_name') }}" required>
+                            <input id="project_name" type="text" class="form-control" name="project_name" value="{{ old('project_name') }}" >
 
                             @if ($errors->has('project_name'))
                                 <span class="help-block">
@@ -101,7 +101,7 @@
                         <td><label for="project_code" class="control-label">6</label></td>
                         <td><label for="project_code" class="control-label">Project Code</label></td>
                         <td>
-                            <input id="project_code" type="text" class="form-control" name="project_code" value="{{ old('project_code') }}" required>
+                            <input id="project_code" type="text" class="form-control" name="project_code" value="{{ old('project_code') }}" >
 
                             @if ($errors->has('project_code'))
                                 <span class="help-block">
@@ -114,7 +114,7 @@
                         <td><label for="nodal_agency" class="control-label">7</label></td>
                         <td><label for="nodal_agency" class="control-label">State Level Nodal Agency</label></td>
                         <td>
-                            <input id="nodal_agency" type="text" class="form-control" name="nodal_agency" value="{{ old('nodal_agency') }}" required>
+                            <input id="nodal_agency" type="text" class="form-control" name="nodal_agency" value="{{ old('nodal_agency') }}" >
 
                             @if ($errors->has('nodal_agency'))
                                 <span class="help-block">
@@ -127,7 +127,7 @@
                         <td><label for="implementing_agency" class="control-label">8</label></td>
                         <td><label for="implementing_agency" class="control-label">Implementing Agency</label></td>
                         <td>
-                            <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ old('implementing_agency') }}" required>
+                            <input id="implementing_agency" type="text" class="form-control" name="implementing_agency" value="{{ old('implementing_agency') }}" >
 
                             @if ($errors->has('implementing_agency'))
                                 <span class="help-block">
@@ -140,7 +140,7 @@
                         <td><label for="agency_name" class="control-label">9</label></td>
                         <td><label for="agency_name" class="control-label">Implementing Agency Name</label></td>
                         <td>
-                            <input id="agency_name" type="text" class="form-control" name="agency_name" value="{{ old('implementing_agency') }}" required>
+                            <input id="agency_name" type="text" class="form-control" name="agency_name" value="{{ old('implementing_agency') }}" >
 
                             @if ($errors->has('agency_name'))
                                 <span class="help-block">
@@ -157,7 +157,7 @@
                             <label for="approval_date" class="control-label">Committee (SLSMC)</label>
                         </td>
                         <td>
-                            <input id="approval_date" type="text" class="form-control" name="approval_date" value="{{ old('approval_date') }}" required>
+                            <input id="approval_date" type="text" class="form-control" name="approval_date" value="{{ old('approval_date') }}" >
 
                             @if ($errors->has('approval_date'))
                                 <span class="help-block">
@@ -172,7 +172,7 @@
                             <label for="project_cost" class="control-label">Project Cost (Rs. In Lakhs)</label>
                         </td>
                         <td>
-                            <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ old('project_cost') }}" required>
+                            <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ old('project_cost') }}" >
 
                             @if ($errors->has('project_cost'))
                                 <span class="help-block">
@@ -187,7 +187,7 @@
                             <label for="project_duration" class="control-label">Project Duration (in months)</label>
                         </td>
                         <td>
-                            <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ old('project_duration') }}" required>
+                            <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ old('project_duration') }}" >
 
                             @if ($errors->has('project_duration'))
                                 <span class="help-block">
@@ -204,7 +204,7 @@
                         <td>
                             <div class="col-sm-10" id="slum">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="slum_status" id="slum_status_1" value="1" required>
+                                    <input class="form-check-input" type="radio" name="slum_status" id="slum_status_1" value="1" >
                                     <label class="form-check-label" for="slum_status_1">
                                         1 (Notified)
                                     </label>
@@ -235,7 +235,7 @@
                             <label for="total_slum_area" class="control-label">Total slum area(Sqm.)</label>
                         </td>
                         <td>
-                            <input id="total_slum_area" type="text" class="form-control" name="total_slum_area" value="{{ old('total_slum_area') }}" required>
+                            <input id="total_slum_area" type="text" class="form-control" name="total_slum_area" value="{{ old('total_slum_area') }}" >
 
                             @if ($errors->has('total_slum_area'))
                                 <span class="help-block">
@@ -250,7 +250,7 @@
                             <label for="rehabilitation_area" class="control-label">Area under rehabilitation(Sqm.)</label>
                         </td>
                         <td>
-                            <input id="rehabilitation_area" type="text" class="form-control" name="rehabilitation_area" value="{{ old('rehabilitation_area') }}" required>
+                            <input id="rehabilitation_area" type="text" class="form-control" name="rehabilitation_area" value="{{ old('rehabilitation_area') }}" >
 
                             @if ($errors->has('rehabilitation_area'))
                                 <span class="help-block">
@@ -265,7 +265,7 @@
                             <label for="slum_population" class="control-label">Slum Population</label>
                         </td>
                         <td>
-                            <input id="slum_population" type="text" class="form-control" name="slum_population" value="{{ old('slum_population') }}" required>
+                            <input id="slum_population" type="text" class="form-control" name="slum_population" value="{{ old('slum_population') }}" >
 
                             @if ($errors->has('slum_population'))
                                 <span class="help-block">
@@ -286,7 +286,7 @@
                                         <label for="gen" class="control-label">Gen</label>
                                     </div>
                                     <div class="row">
-                                        <input id="gen" type="text" class="form-control" name="gen" value="{{ old('gen') }}" required>
+                                        <input id="gen" type="text" class="form-control" name="gen" value="{{ old('gen') }}" >
 
                                         @if ($errors->has('gen'))
                                             <span class="help-block">
@@ -300,7 +300,7 @@
                                         <label for="sc" class="control-label">SC</label>
                                     </div>
                                     <div class="row">
-                                        <input id="sc" type="text" class="form-control" name="sc" value="{{ old('sc') }}" required>
+                                        <input id="sc" type="text" class="form-control" name="sc" value="{{ old('sc') }}" >
 
                                         @if ($errors->has('sc'))
                                             <span class="help-block">
@@ -314,7 +314,7 @@
                                         <label for="st" class="control-label">ST</label>
                                     </div>
                                     <div class="row">
-                                        <input id="st" type="text" class="form-control" name="st" value="{{ old('st') }}" required>
+                                        <input id="st" type="text" class="form-control" name="st" value="{{ old('st') }}" >
 
                                         @if ($errors->has('st'))
                                             <span class="help-block">
@@ -328,7 +328,7 @@
                                         <label for="obc" class="control-label">OBC</label>
                                     </div>
                                     <div class="row">
-                                        <input id="obc" type="text" class="form-control" name="obc" value="{{ old('obc') }}" required>
+                                        <input id="obc" type="text" class="form-control" name="obc" value="{{ old('obc') }}" >
 
                                         @if ($errors->has('obc'))
                                             <span class="help-block">
@@ -342,7 +342,7 @@
                                         <label for="minority" class="control-label">Minority</label>
                                     </div>
                                     <div class="row">
-                                        <input id="minority" type="text" class="form-control" name="minority" value="{{ old('minority') }}" required>
+                                        <input id="minority" type="text" class="form-control" name="minority" value="{{ old('minority') }}" >
 
                                         @if ($errors->has('minority'))
                                             <span class="help-block">
@@ -356,7 +356,7 @@
                                         <label for="total_slum_household" class="control-label">Total</label>
                                     </div>
                                     <div class="row">
-                                        <input id="total_slum_household" type="text" class="form-control" name="total_slum_household" value="{{ old('total_slum_household') }}" required>
+                                        <input id="total_slum_household" type="text" class="form-control" name="total_slum_household" value="{{ old('total_slum_household') }}" >
 
                                         @if ($errors->has('total_slum_household'))
                                             <span class="help-block">
@@ -380,7 +380,7 @@
                                         <label for="gen_eli" class="control-label">Gen</label>
                                     </div>
                                     <div class="row">
-                                        <input id="gen_eli" type="text" class="form-control" name="gen_eli" value="{{ old('gen_eli') }}" required>
+                                        <input id="gen_eli" type="text" class="form-control" name="gen_eli" value="{{ old('gen_eli') }}" >
 
                                         @if ($errors->has('gen_eli'))
                                             <span class="help-block">
@@ -394,7 +394,7 @@
                                         <label for="sc_eli" class="control-label">SC</label>
                                     </div>
                                     <div class="row">
-                                        <input id="sc_eli" type="text" class="form-control" name="sc_eli" value="{{ old('sc_eli') }}" required>
+                                        <input id="sc_eli" type="text" class="form-control" name="sc_eli" value="{{ old('sc_eli') }}" >
 
                                         @if ($errors->has('sc_eli'))
                                             <span class="help-block">
@@ -408,7 +408,7 @@
                                         <label for="st_eli" class="control-label">ST</label>
                                     </div>
                                     <div class="row">
-                                        <input id="st_eli" type="text" class="form-control" name="st_eli" value="{{ old('st_eli') }}" required>
+                                        <input id="st_eli" type="text" class="form-control" name="st_eli" value="{{ old('st_eli') }}" >
 
                                         @if ($errors->has('st_eli'))
                                             <span class="help-block">
@@ -422,7 +422,7 @@
                                         <label for="obc_eli" class="control-label">OBC</label>
                                     </div>
                                     <div class="row">
-                                        <input id="obc_eli" type="text" class="form-control" name="obc_eli" value="{{ old('obc_eli') }}" required>
+                                        <input id="obc_eli" type="text" class="form-control" name="obc_eli" value="{{ old('obc_eli') }}" >
 
                                         @if ($errors->has('obc_eli'))
                                             <span class="help-block">
@@ -436,7 +436,7 @@
                                         <label for="minority_eli" class="control-label">Minority</label>
                                     </div>
                                     <div class="row">
-                                        <input id="minority_eli" type="text" class="form-control" name="minority_eli" value="{{ old('minority_eli') }}" required>
+                                        <input id="minority_eli" type="text" class="form-control" name="minority_eli" value="{{ old('minority_eli') }}" >
 
                                         @if ($errors->has('minority_eli'))
                                             <span class="help-block">
@@ -450,7 +450,7 @@
                                         <label for="total_slum_household_eli" class="control-label">Total</label>
                                     </div>
                                     <div class="row">
-                                        <input id="total_slum_household_eli" type="text" class="form-control" name="total_slum_household_eli" value="{{ old('total_slum_household_eli') }}" required>
+                                        <input id="total_slum_household_eli" type="text" class="form-control" name="total_slum_household_eli" value="{{ old('total_slum_household_eli') }}" >
 
                                         @if ($errors->has('total_slum_household_eli'))
                                             <span class="help-block">
@@ -470,7 +470,7 @@
                             <label for="houses_proposed" class="control-label">area</label>
                         </td>
                         <td>
-                            <input id="houses_proposed" type="text" class="form-control" name="houses_proposed" value="{{ old('houses_proposed') }}" required>
+                            <input id="houses_proposed" type="text" class="form-control" name="houses_proposed" value="{{ old('houses_proposed') }}" >
 
                             @if ($errors->has('houses_proposed'))
                                 <span class="help-block">
@@ -489,7 +489,7 @@
                         <td>
                             <div class="col-sm-10" id="selected_PMAY_label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="selected_PMAY" id="selected_PMAY_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="selected_PMAY" id="selected_PMAY_Yes" value="Yes" >
                                     <label class="form-check-label" for="selected_PMAY_Yes">
                                         Yes
                                     </label>
@@ -517,7 +517,7 @@
                             <label for="private_partner_selected" class="control-label">of Bidding</label>
 						</td>
 						<td>
-							<input id="private_partner_selected" type="date" class="form-control" name="private_partner_selected" value="{{ old('private_partner_selected') }}" required>
+							<input id="private_partner_selected" type="date" class="form-control" name="private_partner_selected" value="{{ old('private_partner_selected') }}" >
                             @if ($errors->has('private_partner_selected'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('private_partner_selected') }}</strong>
@@ -525,14 +525,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="incentive_private_partner" class="control-label">19</label></td>
 						<td>
 							<label for="incentive_private_partner" class="control-label">Incentives to Private Partner</label>
 						</td>
 						<td>
-							<input id="incentive_private_partner" type="text" class="form-control" name="incentive_private_partner" value="{{ old('incentive_private_partner') }}" required>
+							<input id="incentive_private_partner" type="text" class="form-control" name="incentive_private_partner" value="{{ old('incentive_private_partner') }}" >
                             @if ($errors->has('incentive_private_partner'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('incentive_private_partner') }}</strong>
@@ -540,14 +540,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="existing_fsi" class="control-label">19.i)</label></td>
 						<td>
 							<label for="existing_fsi" class="control-label">Existing FSI in the area</label>
 						</td>
 						<td>
-							<input id="existing_fsi" type="text" class="form-control" name="existing_fsi" value="{{ old('existing_fsi') }}" required>
+							<input id="existing_fsi" type="text" class="form-control" name="existing_fsi" value="{{ old('existing_fsi') }}" >
 
                             @if ($errors->has('existing_fsi'))
                                 <span class="help-block">
@@ -556,14 +556,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="provided_fsi" class="control-label">19.ii)</label></td>
 						<td>
 							<label for="provided_fsi" class="control-label">FSI provided in the project</label>
 						</td>
 						<td>
-							<input id="provided_fsi" type="text" class="form-control" name="provided_fsi" value="{{ old('provided_fsi') }}" required>
+							<input id="provided_fsi" type="text" class="form-control" name="provided_fsi" value="{{ old('provided_fsi') }}" >
 
                             @if ($errors->has('provided_fsi'))
                                 <span class="help-block">
@@ -572,14 +572,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="other_incentives" class="control-label">19.iii)</label></td>
 						<td>
 							<label for="other_incentives" class="control-label">Other Incentives, if any</label>
 						</td>
 						<td>
-							<input id="other_incentives" type="text" class="form-control" name="other_incentives" value="{{ old('other_incentives') }}" required>
+							<input id="other_incentives" type="text" class="form-control" name="other_incentives" value="{{ old('other_incentives') }}" >
 
                             @if ($errors->has('other_incentives'))
                                 <span class="help-block">
@@ -588,7 +588,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="goi_grant" class="control-label">20.i)</label></td>
 						<td>
@@ -597,7 +597,7 @@
                             <label for="goi_grant" class="control-label">Lakhs)</label>
 						</td>
 						<td>
-							<input id="goi_grant" type="text" class="form-control" name="goi_grant" value="{{ old('goi_grant') }}" required>
+							<input id="goi_grant" type="text" class="form-control" name="goi_grant" value="{{ old('goi_grant') }}" >
 
                             @if ($errors->has('goi_grant'))
                                 <span class="help-block">
@@ -606,14 +606,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="state_grant" class="control-label">20.ii)</label></td>
 						<td>
 							<label for="state_grant" class="control-label">State grant, if any (Rs. In Lakhs)</label>
 						</td>
 						<td>
-							<input id="state_grant" type="text" class="form-control" name="state_grant" value="{{ old('state_grant') }}" required>
+							<input id="state_grant" type="text" class="form-control" name="state_grant" value="{{ old('state_grant') }}" >
 
                             @if ($errors->has('state_grant'))
                                 <span class="help-block">
@@ -622,14 +622,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="ulb_grant" class="control-label">20.iii)</label></td>
 						<td>
 							<label for="ulb_grant" class="control-label">ULB grant, if any (Rs. In Lakhs)</label>
 						</td>
 						<td>
-							<input id="ulb_grant" type="text" class="form-control" name="ulb_grant" value="{{ old('ulb_grant') }}" required>
+							<input id="ulb_grant" type="text" class="form-control" name="ulb_grant" value="{{ old('ulb_grant') }}" >
 
                             @if ($errors->has('ulb_grant'))
                                 <span class="help-block">
@@ -638,14 +638,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="beneficiary_share" class="control-label">20.iv)</label></td>
 						<td>
 							<label for="beneficiary_share" class="control-label">Beneficiary Share (Rs. In Lakhs)</label>
 						</td>
 						<td>
-							<input id="beneficiary_share" type="text" class="form-control" name="beneficiary_share" value="{{ old('beneficiary_share') }}" required>
+							<input id="beneficiary_share" type="text" class="form-control" name="beneficiary_share" value="{{ old('beneficiary_share') }}" >
 
                             @if ($errors->has('beneficiary_share'))
                                 <span class="help-block">
@@ -654,14 +654,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="total_grant" class="control-label">21</label></td>
 						<td>
 							<label for="total_grant" class="control-label">Total (Rs. In Lakhs)</label>
 						</td>
 						<td>
-							<input id="total_grant" type="text" class="form-control" name="total_grant" value="{{ old('total_grant') }}" required>
+							<input id="total_grant" type="text" class="form-control" name="total_grant" value="{{ old('total_grant') }}" >
 
                             @if ($errors->has('total_grant'))
                                 <span class="help-block">
@@ -670,7 +670,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="specifications" class="control-label">22</label></td>
 						<td>
@@ -680,7 +680,7 @@
                             <label for="specifications" class="control-label">Standards/NBC/ State norms?</label>
 						</td>
 						<td>
-							<input id="specifications" type="text" class="form-control" name="specifications" value="{{ old('specifications') }}" required>
+							<input id="specifications" type="text" class="form-control" name="specifications" value="{{ old('specifications') }}" >
 
                             @if ($errors->has('specifications'))
                                 <span class="help-block">
@@ -689,7 +689,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="temporary" class="control-label">23</label></td>
 						<td>
@@ -699,7 +699,7 @@
                             <label for="temporary" class="control-label">the project (Rent/Transit Shelter)</label>
 						</td>
 						<td>
-							<input id="temporary" type="text" class="form-control" name="temporary" value="{{ old('temporary') }}" required>
+							<input id="temporary" type="text" class="form-control" name="temporary" value="{{ old('temporary') }}" >
 
                             @if ($errors->has('temporary'))
                                 <span class="help-block">
@@ -708,7 +708,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="trunk_infrastructure" class="control-label">24</label></td>
 						<td>
@@ -720,7 +720,7 @@
 						<td>
 							<div class="col-sm-10" id="trunk_infrastructure_label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="trunk_infrastructure" id="trunk_infrastructure_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="trunk_infrastructure" id="trunk_infrastructure_Yes" value="Yes" >
                                     <label class="form-check-label" for="trunk_infrastructure_Yes">
                                         Yes
                                     </label>
@@ -739,7 +739,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="water_supply" class="control-label">25</label></td>
 						<td>
@@ -753,7 +753,7 @@
 						<td>
 							<div class="col-sm-10" id="water_supply">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="water_supply" id="water_supply_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="water_supply" id="water_supply_Yes" value="Yes" >
                                     <label class="form-check-label" for="water_supply_Yes">
                                         Yes
                                     </label>
@@ -772,7 +772,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="sewerage" class="control-label">25.ii)</label></td>
 						<td>
@@ -781,7 +781,7 @@
 						<td>
 							<div class="col-sm-10" id="sewerage">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sewerage" id="sewerage_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="sewerage" id="sewerage_Yes" value="Yes" >
                                     <label class="form-check-label" for="sewerage_Yes">
                                         Yes
                                     </label>
@@ -800,7 +800,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="road" class="control-label">25.iii)</label></td>
 						<td>
@@ -809,7 +809,7 @@
 						<td>
 							<div class="col-sm-10" id="road">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="road" id="road_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="road" id="road_Yes" value="Yes" >
                                     <label class="form-check-label" for="road_Yes">
                                         Yes
                                     </label>
@@ -828,7 +828,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="storm_water_drain" class="control-label">25.iv)</label></td>
 						<td>
@@ -837,7 +837,7 @@
 						<td>
 							<div class="col-sm-10" id="storm_water_drain">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="storm_water_drain" id="storm_water_drain_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="storm_water_drain" id="storm_water_drain_Yes" value="Yes" >
                                     <label class="form-check-label" for="storm_water_drain_Yes">
                                         Yes
                                     </label>
@@ -856,7 +856,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="electrification" class="control-label">25.v)</label></td>
 						<td>
@@ -865,7 +865,7 @@
 						<td>
 							<div class="col-sm-10" id="electrification">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="electrification" id="electrification_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="electrification" id="electrification_Yes" value="Yes" >
                                     <label class="form-check-label" for="electrification_Yes">
                                         Yes
                                     </label>
@@ -884,7 +884,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="solid_waste" class="control-label">25.vi)</label></td>
 						<td>
@@ -894,7 +894,7 @@
 						<td>
 							<div class="col-sm-10" id="solid_waste">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="solid_waste" id="solid_waste_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="solid_waste" id="solid_waste_Yes" value="Yes" >
                                     <label class="form-check-label" for="solid_waste_Yes">
                                         Yes
                                     </label>
@@ -913,14 +913,14 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="other_infrastructure" class="control-label">25.vii)</label></td>
 						<td>
 							<label for="other_infrastructure" class="control-label">Any other, specify</label>
 						</td>
 						<td>
-							<input id="other_infrastructure" type="text" class="form-control" name="other_infrastructure" value="{{ old('other_infrastructure') }}" required>
+							<input id="other_infrastructure" type="text" class="form-control" name="other_infrastructure" value="{{ old('other_infrastructure') }}" >
 
                             @if ($errors->has('other_infrastructure'))
                                 <span class="help-block">
@@ -929,7 +929,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="reasons" class="control-label">25.viii)</label></td>
 						<td>
@@ -938,7 +938,7 @@
                             <label for="reasons" class="control-label">thereof</label>
 						</td>
 						<td>
-							<input id="reasons" type="text" class="form-control" name="reasons" value="{{ old('reasons') }}" required>
+							<input id="reasons" type="text" class="form-control" name="reasons" value="{{ old('reasons') }}" >
 
                             @if ($errors->has('reasons'))
                                 <span class="help-block">
@@ -947,7 +947,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="disaster" class="control-label">26</label></td>
 						<td>
@@ -960,7 +960,7 @@
 						<td>
 							<div class="col-sm-10" id="disaster">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="disaster" id="disaster_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="disaster" id="disaster_Yes" value="Yes" >
                                     <label class="form-check-label" for="disaster_Yes">
                                         Yes
                                     </label>
@@ -979,7 +979,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="quality" class="control-label">27</label></td>
 						<td>
@@ -988,7 +988,7 @@
                             <label for="quality" class="control-label">is proposed to be ensured?</label>
 						</td>
 						<td>
-							<input id="quality" type="text" class="form-control" name="quality" value="{{ old('quality') }}" required>
+							<input id="quality" type="text" class="form-control" name="quality" value="{{ old('quality') }}" >
 
                             @if ($errors->has('quality'))
                                 <span class="help-block">
@@ -997,7 +997,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="o_and_m" class="control-label">28</label></td>
 						<td>
@@ -1005,7 +1005,7 @@
                             <label for="o_and_m" class="control-label">if yes, for how many years?</label>
 						</td>
 						<td>
-							<input id="o_and_m" type="text" class="form-control" name="o_and_m" value="{{ old('o_and_m') }}" required>
+							<input id="o_and_m" type="text" class="form-control" name="o_and_m" value="{{ old('o_and_m') }}" >
 
                             @if ($errors->has('o_and_m'))
                                 <span class="help-block">
@@ -1014,7 +1014,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="encumbrance" class="control-label">29</label></td>
 						<td>
@@ -1025,7 +1025,7 @@
 						<td>
 							<div class="col-sm-10" id="encumbrance">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="encumbrance" id="encumbrance_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="encumbrance" id="encumbrance_Yes" value="Yes" >
                                     <label class="form-check-label" for="encumbrance_Yes">
                                         Yes
                                     </label>
@@ -1044,7 +1044,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="innovative" class="control-label">30</label></td>
 						<td>
@@ -1055,7 +1055,7 @@
 						<td>
 							<div class="col-sm-10" id="innovative">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="innovative" id="innovative_Yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="innovative" id="innovative_Yes" value="Yes" >
                                     <label class="form-check-label" for="innovative_Yes">
                                         Yes
                                     </label>
@@ -1074,7 +1074,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="slac_comments" class="control-label">31</label></td>
 						<td>
@@ -1082,7 +1082,7 @@
                             <label for="slac_comments" class="control-label">economic appraisal of DPR</label>
 						</td>
 						<td>
-							<input id="slac_comments" type="text" class="form-control" name="slac_comments" value="{{ old('slac_comments') }}" required>
+							<input id="slac_comments" type="text" class="form-control" name="slac_comments" value="{{ old('slac_comments') }}" >
 
                             @if ($errors->has('slac_comments'))
                                 <span class="help-block">
@@ -1091,7 +1091,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="project_brief" class="control-label">32</label></td>
 						<td>
@@ -1100,7 +1100,7 @@
                             <label for="project_brief" class="control-label">to furnish</label>
 						</td>
 						<td>
-							<input id="project_brief" type="text" class="form-control" name="project_brief" value="{{ old('project_brief') }}" required>
+							<input id="project_brief" type="text" class="form-control" name="project_brief" value="{{ old('project_brief') }}" >
 
                             @if ($errors->has('project_brief'))
                                 <span class="help-block">
@@ -1109,7 +1109,7 @@
                             @endif
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td><label for="sub_date" class="control-label">33</label></td>
 						<td>
@@ -1117,7 +1117,7 @@
                             <label for="sub_date" class="control-label">to SLSMC</label>
 						</td>
 						<td>
-							<input id="sub_date" type="date" class="form-control" name="sub_date" value="{{ old('sub_date') }}" required>
+							<input id="sub_date" type="date" class="form-control" name="sub_date" value="{{ old('sub_date') }}" >
 
                             @if ($errors->has('sub_date'))
                                 <span class="help-block">
@@ -1130,7 +1130,11 @@
                 </table>
 
                 <div class="row" align="center">
-                    <button class="btn btn-primary" style="margin: 20px">Save</button>
+
+              <a href="{{ route('implementing_phase1_save') }}">
+                <button type="submit" class="btn btn-primary" style="margin: 20px">Save</button>
+              </a>
+
                     <button type="submit" class="btn btn-success" style="margin: 20px">Submit</button>
                 </div>
 
