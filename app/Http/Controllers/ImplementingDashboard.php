@@ -15,6 +15,6 @@ class ImplementingDashboard extends Controller
           error_log('Auth id = ' . $id);
           $phase1=Phase1::create(['status'=>'0']);
           $project=Project::create(['phase1_id'=>$phase1->id,'implementing_agency_id'=>$id]);
-          return redirect()->route('implementing_phase1',['id'=>$phase1->id]);
+          return redirect()->route('implementing_phase1',$phase1->id);
     }
 }
