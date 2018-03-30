@@ -58,3 +58,7 @@ Route::post('/nodal_phase3','Phase3Controller@saveComments')->name('nodal_phase3
 
 
 Route::get('/implementing_dashboard', 'ImplementingDashboard@getProject')->name('implementing_dashboard');
+
+Route::get('/ocr', function () {
+    return view('ocr');
+});
