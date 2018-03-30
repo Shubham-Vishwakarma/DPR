@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class ImplementingDashboard extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create_project(){
           $id = Auth::id();
           error_log('Auth');

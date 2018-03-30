@@ -27,15 +27,13 @@ Route::get('/home', function () {
 })->name('home');
 
 
-Route::get('/nodal_dashboard', function () {
-    return view('nodal_dashboard');
-})->name('nodal_dashboard');
+Route::get('/nodal_dashboard', 'NodalController@displayDashboard')->name('nodal_dashboard');
 
 Route::get('/create_project','ImplementingDashboard@create_project')->name('create_project');
 
 Route::get('/implementing_phase1/{id}','Phase1Controller@display')->name('implementing_phase1');
 Route::post('/implementing_phase1/{id}', 'Phase1Controller@store');
-Route::post('/implementing_phase1/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
+Route::post('/implementing_phase1_save/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
 
 Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2', 'Phase2Controller@store');
@@ -45,18 +43,22 @@ Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementi
 Route::post('/implementing_phase3', 'Phase3Controller@store');
 Route::post('/implementing_phase3', 'Phase3Controller@save')->name('implementing_phase3_save');
 
-Route::get('/nodal_phase1','Phase1Controller@displayNodal')->name('nodal_phase1');
-Route::post('/nodal_phase1','Phase1Controller@storeComments');
-Route::post('/nodal_phase1','Phase1Controller@saveComments')->name('nodal_phase1_save');
+Route::get('/nodal_phase1/{id}','Phase1Controller@displayNodal')->name('nodal_phase1');
+Route::post('/nodal_phase1/{id}','Phase1Controller@storeComments');
+Route::post('/nodal_phase1/{id}','Phase1Controller@saveComments')->name('nodal_phase1_save');
 
-Route::get('/nodal_phase2','Phase2Controller@displayNodal')->name('nodal_phase2');
-Route::post('/nodal_phase2','Phase2Controller@storeComments');
-Route::post('/nodal_phase2','Phase2Controller@saveComments')->name('nodal_phase2_save');
+Route::get('/nodal_phase2/{id}','Phase2Controller@displayNodal')->name('nodal_phase2');
+Route::post('/nodal_phase2/{id}','Phase2Controller@storeComments');
+Route::post('/nodal_phase2/{id}','Phase2Controller@saveComments')->name('nodal_phase2_save');
 
-Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3');
-Route::post('/nodal_phase3','Phase3Controller@storeComments');
-Route::post('/nodal_phase3','Phase3Controller@saveComments')->name('nodal_phase3_save');
+Route::get('/nodal_phase3/{id}','Phase3Controller@displayNodal')->name('nodal_phase3');
+Route::post('/nodal_phase3/{id}','Phase3Controller@storeComments');
+Route::post('/nodal_phase3/{id}','Phase3Controller@saveComments')->name('nodal_phase3_save');
 
 
 
 Route::get('/implementing_dashboard', 'ImplementingDashboard@getProject')->name('implementing_dashboard');
+
+Route::get('/ocr', function () {
+    return view('ocr');
+});

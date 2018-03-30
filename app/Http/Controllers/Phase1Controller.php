@@ -5,20 +5,32 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\Phase1Request;
 use App\Phase1;
+use DB;
+use App\Assigned;
+use App\NodalUsers;
+use App\Project;
 use App\Phase1Comment;
 
 class Phase1Controller extends Controller
 {
-      //
+      public function __construct()
+      {
+            $this->middleware('auth');
+      }
+
       public function display($id){
         $phasedata = Phase1::find($id); //Write the id from the table 'id'
         return view('implementing_phase1')->with('phasedata',$phasedata);
-          //return view('implementing_phase1')->with('id',$id);
       }
 
-      public function store(Phase1Request $request){
-          Phase1::create($request->all());
-          return redirect()->route('implementing_phase1');
+      public function store(Request $request,$id){
+        $phasedata = Phase1::find($id);
+        $phasedata->update($request->all());
+        $min = DB::table('nodal_users')->min('pending');
+        $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
+        $pid=Project::where('phase1_id',$id)->first();
+        $id1 = DB::table('assigneds')->insertGetId(['phase_no' => '1', 'status' => 0,"nodal_id"=>$nodalID->id ,"phase_id"=>$id,"project_id"=>$pid->id ]);
+        return view('implementing_dashboard');
       }
 
       public function displayNodal(){
