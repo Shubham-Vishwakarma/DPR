@@ -28,4 +28,9 @@ class Phase2Controller extends Controller
         Phase2Comment::create($request->all());
         return redirect()->route('nodal_phase2');
     }
+
+    public function saveComments(Request $request){
+        Phase3Comment::create($request->all());
+        return redirect()->route('nodal_phase2');
+    }
 }
