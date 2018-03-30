@@ -9,7 +9,11 @@ use App\Http\Requests\Phase3Request;
 
 class Phase3Controller extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function display(){
         return view('implementing_phase3');
     }

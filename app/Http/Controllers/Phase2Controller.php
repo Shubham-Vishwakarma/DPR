@@ -10,7 +10,11 @@ use App\Http\Requests\Phase2Request;
 
 class Phase2Controller extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function display(){
         return view('implementing_phase2');
     }
