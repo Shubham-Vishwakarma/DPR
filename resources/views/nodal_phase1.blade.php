@@ -918,7 +918,7 @@ to furnish</td>
     </table>
 
         <div>
-          <button class="btn btn-primary">Save</button>
+          <a href="{{ route('nodal_phase1_save') }}"><button type="button" class="btn btn-primary">Save</button></a>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 

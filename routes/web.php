@@ -47,10 +47,13 @@ Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementi
 Route::post('/implementing_phase3', 'Phase3Controller@store');
 
 Route::get('/nodal_phase1','Phase1Controller@displayNodal')->name('nodal_phase1');
-Route::post('nodal_phase1','Phase1Controller@storeComments');
+Route::post('/nodal_phase1','Phase1Controller@storeComments');
+Route::post('/nodal_phase1','Phase1Controller@saveComments')->name('nodal_phase1_save');
 
 Route::get('/nodal_phase2','Phase2Controller@displayNodal')->name('nodal_phase2');
 Route::post('/nodal_phase2','Phase2Controller@storeComments');
+Route::post('/nodal_phase2','Phase2Controller@saveComments')->name('nodal_phase2_save');
 
 Route::get('/nodal_phase3','Phase3Controller@displayNodal')->name('nodal_phase3');
 Route::post('/nodal_phase3','Phase3Controller@storeComments');
+Route::post('/nodal_phase3','Phase3Controller@saveComments')->name('nodal_phase3_save');
