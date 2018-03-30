@@ -217,22 +217,32 @@ toggle between hiding and showing the dropdown content */
 
                 <div class="row cm-fix-height">
                     @forelse($pendings as $pending)
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
+                        <a href="
+                                    @if($phase_no == '1')
+                                        {{ route('nodal_phase1',$pending->phase2_id) }}
+                                    @elseif($phase_no == '2')
+                                        {{ route('nodal_phase2',$pending->phase2_id) }}
+                                    @elseif($phase_no == '3')
+                                        {{ route('nodal_phase3',$pending->phase2_id) }}
+                                    @endif
+                                ">
+                            <div class="col-sm-4">
+                                <div class="panel panel-default">
 
-                                <div class="panel-heading">Project Id {{ $pending->id }}</div>
-                                <div class="panel-body">
-                                    <blockquote style="margin:0">
-                                        <p>Implementing agency:  {{ $pending->implementing_agency_id }}</p>
-                                        <footer>
-                                            <cite title="Source Title">Phase1 Status: {{ $pending->phase1_status }}</cite>
-                                            <cite title="Source Title">Phase2 Status: {{ $pending->phase2_status }}</cite>
-                                            <cite title="Source Title">Phase3 Status: {{ $pending->phase3_status }}</cite>
-                                        </footer>
-                                    </blockquote>
+                                    <div class="panel-heading">Project Id: {{ $pending->id }}</div>
+                                    <div class="panel-body">
+                                        <blockquote style="margin:0">
+                                            <p>Implementing agency:  {{ $pending->implementing_agency_id }}</p>
+                                            <footer>
+                                                <cite title="Source Title">Phase1 Status: {{ $pending->phase1_status }}</cite><br/>
+                                                <cite title="Source Title">Phase2 Status: {{ $pending->phase2_status }}</cite><br/>
+                                                <cite title="Source Title">Phase3 Status: {{ $pending->phase3_status }}</cite><br/>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     @empty
                         <div align="center">
                             <p>No Pending Projects</p>
@@ -243,18 +253,32 @@ toggle between hiding and showing the dropdown content */
             <div class="tab-pane fade" id="completed" style="margin-top:20px;">
                 <div class="row cm-fix-height">
                     @forelse($completed as $complete)
+                        <a href="
+                                    @if($phase_no == '1')
+                                        {{ route('nodal_phase1',$pending->phase2_id) }}
+                                    @elseif($phase_no == '2')
+                                        {{ route('nodal_phase2',$pending->phase2_id) }}
+                                    @elseif($phase_no == '3')
+                                        {{ route('nodal_phase3',$pending->phase2_id) }}
+                                    @endif
+                                ">
                         <div class="col-sm-4">
                             <div class="panel panel-default">
 
-                                <div class="panel-heading">Project Id {{ $complete->id }}</div>
+                                <div class="panel-heading">Project Id: {{ $complete->id }}</div>
                                 <div class="panel-body">
                                     <blockquote style="margin:0">
-                                        <p>Imolementing agency:  {{ $pending->implementing_agency_id }}</p>
-                                        <footer><cite title="Source Title">Status: </cite></footer>
+                                        <p>Imolementing agency:  {{ $complete->implementing_agency_id }}</p>
+                                        <footer>
+                                            <cite title="Source Title">Phase1 Status: {{ $complete->phase1_status }}</cite><br/>
+                                            <cite title="Source Title">Phase2 Status: {{ $complete->phase2_status }}</cite><br/>
+                                            <cite title="Source Title">Phase3 Status: {{ $complete->phase3_status }}</cite><br/>
+                                        </footer>
                                     </blockquote>
                                 </div>
                             </div>
                         </div>
+                        </a>
                     @empty
                         <div align="center">
                             <p>No Completed Projects</p>

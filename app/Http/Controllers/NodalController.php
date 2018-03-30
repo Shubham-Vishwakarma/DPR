@@ -15,7 +15,7 @@ class NodalController extends Controller
     public function displayDashboard(){
         $id = Auth::guard('nodal_user')->id();
 
-        error_log('id = '.$id);
+        $phase_no = '';
 
         $project_pending = Assigned::where('nodal_id','=',$id)->where('status','=',0)->get();
         $completed_projected = Assigned::where('nodal_id','=',$id)->where('status','=',1)->get();
@@ -24,15 +24,17 @@ class NodalController extends Controller
         $completed = array();
 
         foreach ($project_pending as $pending){
+            $phase_no = $pending->phase_no;
             $project = Project::where('id','=',$pending->project_id)->first();
             array_push($pendings,$project);
         }
 
         foreach ($completed_projected as $complete){
+            $phase_no = $pending->phase_no;
             $project = Project::where('id','=',$complete->project_id)->first();
             array_push($completed,$project);
         }
 
-        return view('nodal_dashboard')->with('completed',$completed)->with('pendings',$pendings);
+        return view('nodal_dashboard')->with('completed',$completed)->with('pendings',$pendings)->with('phase_no',$phase_no);
     }
 }
