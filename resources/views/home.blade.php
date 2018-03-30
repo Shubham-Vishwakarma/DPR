@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>DPR Home</title>
@@ -16,6 +15,19 @@
 			<h3>Detailed Project Report</h3>
 		</div> 
 	</div>
+</div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">PMAY Home</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Register</a></li>
+			</ul>
+		</div>
+	</nav>
+<div class="container-fluid">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; height:500px;">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
