@@ -73,15 +73,6 @@ class Phase1Controller extends Controller
               $project->update(['phase2_id' => $phase2->id]);
 
               return redirect()->route('nodal_dashboard');
-//              $phase1comm = Phase1Comment::findOrNew($id);
-//              if($phase1comm->exists){
-//                  $phase1comm->update($request->all());
-//                  return redirect()->route('nodal_dashboard');
-//              }
-//              else{
-//                  Phase1Comment::create([$request->all()]);
-//                  return redirect()->route('nodal_dashboard');
-//              }
           }
           elseif($request->button == 'resend') {
               $phase1 = Phase1::find($id);
