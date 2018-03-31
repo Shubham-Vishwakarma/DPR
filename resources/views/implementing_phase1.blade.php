@@ -206,11 +206,8 @@
                             <label for="project_cost" class="control-label">Project Cost (Rs. In Lakhs)</label>
                         </td>
                         <td>
-                          @if($phasedata->project_cost)
-                            <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ $phasedata->project_cost}}" >
-                            @else
                             <input id="project_cost" type="text" class="form-control" name="project_cost" value="{{ old('project_cost') }}" >
-                            @endif
+
                             @if ($errors->has('project_cost'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('project_cost') }}</strong>
@@ -224,11 +221,8 @@
                             <label for="project_duration" class="control-label">Project Duration (in months)</label>
                         </td>
                         <td>
-                          @if($phasedata->project_duration)
-                            <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ $phasedata->project_duration }}" >
-                            @else
                             <input id="project_duration" type="text" class="form-control" name="project_duration" value="{{ old('project_duration') }}" >
-                            @endif
+
                             @if ($errors->has('project_duration'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('project_duration') }}</strong>
