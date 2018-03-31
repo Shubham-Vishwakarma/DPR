@@ -37,11 +37,11 @@ Route::post('/implementing_phase1_save/{id}', 'Phase1Controller@save')->name('im
 
 Route::get('/implementing_phase2/{id}', 'Phase2Controller@display')->name('implementing_phase2');
 Route::post('/implementing_phase2/{id}', 'Phase2Controller@store');
-Route::post('/implementing_phase2/{id}', 'Phase2Controller@save')->name('implementing_phase2_save');
+//Route::post('/implementing_phase2/{id}', 'Phase2Controller@save')->name('implementing_phase2_save');
 
 Route::get('/implementing_phase3/{id}', 'Phase3Controller@display')->name('implementing_phase3');
 Route::post('/implementing_phase3/{id}', 'Phase3Controller@store');
-Route::post('/implementing_phase3/{id}', 'Phase3Controller@save')->name('implementing_phase3_save');
+//Route::post('/implementing_phase3/{id}', 'Phase3Controller@save')->name('implementing_phase3_save');
 
 Route::get('/nodal_phase1/{id}','Phase1Controller@displayNodal')->name('nodal_phase1');
 Route::post('/nodal_phase1/{id}','Phase1Controller@storeComments');

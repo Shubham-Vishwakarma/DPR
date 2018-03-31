@@ -38,7 +38,7 @@ class Phase3Controller extends Controller
           $nodalIDpending=NodalUsers::where('pending',$min)->first();
           $nodalIDpending->pending+=1;
           $nodalIDpending->save();
-          $pid=Project::where('phase1_id',$id)->first();
+          $pid=Project::where('phase3_id',$id)->first();
           $id1 = DB::table('assigneds')->insertGetId(['phase_no' => '3', 'status' => 0,"nodal_id"=>$nodalID->id ,"phase_id"=>$id,"project_id"=>$pid->id ]);
             return redirect()->route('implementing_dashboard');
             break;

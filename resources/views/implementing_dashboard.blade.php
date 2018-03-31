@@ -93,7 +93,7 @@
                     <div class="nav-tabs-container">
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
-                            <li><a href="#completed" data-toggle="tab">Completed</a></li>
+                            <li><a href="#completed" data-toggle="tab">Approved</a></li>
                         </ul>
                     </div>
                 </div>
