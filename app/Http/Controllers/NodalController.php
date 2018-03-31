@@ -34,7 +34,7 @@ class NodalController extends Controller
         }
 
         foreach ($completed_projected as $complete){
-            $phase_no = $pending->phase_no;
+            $phase_no = $complete->phase_no;
             $project = Project::where('id','=',$complete->project_id)->first();
             array_push($completed,$project);
         }

@@ -262,11 +262,11 @@ toggle between hiding and showing the dropdown content */
                     @forelse($completed as $complete)
                         <a href="
                                     @if($phase_no == '1')
-                                        {{ route('nodal_phase1',$pending->phase1_id) }}
+                                        {{ route('nodal_phase1',$complete->phase1_id) }}
                                     @elseif($phase_no == '2')
-                                        {{ route('nodal_phase2',$pending->phase2_id) }}
+                                        {{ route('nodal_phase2',$complete->phase2_id) }}
                                     @elseif($phase_no == '3')
-                                        {{ route('nodal_phase3',$pending->phase3_id) }}
+                                        {{ route('nodal_phase3',$complete->phase3_id) }}
                                     @endif
                                 ">
                         <div class="col-sm-4">
