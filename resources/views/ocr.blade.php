@@ -6,7 +6,7 @@
 	</script>
 </head>
 <body>
-	<input type="text" id="url" placeholder="Image URL" value="{{ URL::asset('img/pmay1.jpg') }}" />
+	<input type="text" id="url" placeholder="Image URL" value="{{ URL::asset('img/ocr.png') }}" />
 	<input type="button" id="go_button" value="Run" />
 	<div id="ocr_results"> </div>
 	<div id="ocr_status"> </div>
