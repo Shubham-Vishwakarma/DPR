@@ -1166,10 +1166,10 @@
                 <div class="row" align="center">
 
               <a href="{{ route('implementing_phase1_save', $phasedata->id) }}">
-                <button type="submit" class="btn btn-primary" style="margin: 20px">Save</button>
+                <button type="submit" name="final" class="btn btn-primary" value="save_final"style="margin: 20px">Save</button>
               </a>
 
-                    <button type="submit" class="btn btn-success" style="margin: 20px">Submit</button>
+                    <button type="submit" name="final" class="btn btn-success" value="submit_final" style="margin: 20px">Submit</button>
                 </div>
 
             </form>
