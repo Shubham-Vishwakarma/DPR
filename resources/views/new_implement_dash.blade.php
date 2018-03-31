@@ -265,7 +265,7 @@ toggle between hiding and showing the dropdown content */
                 <div class="row cm-fix-height" style="padding: 2em;">
                     <h3 style="color: #E8EAF6">Phase 2</h3>
                     @forelse ($phase2projects as $project)
-                        <a href="{{route('implementing_phase1',$project->id)}}">
+                        <a href="{{route('implementing_phase2',$project->id)}}">
                             <div class="col-sm-4">
                                 <div class="panel panel-default">
 
@@ -296,7 +296,7 @@ toggle between hiding and showing the dropdown content */
                 <div class="row cm-fix-height" style="padding: 2em;">
                     <h3 style="color: #E8EAF6">Phase 3</h3>
                     @forelse ($phase3projects as $project)
-                        <a href="{{route('implementing_phase1',$project->id)}}">
+                        <a href="{{route('implementing_phase3',$project->id)}}">
                             <div class="col-sm-4">
                                 <div class="panel panel-default">
 
