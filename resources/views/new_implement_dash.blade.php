@@ -199,6 +199,9 @@ toggle between hiding and showing the dropdown content */
     </div>
 </nav>
 <div class="container">
+
+    <h1 style="color: #E8EAF6;" align="center">DASHBOARD - IMPLEMENTING AGENCY</h1><br>
+
     <div class="row">
         <div class="col-md-1">
 
@@ -231,7 +234,7 @@ toggle between hiding and showing the dropdown content */
             <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
 
                 <div class="row cm-fix-height" style="padding: 2em;">
-                    <h3>Phase 1</h3>
+                    <h3 style="color: #E8EAF6">Phase 1</h3>
                     @forelse ($phase1projects as $project)
                         <a href="{{route('implementing_phase1',$project->id)}}">
                             <div class="col-sm-4">
@@ -257,13 +260,13 @@ toggle between hiding and showing the dropdown content */
                             </div>
                         </a>
                     @empty
-                        <p>No Phase1 pending</p>
+                        <p style="color: #E8EAF6">No Phase1 pending</p>
                     @endforelse
 
                 </div>
 
                 <div class="row cm-fix-height" style="padding: 2em;">
-                    <h3>Phase 2</h3>
+                    <h3 style="color: #E8EAF6">Phase 2</h3>
                     @forelse ($phase2projects as $project)
                         <a href="{{route('implementing_phase1',$project->id)}}">
                             <div class="col-sm-4">
@@ -289,12 +292,12 @@ toggle between hiding and showing the dropdown content */
                             </div>
                         </a>
                     @empty
-                        <p>No Phase 2 Pending</p>
+                        <p style="color: #E8EAF6">No Phase 2 Pending</p>
                     @endforelse
                 </div>
 
                 <div class="row cm-fix-height" style="padding: 2em;">
-                    <h3>Phase 3</h3>
+                    <h3 style="color: #E8EAF6">Phase 3</h3>
                     @forelse ($phase3projects as $project)
                         <a href="{{route('implementing_phase1',$project->id)}}">
                             <div class="col-sm-4">
@@ -320,13 +323,13 @@ toggle between hiding and showing the dropdown content */
                             </div>
                         </a>
                     @empty
-                        <p>No Phase 3 Pending</p>
+                        <p style="color: #E8EAF6">No Phase 3 Pending</p>
                     @endforelse
                 </div>
             </div>
             <div class="tab-pane fade" id="completed" style="margin-top:20px;">
               <div class="row cm-fix-height" style="padding: 2em;">
-                  <h3>Phase 1</h3>
+                  <h3 style="color: #E8EAF6">Phase 1</h3>
                   @forelse ($completedprojectsphase1 as $project)
                       <a href="{{route('implementing_phase1',$project->id)}}">
                           <div class="col-sm-4">
@@ -350,13 +353,13 @@ toggle between hiding and showing the dropdown content */
                           </div>
                       </a>
                   @empty
-                      <p>No Phase1 pending</p>
+                      <p style="color: #E8EAF6">No Phase1 pending</p>
                   @endforelse
 
               </div>
 
               <div class="row cm-fix-height" style="padding: 2em;">
-                  <h3>Phase 2</h3>
+                  <h3 style="color: #E8EAF6">Phase 2</h3>
                   @forelse ($completedprojectsphase2 as $project)
                       <a href="{{route('implementing_phase1',$project->id)}}">
                           <div class="col-sm-4">
@@ -380,12 +383,12 @@ toggle between hiding and showing the dropdown content */
                           </div>
                       </a>
                   @empty
-                      <p>No Phase 2 Pending</p>
+                      <p style="color: #E8EAF6">No Phase 2 Pending</p>
                   @endforelse
               </div>
 
               <div class="row cm-fix-height" style="padding: 2em;">
-                  <h3>Phase 3</h3>
+                  <h3 style="color: #E8EAF6">Phase 3</h3>
                   @forelse ($completedprojectsphase3 as $project)
                       <a href="{{route('implementing_phase1',$project->id)}}">
                           <div class="col-sm-4">
@@ -409,7 +412,7 @@ toggle between hiding and showing the dropdown content */
                           </div>
                       </a>
                   @empty
-                      <p>No Phase 3 Pending</p>
+                      <p style="color: #E8EAF6">No Phase 3 Pending</p>
                   @endforelse
               </div>
             </div>

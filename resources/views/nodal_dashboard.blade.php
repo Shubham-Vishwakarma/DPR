@@ -200,6 +200,8 @@ toggle between hiding and showing the dropdown content */
     </div>
 </nav>
 
+    <h1 style="color: #E8EAF6;" align="center">DASHBOARD - NODAL AGENCY</h1><br>
+
     <div align="center">
         <h1>InSitu Development</h1>
     </div>
@@ -220,7 +222,7 @@ toggle between hiding and showing the dropdown content */
         <div class="tab-content">
             <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
 
-                <div class="row cm-fix-height">
+                <div class="row cm-fix-height" style="padding: 2em;">
                     @forelse($pendings as $pending)
                         <a href="
                                     @if($phase_no == '1')
@@ -250,13 +252,13 @@ toggle between hiding and showing the dropdown content */
                         </a>
                     @empty
                         <div align="center">
-                            <p>No Pending Projects</p>
+                            <p style="color: #E8EAF6">No Pending Projects</p>
                         </div>
                     @endforelse
                 </div>
             </div>
             <div class="tab-pane fade" id="completed" style="margin-top:20px;">
-                <div class="row cm-fix-height">
+                <div class="row cm-fix-height" style="padding: 2em;">
                     @forelse($completed as $complete)
                         <a href="
                                     @if($phase_no == '1')
@@ -286,7 +288,7 @@ toggle between hiding and showing the dropdown content */
                         </a>
                     @empty
                         <div align="center">
-                            <p>No Completed Projects</p>
+                            <p style="color: #E8EAF6">No Completed Projects</p>
                         </div>
                     @endforelse
                 </div>
