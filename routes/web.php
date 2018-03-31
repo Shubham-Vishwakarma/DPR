@@ -35,13 +35,13 @@ Route::get('/implementing_phase1/{id}','Phase1Controller@display')->name('implem
 Route::post('/implementing_phase1/{id}', 'Phase1Controller@store');
 Route::post('/implementing_phase1_save/{id}', 'Phase1Controller@save')->name('implementing_phase1_save');
 
-Route::get('/implementing_phase2', 'Phase2Controller@display')->name('implementing_phase2');
-Route::post('/implementing_phase2', 'Phase2Controller@store');
-Route::post('/implementing_phase2', 'Phase2Controller@save')->name('implementing_phase2_save');
+Route::get('/implementing_phase2/{id}', 'Phase2Controller@display')->name('implementing_phase2');
+Route::post('/implementing_phase2/{id}', 'Phase2Controller@store');
+Route::post('/implementing_phase2/{id}', 'Phase2Controller@save')->name('implementing_phase2_save');
 
-Route::get('/implementing_phase3', 'Phase3Controller@display')->name('implementing_phase3');
-Route::post('/implementing_phase3', 'Phase3Controller@store');
-Route::post('/implementing_phase3', 'Phase3Controller@save')->name('implementing_phase3_save');
+Route::get('/implementing_phase3/{id}', 'Phase3Controller@display')->name('implementing_phase3');
+Route::post('/implementing_phase3/{id}', 'Phase3Controller@store');
+Route::post('/implementing_phase3/{id}', 'Phase3Controller@save')->name('implementing_phase3_save');
 
 Route::get('/nodal_phase1/{id}','Phase1Controller@displayNodal')->name('nodal_phase1');
 Route::post('/nodal_phase1/{id}','Phase1Controller@storeComments');
