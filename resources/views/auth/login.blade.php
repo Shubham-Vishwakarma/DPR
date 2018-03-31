@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
+<html style="background-color: #9FA8DA">
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login
+                <div class="panel-heading" style="background-color: #C5CAE9;"><img src="/img/logo-head.png" alt="PMAY1" style="max-height: 150px;"><br>
+                    <span style="float: left; display: inline-block; margin-left: 1.7em; font-size: 1.5em;">Login</span>
                     <div align="right"><font color="red" size="3"> * </font>indicates mandatory fields</div>
                 </div>
 
-                <div class="panel-body">
+                <div class="panel-body" style="background-color: #7986CB; color: #ffffff;">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -74,7 +77,7 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" href="{{ route('password.request') }}" style="color: white;">
                                     Forgot Your Password?
                                 </a>
                             </div>
@@ -85,4 +88,5 @@
         </div>
     </div>
 </div>
+</html>
 @endsection
