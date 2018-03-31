@@ -32,6 +32,54 @@
 </head>
 
 <body>
+<div class="container-fluid">
+  <div class="row" style="background-color: rgb(206,219,233);">
+    <div class="col-md-2 col-sm-2" align="center">
+      <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
+    </div>
+    <div class="col-md-8 col-sm-2">
+            <span style="vertical-align: middle;">
+                <h3 class="text-header text-center">Online Detailed Project Report</h3>
+            </span>
+      <div align="center">
+        <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 75px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar" style="background-color: #C5CAE9; color: #212121; font-size: 1.15em;">
+  <div class="container-fluid">
+    <!--<div class="navbar-header">
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="navbar-brand" href="#" style="color: #212121; font-size: 1.2em;">PMAY Home</a>
+            </li>
+        </ul>
+    </div>-->
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="{{route('home')}}" style="color: #212121;">PMAY Home</a>
+      </li>
+      <li>
+        <a href="{{route('home')}}" style="color: #212121;">About</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{{route('login')}}" style="color: #212121;">Logout</a></li>
+      <li>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn"><a href="javascript: myFunction()"><i class="fa fa-user-circle-o" style="font-size:24px; color: black;"></i></a></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Sign Out</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
   <div class="container">
   <br />
     <nav aria-label="breadcrumb">
@@ -670,4 +718,73 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div class="container-fluid" style="background-color: #283593;">
+  <div class="container" style="background-color: #283593;">
+    <br>
+    <div class="row">
+      <div class="col-md-1 col-sm-1">
+
+      </div>
+      <div class="col-md-2 col-sm-2" align="center">
+        <img src="/img/logo_wt.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
+      </div>
+      <div class="col-md-2 col-sm-2" align="center">
+        <p class="text-footer-heading">
+          PMAY
+        </p>
+        <p class="text-footer">
+          About <br> History
+        </p>
+      </div>
+      <div class="col-md-2 col-sm-2" align="center">
+        <p class="text-footer-heading">
+          Related Sites
+        </p>
+        <p class="text-footer">
+          Site 1 <br> Site 2 <br> GST GOV
+        </p>
+      </div>
+      <div class="col-md-2 col-sm-2" align="center">
+        <p class="text-footer-heading">
+          Help
+        </p>
+        <p class="text-footer">
+          Requirements <br> How To Register <br> DPR Manual
+        </p>
+      </div>
+      <div class="col-md-2 col-sm-2" align="center">
+        <div class="row">
+          <p class="text-footer-heading">
+            Contact Us
+          </p>
+          <p class="text-footer">
+            Help Desk Number :  <br> 1800-xxxx-xxxx <br>
+          </p>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+            <i class="fa fa-facebook-square" style="font-size:1.5em;color:#CFD8DC"></i>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+            <i class="fa fa-youtube-play" style="font-size:1.5em;color:#CFD8DC"></i>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+            <i class="fa fa-twitter-square" style="font-size:1.5em;color:#CFD8DC"></i>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3" align="center">
+            <i class="fa fa-linkedin-square" style="font-size:1.5em;color:#CFD8DC"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+<div class="container-fluid" style="background-color: #1A237E; padding: 1em 1em 1em 1em;">
+  <div class="container">
+    <p style="color: #F5F5F5; font-size: 1.2em;" class="text-center"><i class="fa fa-copyright" aria-hidden="true"></i> This site was made as a part of Smart India Hackathon 2018 by Team Friday</p>
+  </div>
+</div>
 </body>

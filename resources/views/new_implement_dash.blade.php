@@ -174,13 +174,10 @@ toggle between hiding and showing the dropdown content */
         </div>-->
         <ul class="nav navbar-nav">
             <li>
-                <a href="#" style="color: #212121;">PMAY Home</a>
+                <a href="{{route('home')}}" style="color: #212121;">PMAY Home</a>
             </li>
             <li>
-                <a href="#" style="color: #212121;">Services</a>
-            </li>
-            <li>
-                <a href="#about-div" style="color: #212121;">About</a>
+                <a href="{{route('home')}}" style="color: #212121;">About</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
