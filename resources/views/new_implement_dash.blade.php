@@ -243,7 +243,14 @@ toggle between hiding and showing the dropdown content */
                                             <p>City Name:{{$project->city_name}}</p>
                                             <p>District Name:{{$project->district_name}}</p>
                                             <p>State Name:{{$project->state_name}}</p>
-                                            <footer><cite title="Source Title">Status</cite></footer>
+                                            <p>Submission Date:{{$project->dos}}</p>
+                                            <footer><cite title="Source Title">
+                                              @if($project->status==0)
+                                              Saved
+                                              @elseif($project->status==1)
+                                              Pending for approval
+                                              @endif
+                                            </cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -268,7 +275,14 @@ toggle between hiding and showing the dropdown content */
                                             <p>City Name:{{$project->city_name}}</p>
                                             <p>District Name:{{$project->district_name}}</p>
                                             <p>State Name:{{$project->state_name}}</p>
-                                            <footer><cite title="Source Title">Status</cite></footer>
+                                            <p>Submission Date:{{$project->dos}}</p>
+                                            <footer><cite title="Source Title">
+                                              @if($project->status==0)
+                                              Saved
+                                              @elseif($project->status==1)
+                                              Pending for approval
+                                              @endif
+                                            </cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -292,7 +306,14 @@ toggle between hiding and showing the dropdown content */
                                             <p>City Name:{{$project->city_name}}</p>
                                             <p>District Name:{{$project->district_name}}</p>
                                             <p>State Name:{{$project->state_name}}</p>
-                                            <footer><cite title="Source Title">Status</cite></footer>
+                                            <p>Submission Date:{{$project->dos}}</p>
+                                            <footer><cite title="Source Title">
+                                              @if($project->status==0)
+                                              Saved
+                                              @elseif($project->status==1)
+                                              Pending for approval
+                                              @endif
+                                            </cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -316,6 +337,7 @@ toggle between hiding and showing the dropdown content */
                                             <p>City Name:{{$project->city_name}}</p>
                                             <p>District Name:{{$project->district_name}}</p>
                                             <p>State Name:{{$project->state_name}}</p>
+                                            <p>Submission Date:{{$project->dos}}</p>
                                             <footer><cite title="Source Title">Status</cite></footer>
                                         </blockquote>
                                     </div>

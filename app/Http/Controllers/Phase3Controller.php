@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Phase3;
 use App\Phase3Comment;
+use Carbon;
 use App\Http\Requests\Phase3Request;
 
 class Phase3Controller extends Controller
@@ -29,6 +30,9 @@ class Phase3Controller extends Controller
           case 'submit_final':
           $phasedata = Phase3::find($id);
           $phasedata->update($request->all());
+          $phasedata->dos=Carbon\Carbon::now()->toDateTimeString();
+          $phasedata->status=1;
+          $phasedata->save();
           $min = DB::table('nodal_users')->where('phase_no','3')->min('pending');
           $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
           $nodalIDpending=NodalUsers::where('pending',$min)->first();

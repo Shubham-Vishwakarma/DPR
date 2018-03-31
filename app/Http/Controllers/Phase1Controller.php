@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Phase1Request;
 use App\Phase1;
 use DB;
+use Carbon;
 use App\Assigned;
 use App\NodalUsers;
 use App\Project;
@@ -34,6 +35,9 @@ class Phase1Controller extends Controller
             case 'submit_final':
             $phasedata = Phase1::find($id);
             $phasedata->update($request->all());
+            $phasedata->dos= Carbon\Carbon::now()->toDateTimeString();
+            $phasedata->status=1;
+            $phasedata->save();
             $min = DB::table('nodal_users')->where('phase_no','1')->min('pending');
             $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
             $nodalIDpending=NodalUsers::where('pending',$min)->first();
