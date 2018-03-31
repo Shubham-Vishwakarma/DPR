@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\Phase1Request;
 use App\Phase1;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Carbon;
 use App\Assigned;
 use App\NodalUsers;
@@ -62,6 +62,12 @@ class Phase1Controller extends Controller
           if($request->button == 'submit') {
               $phase1 = Phase1::find($id);
               $phase1->update(['status' => 2]);
+              $project = Project::where('phase1_id',$id)->first();
+              $project->update(['phase1_status' => 1]);
+
+              $assign = Assigned::where('phase_id',$id)->where('phase_no','1')->first();
+              $assign->update(['status' => '1']);
+
               return redirect()->route('nodal_dashboard');
 //              $phase1comm = Phase1Comment::findOrNew($id);
 //              if($phase1comm->exists){
