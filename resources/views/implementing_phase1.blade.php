@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-8 col-sm-2">
             <span style="vertical-align: middle;">
-                <h3 class="text-header text-center">Online Detailed Project Report</h3>
+                <h3 class="text-header text-center">Online Detaile Project Report</h3>
             </span>
                 <div align="center">
                     <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 75px;">
