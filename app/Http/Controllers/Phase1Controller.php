@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Phase2;
 use Illuminate\Http\Request;
 use App\Http\Requests\Phase1Request;
 use App\Phase1;
@@ -67,6 +68,9 @@ class Phase1Controller extends Controller
 
               $assign = Assigned::where('phase_id',$id)->where('phase_no','1')->first();
               $assign->update(['status' => '1']);
+
+              $phase2 = Phase2::create(['status'=>'0']);
+              $project->update(['phase2_id' => $phase2->id]);
 
               return redirect()->route('nodal_dashboard');
 //              $phase1comm = Phase1Comment::findOrNew($id);
