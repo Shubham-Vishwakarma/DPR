@@ -40,13 +40,16 @@ class ImplementingDashboard extends Controller
             ->where('implementing_agency_id',$id)->where('phase1_status','1')->where('phase2_status','1')
             ->where('phase3_status','0')->get();
 
-        $completedprojects = DB::table('projects')->join('phase3', 'projects.phase3_id', '=', 'phase3.id')
-            ->where('implementing_agency_id',$id)->where('phase1_status','1')->where('phase2_status','1')
-            ->where('phase3_status','1')->get();
+        $completedprojectsphase1 = DB::table('phase1')->where('status','2')->get();
+
+        $completedprojectsphase2 = DB::table('phase2')->where('status','2')->get();
+        $completedprojectsphase3 = DB::table('phase3')->where('status','2')->get();
 
         return view('new_implement_dash')->with('phase1projects',$phase1projects)
                                                 ->with('phase2projects',$phase2projects)
                                                 ->with('phase3projects',$phase3projects)
-                                                ->with('completedprojects',$completedprojects);
+                                                ->with('completedprojectsphase1',$completedprojectsphase1)
+                                                ->with('completedprojectsphase2',$completedprojectsphase2)
+                                                ->with('completedprojectsphase3',$completedprojectsphase3);
     }
 }
