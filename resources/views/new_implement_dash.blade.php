@@ -1,25 +1,3 @@
-
-
-More
-1 of 10,265
-
-(no subject)
-Inbox
-x
-
-Yogesh Mahajan
-Attachments05:43 (0 minutes ago)
-to me
-
-Attachments area
-
-Click here to Reply or Forward
-6.81 GB (45%) of 15 GB used
-Manage
-Terms - Privacy
-Last account activity: 7 hours ago
-Details
-
 <html lang="en">
 <head>
     <title>Implementing Dashboard</title>
@@ -220,8 +198,21 @@ toggle between hiding and showing the dropdown content */
         </ul>
     </div>
 </nav>
-<a href="{{ route('create_project') }}">Create new Project</a>
 <div class="container">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-9 text-center">
+           <a href="{{ route('create_project') }}">
+               <span><i class="fa fa-plus-square" style="font-size:2.1em;color:white;"></i></span>
+                <span style="font-size: 2em; color: white;">CREATE NEW PROJECT</span>
+           </a>
+        </div>
+    </div>
+    <br>
+    <br>
+
     <nav class="navbar" style="background-color: #BDBDBD">
         <!--<div class="cm-flex">-->
         <div class="">
