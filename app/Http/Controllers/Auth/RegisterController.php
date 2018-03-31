@@ -96,7 +96,7 @@ class RegisterController extends Controller
 
       return $licensed_user;
     }
-  /*  public static function sendMail($username,$pass){
+    public static function sendMail($username,$pass){
       $data = array('name'=>$username,
       "pass"=>$pass,
       "end" => "This is Auto-generated mail. Dont't Reply.");
@@ -107,5 +107,5 @@ class RegisterController extends Controller
 
 	});
 
-}*/
+}
 }
