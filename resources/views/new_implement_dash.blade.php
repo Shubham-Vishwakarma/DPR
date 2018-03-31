@@ -1,3 +1,25 @@
+
+
+More
+1 of 10,265
+
+(no subject)
+Inbox
+x
+
+Yogesh Mahajan
+Attachments05:43 (0 minutes ago)
+to me
+
+Attachments area
+
+Click here to Reply or Forward
+6.81 GB (45%) of 15 GB used
+Manage
+Terms - Privacy
+Last account activity: 7 hours ago
+Details
+
 <html lang="en">
 <head>
     <title>Implementing Dashboard</title>
@@ -147,131 +169,131 @@ toggle between hiding and showing the dropdown content */
 
 <body style="background-color: #7986CB;">
 
-    <div class="container-fluid">
-        <div class="row" style="background-color: rgb(206,219,233);">
-            <div class="col-md-2 col-sm-2" align="center">
-                <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
-            </div>
-            <div class="col-md-8 col-sm-2">
+<div class="container-fluid">
+    <div class="row" style="background-color: rgb(206,219,233);">
+        <div class="col-md-2 col-sm-2" align="center">
+            <img src="/img/logo-head.png" class="img-responsive" alt="PMAY1" style="max-height: 150px;">
+        </div>
+        <div class="col-md-8 col-sm-2">
             <span style="vertical-align: middle;">
                 <h3 class="text-header text-center">Online Detailed Project Report</h3>
             </span>
-                <div align="center">
-                    <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 75px;">
-                </div>
+            <div align="center">
+                <img src="/img/maha-logo.png" class="img-responsive" alt="PMAY1" style="max-height: 75px;">
             </div>
         </div>
     </div>
+</div>
 
-    <nav class="navbar" style="background-color: #C5CAE9; color: #212121; font-size: 1.15em;">
-        <div class="container-fluid">
-            <!--<div class="navbar-header">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="navbar-brand" href="#" style="color: #212121; font-size: 1.2em;">PMAY Home</a>
-                    </li>
-                </ul>
-            </div>-->
+<nav class="navbar" style="background-color: #C5CAE9; color: #212121; font-size: 1.15em;">
+    <div class="container-fluid">
+        <!--<div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" style="color: #212121;">PMAY Home</a>
-                </li>
-                <li>
-                    <a href="#" style="color: #212121;">Services</a>
-                </li>
-                <li>
-                    <a href="#about-div" style="color: #212121;">About</a>
+                    <a class="navbar-brand" href="#" style="color: #212121; font-size: 1.2em;">PMAY Home</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{route('login')}}" style="color: #212121;">Logout</a></li>
-                <li>
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn"><a href="javascript: myFunction()"><i class="fa fa-user-circle-o" style="font-size:24px; color: black;"></i></a></button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Profile</a>
-                            <a href="#">Settings</a>
-                            <a href="#">Sign Out</a>
-                        </div>
+        </div>-->
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#" style="color: #212121;">PMAY Home</a>
+            </li>
+            <li>
+                <a href="#" style="color: #212121;">Services</a>
+            </li>
+            <li>
+                <a href="#about-div" style="color: #212121;">About</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{route('login')}}" style="color: #212121;">Logout</a></li>
+            <li>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><a href="javascript: myFunction()"><i class="fa fa-user-circle-o" style="font-size:24px; color: black;"></i></a></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Sign Out</a>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <a href="{{ route('create_project') }}">Create new Project</a>
 <div class="container">
     <nav class="navbar" style="background-color: #BDBDBD">
         <!--<div class="cm-flex">-->
-            <div class="">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
-                    <li><a href="#completed" data-toggle="tab">Completed</a></li>
-                </ul>
-            </div>
+        <div class="">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
+                <li><a href="#completed" data-toggle="tab">Completed</a></li>
+            </ul>
+        </div>
         <!--</div>-->
     </nav>
 </div>
 
-    <div class="container-fluid" style="background-color: #7986CB; min-height: 500px;">
-        <div class="container">
-            <div class="tab-content">
-                <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
+<div class="container-fluid" style="background-color: #7986CB; min-height: 500px;">
+    <div class="container">
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
 
-                    <div class="row cm-fix-height">
-                      @forelse ($userproject as $project)
-                      <a href="{{route('implementing_phase1',$project->id)}}">
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
+                <div class="row cm-fix-height">
+                    @forelse ($userproject as $project)
+                        <a href="{{route('implementing_phase1',$project->id)}}">
+                            <div class="col-sm-4">
+                                <div class="panel panel-default">
 
-                                <div class="panel-heading">{{$project->project_name}}</div>
-                                <div class="panel-body">
-                                    <blockquote style="margin:0">
-                                      <p>City Name:{{$project->city_name}}</p>
-                                        <p>District Name:{{$project->district_name}}</p>
-                                        <p>State Name:{{$project->state_name}}</p>
-                                        <footer><cite title="Source Title">Status</cite></footer>
-                                    </blockquote>
+                                    <div class="panel-heading">{{$project->project_name}}</div>
+                                    <div class="panel-body">
+                                        <blockquote style="margin:0">
+                                            <p>City Name:{{$project->city_name}}</p>
+                                            <p>District Name:{{$project->district_name}}</p>
+                                            <p>State Name:{{$project->state_name}}</p>
+                                            <footer><cite title="Source Title">Status</cite></footer>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
-                        @empty
+                    @empty
                         <p>not found</p>
-                        @endforelse
+                    @endforelse
 
-                    </div>
                 </div>
-                <div class="tab-pane fade" id="completed" style="margin-top:20px;">
-                    <div class="row cm-fix-height">
+            </div>
+            <div class="tab-pane fade" id="completed" style="margin-top:20px;">
+                <div class="row cm-fix-height">
 
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Project name</div>
-                                <div class="panel-body">
-                                    <blockquote style="margin:0">
-                                        <p>Project DashBoard</p>
-                                        <footer><cite title="Source Title">Status</cite></footer>
-                                    </blockquote>
-                                </div>
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Project name</div>
+                            <div class="panel-body">
+                                <blockquote style="margin:0">
+                                    <p>Project DashBoard</p>
+                                    <footer><cite title="Source Title">Status</cite></footer>
+                                </blockquote>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Project name</div>
-                                <div class="panel-body">
-                                    <blockquote style="margin:0">
-                                        <p>Project Description</p>
-                                        <footer><cite title="Source Title">Status</cite></footer>
-                                    </blockquote>
-                                </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Project name</div>
+                            <div class="panel-body">
+                                <blockquote style="margin:0">
+                                    <p>Project Description</p>
+                                    <footer><cite title="Source Title">Status</cite></footer>
+                                </blockquote>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
 <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>
 <script src="{{ asset('js/jquery.mousewheel.min.js') }}"></script>
 <script src="{{ asset('js/jquery.cookie.min.js') }}"></script>
