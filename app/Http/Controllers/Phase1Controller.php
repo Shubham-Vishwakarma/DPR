@@ -15,7 +15,7 @@ class Phase1Controller extends Controller
 {
       public function __construct()
       {
-            $this->middleware('auth');
+          //  $this->middleware('auth');
       }
 
       public function display($id){
@@ -34,7 +34,7 @@ class Phase1Controller extends Controller
             case 'submit_final':
             $phasedata = Phase1::find($id);
             $phasedata->update($request->all());
-            $min = DB::table('nodal_users')->min('pending');
+            $min = DB::table('nodal_users')->where('phase_no','1')->min('pending');
             $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
             $nodalIDpending=NodalUsers::where('pending',$min)->first();
             $nodalIDpending->pending+=1;
@@ -53,8 +53,8 @@ class Phase1Controller extends Controller
       }
 
       public function storeComments(Request $request,$id){
-        $phasedata = Phase1Comment::find($id);
-        $phasedata->update($request->all());
+        $phase1comm=Phase1Comment::create(['id'=>$id]);
+        $phase1comm->update($request->all());
           return redirect()->route('nodal_dashboard');
       }
       public function save(Request $request,$id){
