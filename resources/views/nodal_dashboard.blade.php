@@ -207,7 +207,7 @@ toggle between hiding and showing the dropdown content */
     </div>
 
 <div class="container">
-    <nav class="navbar" style="background-color: #BDBDBD">
+    <nav class="navbar" style="background-color: #E8EAF6">
         <div class="">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#pending" data-toggle="tab">Pending</a></li>
