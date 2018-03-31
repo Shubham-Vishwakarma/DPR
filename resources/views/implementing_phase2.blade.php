@@ -82,7 +82,7 @@
 
 <div class="container">
 
-    <form class="form-horizontal" method="POST" action="{{ route('implementing_phase2') }}">
+    <form class="form-horizontal" method="POST" action="{{ route('implementing_phase2',$id) }}">
         {{ csrf_field() }}
 		<br>
         <table class="table table-responsive table-hover">

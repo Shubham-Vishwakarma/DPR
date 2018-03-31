@@ -16,8 +16,8 @@ class Phase2Controller extends Controller
     //    $this->middleware('auth');
     }
 
-    public function display(){
-        return view('implementing_phase2');
+    public function display($id){
+        return view('implementing_phase2')->with('id',$id);
     }
 
     public function store(Request $request, $id){
