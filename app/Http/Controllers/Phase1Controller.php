@@ -24,13 +24,24 @@ class Phase1Controller extends Controller
       }
 
       public function store(Request $request,$id){
-        $phasedata = Phase1::find($id);
-        $phasedata->update($request->all());
-        $min = DB::table('nodal_users')->min('pending');
-        $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
-        $pid=Project::where('phase1_id',$id)->first();
-        $id1 = DB::table('assigneds')->insertGetId(['phase_no' => '1', 'status' => 0,"nodal_id"=>$nodalID->id ,"phase_id"=>$id,"project_id"=>$pid->id ]);
+        switch ($request->final) {
+          case 'save_final':
+          $phasedata = Phase1::find($id);
+          $phasedata->update($request->all());
           return redirect()->route('implementing_dashboard');
+            break;
+
+            case 'submit_final':
+            $phasedata = Phase1::find($id);
+            $phasedata->update($request->all());
+            $min = DB::table('nodal_users')->min('pending');
+            $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
+            $pid=Project::where('phase1_id',$id)->first();
+            $id1 = DB::table('assigneds')->insertGetId(['phase_no' => '1', 'status' => 0,"nodal_id"=>$nodalID->id ,"phase_id"=>$id,"project_id"=>$pid->id ]);
+              return redirect()->route('implementing_dashboard');
+              break;
+        }
+
       }
 
       public function displayNodal($id){
