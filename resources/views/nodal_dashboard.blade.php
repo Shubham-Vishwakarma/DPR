@@ -183,6 +183,7 @@ toggle between hiding and showing the dropdown content */
                 <a href="#about-div" style="color: #212121;">About</a>
             </li>
         </ul>
+
         <ul class="nav navbar-nav navbar-right">
             <li><a href="{{route('login')}}" style="color: #212121;">Logout</a></li>
             <li>
@@ -198,6 +199,10 @@ toggle between hiding and showing the dropdown content */
         </ul>
     </div>
 </nav>
+
+    <div align="center">
+        <h1>InSitu Development</h1>
+    </div>
 
 <div class="container">
     <nav class="navbar" style="background-color: #BDBDBD">

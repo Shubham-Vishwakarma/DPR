@@ -45,7 +45,7 @@ Route::post('/implementing_phase3/{id}', 'Phase3Controller@save')->name('impleme
 
 Route::get('/nodal_phase1/{id}','Phase1Controller@displayNodal')->name('nodal_phase1');
 Route::post('/nodal_phase1/{id}','Phase1Controller@storeComments');
-Route::post('/nodal_phase1/{id}','Phase1Controller@saveComments')->name('nodal_phase1_save');
+//Route::post('/nodal_phase1/{id}','Phase1Controller@saveComments')->name('nodal_phase1_save');
 
 Route::get('/nodal_phase2/{id}','Phase2Controller@displayNodal')->name('nodal_phase2');
 Route::post('/nodal_phase2/{id}','Phase2Controller@storeComments');

@@ -15,7 +15,8 @@ class CreatePhase3CommentsTable extends Migration
     {
         Schema::create('phase3_comments', function (Blueprint $table) {
             $table->integer('id')->nullable();
-			      $table->string('state_name')->nullable();
+            $table->integer('phase3_id')->nullable();
+            $table->string('state_name')->nullable();
             $table->string('district_name')->nullable();
             $table->string('city_name')->nullable();
             $table->string('project_name')->nullable();

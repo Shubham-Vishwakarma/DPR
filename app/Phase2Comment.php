@@ -10,6 +10,7 @@ class Phase2Comment extends Model
     public $timestamps = false;
     protected $fillable = [
       'id',
+        'phase2_id',
         'state_name',
         'district_name',
         'city_name',

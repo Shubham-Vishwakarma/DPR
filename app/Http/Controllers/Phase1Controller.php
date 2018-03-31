@@ -53,21 +53,51 @@ class Phase1Controller extends Controller
 
       public function displayNodal($id){
           $phasedata = Phase1::find($id); //Write the id from the table 'id'
+          error_log('Phase1' . $phasedata->id);
           return view('nodal_phase1')->with('phasedata',$phasedata);
       }
 
       public function storeComments(Request $request,$id){
-        $phase1comm=Phase1Comment::create(['id'=>$id]);
-        $phase1comm->update($request->all());
-          return redirect()->route('nodal_dashboard');
+          error_log('Id = ' . $id);
+          if($request->button == 'submit') {
+              $phase1 = Phase1::find($id);
+              $phase1->update(['status' => 2]);
+              return redirect()->route('nodal_dashboard');
+//              $phase1comm = Phase1Comment::findOrNew($id);
+//              if($phase1comm->exists){
+//                  $phase1comm->update($request->all());
+//                  return redirect()->route('nodal_dashboard');
+//              }
+//              else{
+//                  Phase1Comment::create([$request->all()]);
+//                  return redirect()->route('nodal_dashboard');
+//              }
+          }
+          elseif($request->button == 'resend') {
+              $phase1 = Phase1::find($id);
+              $phase1->update(['status' => 0]);
+              $phase1comm = Phase1Comment::where('phase1_id',$id);
+              if($phase1comm){
+                  $phase1comm->update($request->all());
+                  return redirect()->route('nodal_dashboard');
+              }
+              else{
+                  $phase1comm = Phase1Comment::create($request->all());
+                  $phase1comm->phase1_id = $id;
+                  $phase1comm->save();
+                  return redirect()->route('nodal_dashboard');
+              }
+
+          }
       }
+
       public function save(Request $request,$id){
           $phasedata = Phase1::find($id);
           $phasedata->update($request->all());
           return redirect()->route('implementing_dashboard');
       }
-      public function saveComments(Request $request){
-          Phase1Comment::create($request->all());
-          return redirect()->route('nodal_dashboard');
-      }
+//      public function saveComments(Request $request){
+//          Phase1Comment::create($request->all());
+//          return redirect()->route('nodal_dashboard');
+//      }
 }

@@ -11,6 +11,7 @@ class Phase3Comment extends Model
 
     protected $fillable = [
       'id',
+        'phase3_id',
       'state_name',
       'district_name',
       'city_name',

@@ -62,12 +62,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="state_name" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -78,12 +73,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="district_name" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -94,12 +84,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="city_name" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -110,12 +95,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="project_name" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -126,12 +106,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="project_code" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -142,12 +117,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="nodal_agency" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -158,12 +128,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="implementing_agency" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -174,12 +139,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="implementing_agency_name" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -190,12 +150,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="approval_date" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -221,12 +176,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="total_project_cost" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -254,12 +204,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="total_slum_household" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -270,12 +215,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="selected" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -286,12 +226,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="construction_cost" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -302,12 +237,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="project_duration" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -318,12 +248,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="sales_price" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -334,12 +259,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="carpet_area" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -350,12 +270,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="total_houses" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -366,12 +281,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="ews_unit" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -382,12 +292,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="lig_unit" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -398,12 +303,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="mig_unit" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -414,12 +314,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="hig_unit" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -430,12 +325,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="commercial_unit" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -446,12 +336,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="private_partner" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -462,12 +347,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="ews_eligible" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -478,12 +358,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="goi_grant" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -494,12 +369,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="state_grant" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -510,12 +380,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="land_grant" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -526,12 +391,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="cash_grant" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -542,12 +402,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="implementing_agency_share" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -558,12 +413,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="beneficiary_share" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -574,12 +424,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="total_share" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -590,12 +435,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="specifications" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -606,12 +446,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="trunk_infrastructure" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -622,12 +457,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -638,12 +468,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="water_supply" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -654,12 +479,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="sewerage" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -670,12 +490,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="road" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -686,12 +501,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="storm_water" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -702,12 +512,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="electrification" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -718,12 +523,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="solid_waste" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -734,12 +534,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="other_civic" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -750,12 +545,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="reason" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -766,12 +556,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="social_infrastructure" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -782,12 +567,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="disaster" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -798,12 +578,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="quality" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -814,12 +589,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="o_m" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -830,12 +600,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="emcumbrance" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -846,12 +611,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="innovative" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -862,12 +622,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="slac_comments" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -878,12 +633,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="brief" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
@@ -894,12 +644,7 @@
           <td class="align-items-center">
             <div class="input-group ">
               <textarea class="form-control" name="submission_date" placeholder="Comment here" rows=1 cols=250></textarea>
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Yes</button>
-              </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button">No</button>
-              </div>
+
             </div>
           </td>
         </tr>
