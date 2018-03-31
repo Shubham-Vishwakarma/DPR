@@ -231,7 +231,8 @@ toggle between hiding and showing the dropdown content */
             <div class="tab-pane fade in active" id="pending" style="margin-top:20px">
 
                 <div class="row cm-fix-height">
-                    @forelse ($userproject as $project)
+                    <h3>Phase 1</h3>
+                    @forelse ($phase1projects as $project)
                         <a href="{{route('implementing_phase1',$project->id)}}">
                             <div class="col-sm-4">
                                 <div class="panel panel-default">
@@ -242,44 +243,175 @@ toggle between hiding and showing the dropdown content */
                                             <p>City Name:{{$project->city_name}}</p>
                                             <p>District Name:{{$project->district_name}}</p>
                                             <p>State Name:{{$project->state_name}}</p>
-                                            <footer><cite title="Source Title">Status</cite></footer>
+                                            <p>Submission Date:{{$project->dos}}</p>
+                                            <footer><cite title="Source Title">
+                                              @if($project->status==0)
+                                              Saved
+                                              @elseif($project->status==1)
+                                              Pending for approval
+                                              @endif
+                                            </cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     @empty
-                        <p>not found</p>
+                        <p>No Phase1 pending</p>
                     @endforelse
 
                 </div>
+
+                <div class="row cm-fix-height">
+                    <h3>Phase 2</h3>
+                    @forelse ($phase2projects as $project)
+                        <a href="{{route('implementing_phase1',$project->id)}}">
+                            <div class="col-sm-4">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading">{{$project->project_name}}</div>
+                                    <div class="panel-body">
+                                        <blockquote style="margin:0">
+                                            <p>City Name:{{$project->city_name}}</p>
+                                            <p>District Name:{{$project->district_name}}</p>
+                                            <p>State Name:{{$project->state_name}}</p>
+                                            <p>Submission Date:{{$project->dos}}</p>
+                                            <footer><cite title="Source Title">
+                                              @if($project->status==0)
+                                              Saved
+                                              @elseif($project->status==1)
+                                              Pending for approval
+                                              @endif
+                                            </cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    @empty
+                        <p>No Phase 2 Pending</p>
+                    @endforelse
+                </div>
+
+                <div class="row cm-fix-height">
+                    <h3>Phase 3</h3>
+                    @forelse ($phase3projects as $project)
+                        <a href="{{route('implementing_phase1',$project->id)}}">
+                            <div class="col-sm-4">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading">{{$project->project_name}}</div>
+                                    <div class="panel-body">
+                                        <blockquote style="margin:0">
+                                            <p>City Name:{{$project->city_name}}</p>
+                                            <p>District Name:{{$project->district_name}}</p>
+                                            <p>State Name:{{$project->state_name}}</p>
+                                            <p>Submission Date:{{$project->dos}}</p>
+                                            <footer><cite title="Source Title">
+                                              @if($project->status==0)
+                                              Saved
+                                              @elseif($project->status==1)
+                                              Pending for approval
+                                              @endif
+                                            </cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    @empty
+                        <p>No Phase 3 Pending</p>
+                    @endforelse
+                </div>
             </div>
             <div class="tab-pane fade" id="completed" style="margin-top:20px;">
-                <div class="row cm-fix-height">
+              <div class="row cm-fix-height">
+                  <h3>Phase 1</h3>
+                  @forelse ($completedprojectsphase1 as $project)
+                      <a href="{{route('implementing_phase1',$project->id)}}">
+                          <div class="col-sm-4">
+                              <div class="panel panel-default">
 
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project DashBoard</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Project name</div>
-                            <div class="panel-body">
-                                <blockquote style="margin:0">
-                                    <p>Project Description</p>
-                                    <footer><cite title="Source Title">Status</cite></footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                  <div class="panel-heading">{{$project->project_name}}</div>
+                                  <div class="panel-body">
+                                      <blockquote style="margin:0">
+                                          <p>City Name:{{$project->city_name}}</p>
+                                          <p>District Name:{{$project->district_name}}</p>
+                                          <p>State Name:{{$project->state_name}}</p>
+                                          <p>Submission Date:{{$project->dos}}</p>
+                                          <footer><cite title="Source Title">
+                                            @if($project->status==2)
+                                            Completed
+                                            @endif
+                                          </cite></footer>
+                                      </blockquote>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  @empty
+                      <p>No Phase1 pending</p>
+                  @endforelse
+
+              </div>
+
+              <div class="row cm-fix-height">
+                  <h3>Phase 2</h3>
+                  @forelse ($completedprojectsphase2 as $project)
+                      <a href="{{route('implementing_phase1',$project->id)}}">
+                          <div class="col-sm-4">
+                              <div class="panel panel-default">
+
+                                  <div class="panel-heading">{{$project->project_name}}</div>
+                                  <div class="panel-body">
+                                      <blockquote style="margin:0">
+                                          <p>City Name:{{$project->city_name}}</p>
+                                          <p>District Name:{{$project->district_name}}</p>
+                                          <p>State Name:{{$project->state_name}}</p>
+                                          <p>Submission Date:{{$project->dos}}</p>
+                                          <footer><cite title="Source Title">
+                                            @if($project->status==2)
+                                            Completed
+                                            @endif
+                                          </cite></footer>
+                                      </blockquote>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  @empty
+                      <p>No Phase 2 Pending</p>
+                  @endforelse
+              </div>
+
+              <div class="row cm-fix-height">
+                  <h3>Phase 3</h3>
+                  @forelse ($completedprojectsphase3 as $project)
+                      <a href="{{route('implementing_phase1',$project->id)}}">
+                          <div class="col-sm-4">
+                              <div class="panel panel-default">
+
+                                  <div class="panel-heading">{{$project->project_name}}</div>
+                                  <div class="panel-body">
+                                      <blockquote style="margin:0">
+                                          <p>City Name:{{$project->city_name}}</p>
+                                          <p>District Name:{{$project->district_name}}</p>
+                                          <p>State Name:{{$project->state_name}}</p>
+                                          <p>Submission Date:{{$project->dos}}</p>
+                                          <footer><cite title="Source Title">
+                                            @if($project->status==2)
+                                            Completed
+                                            @endif
+                                          </cite></footer>
+                                      </blockquote>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  @empty
+                      <p>No Phase 3 Pending</p>
+                  @endforelse
+              </div>
             </div>
         </div>
 

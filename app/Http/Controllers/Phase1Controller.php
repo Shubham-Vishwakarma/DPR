@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Phase1Request;
 use App\Phase1;
 use DB;
+use Carbon;
 use App\Assigned;
 use App\NodalUsers;
 use App\Project;
@@ -15,7 +16,7 @@ class Phase1Controller extends Controller
 {
       public function __construct()
       {
-            $this->middleware('auth');
+          //  $this->middleware('auth');
       }
 
       public function display($id){
@@ -24,13 +25,30 @@ class Phase1Controller extends Controller
       }
 
       public function store(Request $request,$id){
-        $phasedata = Phase1::find($id);
-        $phasedata->update($request->all());
-        $min = DB::table('nodal_users')->min('pending');
-        $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
-        $pid=Project::where('phase1_id',$id)->first();
-        $id1 = DB::table('assigneds')->insertGetId(['phase_no' => '1', 'status' => 0,"nodal_id"=>$nodalID->id ,"phase_id"=>$id,"project_id"=>$pid->id ]);
-        return view('new_implementing_dashboard');
+        switch ($request->final) {
+          case 'save_final':
+          $phasedata = Phase1::find($id);
+          $phasedata->update($request->all());
+          return redirect()->route('implementing_dashboard');
+            break;
+
+            case 'submit_final':
+            $phasedata = Phase1::find($id);
+            $phasedata->update($request->all());
+            $phasedata->dos= Carbon\Carbon::now()->toDateTimeString();
+            $phasedata->status=1;
+            $phasedata->save();
+            $min = DB::table('nodal_users')->where('phase_no','1')->min('pending');
+            $nodalID=NodalUsers::where('pending',$min)->select("id")->first();
+            $nodalIDpending=NodalUsers::where('pending',$min)->first();
+            $nodalIDpending->pending+=1;
+            $nodalIDpending->save();
+            $pid=Project::where('phase1_id',$id)->first();
+            $id1 = DB::table('assigneds')->insertGetId(['phase_no' => '1', 'status' => 0,"nodal_id"=>$nodalID->id ,"phase_id"=>$id,"project_id"=>$pid->id ]);
+              return redirect()->route('implementing_dashboard');
+              break;
+        }
+
       }
 
       public function displayNodal($id){
@@ -38,9 +56,10 @@ class Phase1Controller extends Controller
           return view('nodal_phase1')->with('phasedata',$phasedata);
       }
 
-      public function storeComments(Request $request){
-          Phase1Comment::create($request->all());
-          return redirect()->route('nodal_phase1');
+      public function storeComments(Request $request,$id){
+        $phase1comm=Phase1Comment::create(['id'=>$id]);
+        $phase1comm->update($request->all());
+          return redirect()->route('nodal_dashboard');
       }
       public function save(Request $request,$id){
           $phasedata = Phase1::find($id);
@@ -49,6 +68,6 @@ class Phase1Controller extends Controller
       }
       public function saveComments(Request $request){
           Phase1Comment::create($request->all());
-          return redirect()->route('nodal_phase1');
+          return redirect()->route('nodal_dashboard');
       }
 }

@@ -15,6 +15,7 @@ class CreatePhase1Table extends Migration
     {
         Schema::create('phase1', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('dos')->default("21/03/2015");
             $table->string('state_name')->nullable();
             $table->string('district_name')->nullable();
             $table->string('city_name')->nullable();
@@ -72,7 +73,7 @@ class CreatePhase1Table extends Migration
             $table->string('slac_comments')->nullable();
             $table->string('project_brief')->nullable();
             $table->string('sub_date')->nullable();
-            $table->boolean('status')->default(0);
+            $table->integer('status')->default(0);
         });
     }
 

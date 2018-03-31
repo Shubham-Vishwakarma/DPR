@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\DB;
 
 class NodalController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    // //    $this->middleware('auth');
+    // }
 
     public function displayDashboard(){
         $id = Auth::guard('nodal_user')->id();

@@ -9,6 +9,7 @@ class Phase1 extends Model
     protected $table = 'phase1';
     public $timestamps = false;
 	protected $fillable = [
+    'dos',
     'state_name',
     'district_name',
     'city_name',

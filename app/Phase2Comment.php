@@ -9,6 +9,7 @@ class Phase2Comment extends Model
     protected $table = 'phase2_comments';
     public $timestamps = false;
     protected $fillable = [
+      'id',
         'state_name',
         'district_name',
         'city_name',

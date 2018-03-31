@@ -15,6 +15,7 @@ class CreatePhase2Table extends Migration
     {
         Schema::create('phase2', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('dos')->default("21/03/2015");
             $table->string('state_name');
             $table->string('district_name');
             $table->string('city_name');
@@ -73,6 +74,7 @@ class CreatePhase2Table extends Migration
             $table->string('slac_comments');
             $table->string('brief');
             $table->string('submission_date');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

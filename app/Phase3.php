@@ -10,6 +10,7 @@ class Phase3 extends Model
     public $timestamps = false;
 
     protected $fillable = [
+      'dos',
         'state_name',
         'district_name',
         'city_name',
@@ -64,6 +65,7 @@ class Phase3 extends Model
         'innovative',
         'slac_comments',
         'project_brief',
-        'submission_date'
+        'submission_date',
+        'status'
     ];
 }
