@@ -106,10 +106,7 @@
 			</div>-->
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" style="color: #212121;">PMAY Home</a>
-                </li>
-                <li>
-                    <a href="#" style="color: #212121;">Services</a>
+                    <a href="{{route('home')}}" style="color: #212121;">PMAY Home</a>
                 </li>
                 <li>
                     <a href="#about-div" style="color: #212121;">About</a>
@@ -117,7 +114,7 @@
             </ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="{{route('login')}}" style="color: #212121;">Login</a></li>
-				<li><a href="#" style="color: #212121;">Register</a></li>
+				<li><a href="{{route('register')}}" style="color: #212121;">Register</a></li>
 			</ul>
 		</div>
 	</nav>
