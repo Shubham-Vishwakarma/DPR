@@ -14,8 +14,8 @@ class CreatePhase1CommentsTable extends Migration
     public function up()
     {
         Schema::create('phase1_comments', function (Blueprint $table) {
-            $table->increments('id')->nullable();
-			$table->string('state_name')->nullable();
+            $table->integer('id')->nullable();
+			      $table->string('state_name')->nullable();
             $table->string('district_name')->nullable();
             $table->string('city_name')->nullable();
             $table->string('slum_name')->nullable();
